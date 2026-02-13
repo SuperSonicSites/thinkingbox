@@ -1,0 +1,117 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import FAQSection from "@/components/seo/FAQSection.astro";
+import { t } from "@/i18n/utils";
+import { provinces, getCitiesByProvince, getISPsByProvince, getProvinceByCode } from "@/lib/seo/data";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return provinces.map((p) => ({ params: { region: p.code } }));
+}
+
+const locale = "fr";
+const { region } = Astro.params;
+const prov = getProvinceByCode(region ?? "");
+if (!prov) return Astro.redirect("/fr/coverage");
+
+const cities = getCitiesByProvince(prov.code);
+const isps = getISPsByProvince(prov.code);
+const fibreISPs = isps.filter((i) => i.technologies.includes("fibre"));
+
+const seoTitle = `Fournisseurs Internet au/en ${prov.name_fr} \u2014 FSI par adresse Canada`;
+const seoDesc = `Explorez la couverture Internet large bande au/en ${prov.name_fr}. ${isps.length} FSI, ${cities.length} villes. Trouvez les fournisseurs fibre, c\u00e2ble, DSL et sans fil.`;
+
+const crumbs = [
+  { name: "Accueil", href: "/fr" },
+  { name: "Couverture", href: "/fr/coverage" },
+  { name: prov.name_fr, href: `/fr/coverage/${prov.code}` },
+];
+
+const faqs = [
+  { question: `Combien de fournisseurs Internet y a-t-il au/en ${prov.name_fr}\u00a0?`, answer: `Il y a ${isps.length} fournisseurs Internet desservant le/la ${prov.name_fr}, incluant les grands op\u00e9rateurs et les FSI r\u00e9gionaux. La disponibilit\u00e9 varie selon l\u2019adresse.` },
+  { question: `Internet fibre est-il disponible au/en ${prov.name_fr}\u00a0?`, answer: `Oui, ${fibreISPs.length} fournisseurs offrent Internet fibre au/en ${prov.name_fr}. La disponibilit\u00e9 de la fibre varie selon la ville et le quartier.` },
+  { question: `Quelle est la vitesse Internet la plus rapide au/en ${prov.name_fr}\u00a0?`, answer: `Les vitesses les plus rapides au/en ${prov.name_fr} sont disponibles par connexion fibre, atteignant jusqu\u2019\u00e0 1,5 Gbit/s ou plus dans les grandes villes.` },
+  { question: `Comment trouver les fournisseurs Internet \u00e0 mon adresse au/en ${prov.name_fr}\u00a0?`, answer: `Utilisez notre outil de recherche par adresse pour v\u00e9rifier exactement quels fournisseurs et vitesses sont disponibles \u00e0 votre emplacement sp\u00e9cifique au/en ${prov.name_fr}.` },
+  { question: `Quel est l\u2019objectif du CRTC pour le/la ${prov.name_fr}\u00a0?`, answer: `L\u2019objectif du service universel du CRTC vise 50/10 Mbit/s pour tous les Canadiens. La progression de la couverture varie selon les r\u00e9gions au/en ${prov.name_fr}.` },
+];
+---
+
+<BaseLayout title={seoTitle} description={seoDesc} locale={locale} canonicalPath={`/fr/coverage/${prov.code}`}>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={crumbs} />
+
+      <div class="max-w-3xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
+          Fournisseurs Internet au/en {prov.name_fr}
+        </h1>
+        <p class="mt-4 text-lg text-text-secondary">
+          Explorez les donn\u00e9es de couverture Internet large bande pour le/la {prov.name_fr}. Comparez la disponibilit\u00e9 des FSI, les vitesses et les technologies dans {cities.length} villes.
+        </p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-3 gap-4">
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{isps.length}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.isps")}</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{fibreISPs.length}</div>
+          <div class="mt-1 text-xs text-text-muted">FSI fibre</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{cities.length}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.cities")}</div>
+        </div>
+      </div>
+
+      <section class="mt-12">
+        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">FSI au/en {prov.name_fr}</h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {isps.map((isp) => (
+            <a href={`/fr/providers/${isp.slug}`} class="group rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-5 shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover hover:-translate-y-0.5">
+              <div class="font-[var(--font-display)] font-bold text-text-primary group-hover:text-primary-600 transition-colors">{isp.name}</div>
+              <div class="mt-1.5 flex flex-wrap gap-1.5">
+                {isp.technologies.slice(0, 3).map((tech) => (
+                  <span class="rounded-full bg-primary-50 px-2 py-0.5 text-xs font-medium text-primary-700">{tech}</span>
+                ))}
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {cities.length > 0 && (
+        <section class="mt-12">
+          <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">Villes au/en {prov.name_fr}</h2>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {cities.sort((a, b) => b.population - a.population).map((city) => (
+              <a href={`/fr/internet/${prov.code}/${city.slug}`} class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised px-5 py-4 shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover hover:-translate-y-0.5">
+                <div class="font-medium text-text-primary">{city.name_fr}</div>
+                <div class="mt-1 text-xs text-text-muted">{city.population.toLocaleString("fr-CA")} hab. &middot; {city.major_isps.length} FSI</div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section class="mt-12">
+        <div class="rounded-[var(--radius-xl)] bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-center text-white shadow-card-hover md:p-12">
+          <h2 class="font-[var(--font-display)] text-2xl font-bold md:text-3xl">{t(locale, "common.check_address_cta")}</h2>
+          <p class="mx-auto mt-3 max-w-lg text-primary-100">Voyez exactement quels fournisseurs desservent votre adresse sp\u00e9cifique au/en {prov.name_fr}.</p>
+          <a href="/fr" class="mt-6 inline-flex items-center gap-2 rounded-[var(--radius-md)] bg-white px-6 py-3 font-[var(--font-display)] font-semibold text-primary-700 shadow-card transition-colors hover:bg-primary-50">{t(locale, "nav.lookup")}</a>
+        </div>
+      </section>
+
+      <FAQSection title={t(locale, "seo.faq_title")} faqs={faqs} />
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

@@ -1,0 +1,120 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import { CoverageMap } from "@/components/coverage/CoverageMap";
+import { t } from "@/i18n/utils";
+import { provinces, getCitiesByProvince, getISPsByProvince } from "@/lib/seo/data";
+
+export const prerender = true;
+
+const locale = "fr";
+const apiKey = import.meta.env.GOOGLE_PLACES_API_KEY ?? "";
+
+const PROVINCE_COORDS: Record<string, { lat: number; lng: number }> = {
+  on: { lat: 50.0, lng: -85.0 },
+  qc: { lat: 52.0, lng: -72.0 },
+  bc: { lat: 53.7, lng: -127.6 },
+  ab: { lat: 53.9, lng: -116.6 },
+  mb: { lat: 55.0, lng: -97.0 },
+  sk: { lat: 54.0, lng: -106.0 },
+  ns: { lat: 44.7, lng: -63.7 },
+  nb: { lat: 46.5, lng: -66.5 },
+  nl: { lat: 53.1, lng: -57.7 },
+  pe: { lat: 46.25, lng: -63.0 },
+  nt: { lat: 64.3, lng: -124.0 },
+  yt: { lat: 64.0, lng: -135.0 },
+  nu: { lat: 70.3, lng: -86.0 },
+};
+
+const provinceStats = provinces.map((p) => ({
+  ...p,
+  cityCount: getCitiesByProvince(p.code).length,
+  ispCount: getISPsByProvince(p.code).length,
+}));
+
+const mapProvinces = provinceStats.map((p) => ({
+  code: p.code,
+  name: p.name_fr,
+  lat: PROVINCE_COORDS[p.code]?.lat ?? 56,
+  lng: PROVINCE_COORDS[p.code]?.lng ?? -96,
+  ispCount: p.ispCount,
+  cityCount: p.cityCount,
+}));
+---
+
+<BaseLayout
+  title="Carte de couverture large bande — FSI par adresse Canada"
+  description="Explorez les données de couverture Internet large bande dans toutes les provinces et territoires du Canada. Trouvez les FSI, vitesses et technologies disponibles."
+  locale={locale}
+  canonicalPath="/fr/coverage"
+>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={[
+        { name: "Accueil", href: "/fr" },
+        { name: t(locale, "nav.coverage"), href: "/fr/coverage" },
+      ]} />
+
+      <div class="max-w-3xl">
+        <h1 class="text-3xl font-bold tracking-tight text-[var(--color-text-primary)] md:text-4xl">
+          Carte de couverture large bande
+        </h1>
+        <p class="mt-4 text-lg text-[var(--color-text-secondary)]">
+          Explorez les données de couverture Internet dans toutes les provinces et territoires du Canada. Cliquez sur une région pour voir les FSI, villes et technologies disponibles.
+        </p>
+      </div>
+
+      <!-- Interactive Map -->
+      {apiKey && (
+        <div class="mt-10">
+          <CoverageMap locale={locale} apiKey={apiKey} provinces={mapProvinces} client:load />
+        </div>
+      )}
+
+      <!-- Province Cards -->
+      <div class="mx-auto mt-12 max-w-4xl">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {provinceStats.map((p) => (
+            <a
+              href={`/fr/coverage/${p.code}`}
+              class="group rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-raised)] p-5 shadow-[var(--shadow-card)] transition-all hover:border-[var(--color-primary-300)] hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-0.5"
+            >
+              <div class="text-lg font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary-600)] transition-colors">
+                {p.name_fr}
+              </div>
+              <div class="mt-2 flex items-center gap-3 text-sm text-[var(--color-text-secondary)]">
+                {p.ispCount > 0 && (
+                  <span>{p.ispCount} FSI</span>
+                )}
+                {p.cityCount > 0 && (
+                  <span class="text-[var(--color-border)]">·</span>
+                  <span>{p.cityCount} villes</span>
+                )}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mx-auto mt-16 max-w-xl text-center">
+        <p class="text-[var(--color-text-secondary)]">
+          Vous connaissez votre adresse exacte ? Obtenez des données de couverture précises.
+        </p>
+        <a
+          href="/fr"
+          class="mt-4 inline-flex items-center gap-2 rounded-[var(--radius-md)] bg-[var(--color-primary-500)] px-6 py-3 font-medium text-white shadow-[var(--shadow-card)] transition-all hover:bg-[var(--color-primary-600)] hover:shadow-[var(--shadow-card-hover)]"
+        >
+          {t(locale, "common.check_address_cta")}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

@@ -1,0 +1,36 @@
+---
+interface LinkItem {
+  text: string;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  links: LinkItem[];
+  columns?: 2 | 3 | 4;
+}
+
+const { title, links, columns = 3 } = Astro.props;
+
+const gridCols: Record<number, string> = {
+  2: "sm:grid-cols-2",
+  3: "sm:grid-cols-2 lg:grid-cols-3",
+  4: "sm:grid-cols-2 lg:grid-cols-4",
+};
+---
+
+<section class="mt-12">
+  <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">
+    {title}
+  </h2>
+  <div class:list={["grid gap-3", gridCols[columns]]}>
+    {links.map((link) => (
+      <a
+        href={link.href}
+        class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised px-5 py-4 text-sm font-medium text-text-primary shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover hover:-translate-y-0.5"
+      >
+        {link.text}
+      </a>
+    ))}
+  </div>
+</section>

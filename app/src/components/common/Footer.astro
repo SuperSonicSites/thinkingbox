@@ -1,0 +1,97 @@
+---
+import { t } from "@/i18n/utils";
+import type { Locale } from "@/types/index";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const currentYear = new Date().getFullYear();
+const copyrightText = t(locale, "common.copyright").replace("{{year}}", String(currentYear));
+
+const footerLinks = [
+  { label: t(locale, "common.privacy"), href: locale === "en" ? "/privacy" : "/fr/privacy" },
+  { label: t(locale, "common.terms"), href: locale === "en" ? "/terms" : "/fr/terms" },
+];
+
+const hubLinks = [
+  { label: t(locale, "nav.coverage"), href: locale === "en" ? "/coverage" : "/fr/coverage" },
+  { label: t(locale, "nav.providers"), href: locale === "en" ? "/providers" : "/fr/providers" },
+  { label: t(locale, "common.technology_hub"), href: locale === "en" ? "/technology" : "/fr/technology" },
+  { label: t(locale, "common.speed_guide"), href: locale === "en" ? "/speeds" : "/fr/speeds" },
+  { label: t(locale, "common.guides_hub"), href: locale === "en" ? "/guides" : "/fr/guides" },
+  { label: t(locale, "common.comparisons_hub"), href: locale === "en" ? "/compare" : "/fr/compare" },
+];
+
+const dataAttribution = locale === "en"
+  ? "Data from ISED National Broadband Data"
+  : "Donn\u00e9es provenant des donn\u00e9es nationales sur le large bande d\u2019ISDE";
+
+const isedUrl = locale === "en"
+  ? "https://ised-isde.canada.ca/site/high-speed-internet-canada/en/universal-broadband-fund/broadband-coverage"
+  : "https://ised-isde.canada.ca/site/internet-haute-vitesse-canada/fr/fonds-pour-la-large-bande-universelle/couverture-large-bande";
+---
+
+<footer class="mt-auto border-t border-border bg-surface-raised" role="contentinfo">
+  <div class="container-page py-8">
+    <!-- Hub links -->
+    <div class="mb-6">
+      <nav aria-label={locale === "en" ? "Explore" : "Explorer"}>
+        <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2" role="list">
+          {hubLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-sm text-text-secondary transition-colors hover:text-primary-500"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Links row -->
+    <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+      <nav aria-label={locale === "en" ? "Footer navigation" : "Navigation de pied de page"}>
+        <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2" role="list">
+          {footerLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-sm text-text-secondary transition-colors hover:text-primary-500"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <!-- Data attribution -->
+      <p class="text-center text-xs text-text-muted sm:text-right">
+        <a
+          href={isedUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline decoration-border-subtle underline-offset-2 transition-colors hover:text-primary-500 hover:decoration-primary-500"
+        >
+          {dataAttribution}
+          <span class="sr-only">
+            {locale === "en" ? "(opens in a new tab)" : "(ouvre dans un nouvel onglet)"}
+          </span>
+        </a>
+      </p>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-6 border-t border-border-subtle pt-4">
+      <p class="text-center text-xs text-text-muted">
+        {copyrightText}
+      </p>
+    </div>
+  </div>
+</footer>

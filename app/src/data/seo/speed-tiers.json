@@ -1,0 +1,432 @@
+[
+  {
+    "slug": "under-25-mbps",
+    "name_en": "Under 25 Mbps",
+    "name_fr": "Moins de 25 Mbit/s",
+    "range_en": "Under 25 Mbps",
+    "range_fr": "Moins de 25 Mbit/s",
+    "description_en": "Basic internet speeds that fall below the CRTC's 50/10 Mbps universal service objective. These connections are typically found in rural and underserved areas where infrastructure options are limited. While adequate for single-user light browsing and email, these speeds are increasingly considered insufficient for modern Canadian households with multiple connected devices.",
+    "description_fr": "Vitesses Internet de base qui se situent en dessous de l'objectif du service universel de 50/10 Mbit/s du CRTC. Ces connexions se trouvent généralement dans les zones rurales et mal desservies o\u00f9 les options d'infrastructure sont limit\u00e9es. Bien qu'ad\u00e9quates pour la navigation l\u00e9g\u00e8re et le courriel d'un seul utilisateur, ces vitesses sont de plus en plus consid\u00e9r\u00e9es comme insuffisantes pour les foyers canadiens modernes avec plusieurs appareils connect\u00e9s.",
+    "crtc_classification_en": "Below CRTC Universal Service Objective",
+    "crtc_classification_fr": "En dessous de l'objectif du service universel du CRTC",
+    "suitable_activities_en": [
+      "Email and basic web browsing",
+      "Social media browsing",
+      "Standard definition video streaming on one device",
+      "Voice over IP (VoIP) calls",
+      "Light online shopping and banking"
+    ],
+    "suitable_activities_fr": [
+      "Courriel et navigation Web de base",
+      "Navigation sur les m\u00e9dias sociaux",
+      "Diffusion vid\u00e9o en d\u00e9finition standard sur un appareil",
+      "Appels vocaux par Internet (VoIP)",
+      "Magasinage et services bancaires en ligne l\u00e9gers"
+    ],
+    "not_suitable_en": [
+      "4K video streaming",
+      "Large file downloads or cloud backups",
+      "Multiple simultaneous users streaming or video calling"
+    ],
+    "not_suitable_fr": [
+      "Diffusion vid\u00e9o en 4K",
+      "T\u00e9l\u00e9chargement de gros fichiers ou sauvegardes en nuage",
+      "Plusieurs utilisateurs simultan\u00e9s en diffusion ou en appel vid\u00e9o"
+    ],
+    "household_size": "1\u20132 people",
+    "device_count": "1\u20133 devices",
+    "typical_technologies": ["dsl", "satellite", "fixed-wireless"],
+    "typical_price_range_en": "$30\u2013$50/month",
+    "typical_price_range_fr": "30 $\u201350 $/mois",
+    "faqs_en": [
+      {
+        "question": "Is under 25 Mbps fast enough for everyday use?",
+        "answer": "For a single person doing basic tasks like email, web browsing, and standard-definition streaming, speeds under 25 Mbps can be workable. However, the CRTC considers 50/10 Mbps the minimum for modern broadband, and most households with more than one user will find these speeds frustrating, especially during peak usage hours."
+      },
+      {
+        "question": "Why is my internet speed under 25 Mbps?",
+        "answer": "Speeds under 25 Mbps are common on older DSL lines far from the telephone exchange, basic satellite plans, or weak fixed wireless signals. In many rural parts of Canada, these are the only options currently available. Use our address lookup tool to check whether faster alternatives like cable or fibre have become available in your area."
+      },
+      {
+        "question": "Can I work from home with under 25 Mbps?",
+        "answer": "Basic remote work tasks such as email, document editing, and web-based tools are manageable. Video conferencing on platforms like Zoom or Microsoft Teams requires roughly 3\u20135 Mbps, which is possible but leaves very little headroom for other household members. If anyone else is streaming or downloading at the same time, call quality will suffer."
+      },
+      {
+        "question": "Can I stream Netflix with under 25 Mbps?",
+        "answer": "Netflix requires about 3 Mbps for standard definition and 5 Mbps for HD. With speeds under 25 Mbps, you can stream one show in HD, but 4K streaming (which needs 25 Mbps) is off the table. If a second person starts streaming or browsing heavily, you may experience buffering."
+      },
+      {
+        "question": "What government programs exist to improve rural internet speeds?",
+        "answer": "The federal Universal Broadband Fund and various provincial programs are investing billions to bring 50/10 Mbps service to underserved communities. The CRTC's target is for 98% of Canadian households to have access to 50/10 Mbps by 2026 and 100% by 2030. Check with your provincial broadband office for timelines in your area."
+      }
+    ],
+    "faqs_fr": [
+      {
+        "question": "Moins de 25 Mbit/s est-il suffisant pour un usage quotidien ?",
+        "answer": "Pour une seule personne effectuant des t\u00e2ches de base comme le courriel, la navigation Web et la diffusion en d\u00e9finition standard, les vitesses inf\u00e9rieures \u00e0 25 Mbit/s peuvent \u00eatre suffisantes. Cependant, le CRTC consid\u00e8re 50/10 Mbit/s comme le minimum pour le haut d\u00e9bit moderne, et la plupart des foyers de plus d'un utilisateur trouveront ces vitesses frustrantes, surtout aux heures de pointe."
+      },
+      {
+        "question": "Pourquoi ma vitesse Internet est-elle inf\u00e9rieure \u00e0 25 Mbit/s ?",
+        "answer": "Les vitesses inf\u00e9rieures \u00e0 25 Mbit/s sont courantes sur les anciennes lignes DSL \u00e9loign\u00e9es du central t\u00e9l\u00e9phonique, les forfaits satellite de base ou les signaux sans fil fixes faibles. Dans de nombreuses r\u00e9gions rurales du Canada, ce sont les seules options actuellement disponibles. Utilisez notre outil de recherche d'adresse pour v\u00e9rifier si des alternatives plus rapides comme le c\u00e2ble ou la fibre sont devenues disponibles dans votre r\u00e9gion."
+      },
+      {
+        "question": "Puis-je travailler \u00e0 domicile avec moins de 25 Mbit/s ?",
+        "answer": "Les t\u00e2ches de t\u00e9l\u00e9travail de base telles que le courriel, l'\u00e9dition de documents et les outils Web sont g\u00e9rables. La vid\u00e9oconf\u00e9rence sur des plateformes comme Zoom ou Microsoft Teams n\u00e9cessite environ 3 \u00e0 5 Mbit/s, ce qui est possible mais laisse tr\u00e8s peu de marge pour les autres membres du foyer. Si quelqu'un d'autre diffuse ou t\u00e9l\u00e9charge en m\u00eame temps, la qualit\u00e9 de l'appel en souffrira."
+      },
+      {
+        "question": "Puis-je diffuser Netflix avec moins de 25 Mbit/s ?",
+        "answer": "Netflix n\u00e9cessite environ 3 Mbit/s pour la d\u00e9finition standard et 5 Mbit/s pour la HD. Avec des vitesses inf\u00e9rieures \u00e0 25 Mbit/s, vous pouvez diffuser une \u00e9mission en HD, mais la diffusion 4K (qui n\u00e9cessite 25 Mbit/s) est impossible. Si une deuxi\u00e8me personne commence \u00e0 diffuser ou \u00e0 naviguer intensivement, vous pourriez subir de la mise en m\u00e9moire tampon."
+      },
+      {
+        "question": "Quels programmes gouvernementaux existent pour am\u00e9liorer les vitesses Internet rurales ?",
+        "answer": "Le Fonds pour la large bande universelle du f\u00e9d\u00e9ral et divers programmes provinciaux investissent des milliards pour offrir un service de 50/10 Mbit/s aux communaut\u00e9s mal desservies. L'objectif du CRTC est que 98 % des foyers canadiens aient acc\u00e8s \u00e0 50/10 Mbit/s d'ici 2026 et 100 % d'ici 2030. V\u00e9rifiez aupr\u00e8s du bureau de la large bande de votre province pour les \u00e9ch\u00e9anciers dans votre r\u00e9gion."
+      }
+    ]
+  },
+  {
+    "slug": "25-50-mbps",
+    "name_en": "25\u201350 Mbps",
+    "name_fr": "25\u201350 Mbit/s",
+    "range_en": "25\u201350 Mbps",
+    "range_fr": "25\u201350 Mbit/s",
+    "description_en": "An entry-level broadband tier that approaches the CRTC's 50/10 Mbps universal service objective. Suitable for small households with moderate usage, including HD streaming, video calls, and casual online activities. While not ideal for data-heavy multi-user homes, this tier represents a significant step up from basic connectivity.",
+    "description_fr": "Un niveau de haut d\u00e9bit d'entr\u00e9e de gamme qui approche l'objectif de service universel de 50/10 Mbit/s du CRTC. Convient aux petits foyers avec une utilisation mod\u00e9r\u00e9e, y compris la diffusion HD, les appels vid\u00e9o et les activit\u00e9s en ligne occasionnelles. Bien qu'il ne soit pas id\u00e9al pour les foyers multi-utilisateurs \u00e0 forte consommation de donn\u00e9es, ce niveau repr\u00e9sente une am\u00e9lioration significative par rapport \u00e0 la connectivit\u00e9 de base.",
+    "crtc_classification_en": "Approaching CRTC Universal Service Objective",
+    "crtc_classification_fr": "Approche de l'objectif du service universel du CRTC",
+    "suitable_activities_en": [
+      "HD video streaming on one or two devices",
+      "Video calls on Zoom or Microsoft Teams",
+      "Remote work with cloud-based tools",
+      "Light online gaming",
+      "Music streaming and podcast listening",
+      "Web browsing across several devices"
+    ],
+    "suitable_activities_fr": [
+      "Diffusion vid\u00e9o HD sur un ou deux appareils",
+      "Appels vid\u00e9o sur Zoom ou Microsoft Teams",
+      "T\u00e9l\u00e9travail avec des outils infonuagiques",
+      "Jeux en ligne l\u00e9gers",
+      "\u00c9coute de musique en continu et de balados",
+      "Navigation Web sur plusieurs appareils"
+    ],
+    "not_suitable_en": [
+      "4K streaming on multiple screens simultaneously",
+      "Large household with five or more simultaneous heavy users",
+      "Competitive online gaming requiring very low latency",
+      "Uploading large video or design files regularly"
+    ],
+    "not_suitable_fr": [
+      "Diffusion 4K sur plusieurs \u00e9crans simultan\u00e9ment",
+      "Grand foyer avec cinq utilisateurs intensifs simultan\u00e9s ou plus",
+      "Jeux en ligne comp\u00e9titifs n\u00e9cessitant une tr\u00e8s faible latence",
+      "T\u00e9l\u00e9versement r\u00e9gulier de gros fichiers vid\u00e9o ou de conception"
+    ],
+    "household_size": "2\u20133 people",
+    "device_count": "3\u20135 devices",
+    "typical_technologies": ["dsl", "cable", "fixed-wireless"],
+    "typical_price_range_en": "$40\u2013$60/month",
+    "typical_price_range_fr": "40 $\u201360 $/mois",
+    "faqs_en": [
+      {
+        "question": "Is 50 Mbps enough for a couple or small family?",
+        "answer": "For a couple or a family of three doing everyday activities like HD streaming, web browsing, and the occasional video call, 50 Mbps is adequate. Problems arise when multiple people try to stream video or make video calls at the same time, so households with heavier simultaneous usage should consider the 50\u2013100 Mbps tier."
+      },
+      {
+        "question": "Can I stream Netflix in 4K at 50 Mbps?",
+        "answer": "Netflix recommends 25 Mbps for a single 4K Ultra HD stream. At 50 Mbps, you can watch one 4K stream and still have bandwidth left over for light browsing or email on another device. However, running two 4K streams simultaneously would consume all your available bandwidth."
+      },
+      {
+        "question": "What does the CRTC's 50/10 target mean for me?",
+        "answer": "The CRTC established 50 Mbps download and 10 Mbps upload as the baseline for acceptable broadband in Canada in 2016. If your plan delivers at least 50/10, you meet the national minimum standard. Plans under this threshold are considered underserved, and government funding programs are working to bring 50/10 service to all Canadians."
+      },
+      {
+        "question": "Is 25 Mbps enough for video conferencing?",
+        "answer": "For a single video call, yes. Zoom recommends 3.8 Mbps for an HD group call. At 25 Mbps you can handle one video call plus some light browsing, but if a second person in your household starts a video call or streams HD video, quality may degrade noticeably."
+      },
+      {
+        "question": "Should I upgrade from 25 Mbps to 50 Mbps?",
+        "answer": "If you have more than two people using the internet regularly, do video conferencing, or stream HD content on more than one device, upgrading to 50 Mbps is worthwhile. The price difference is typically only $10\u2013$20 per month, and the improvement in day-to-day experience is meaningful."
+      }
+    ],
+    "faqs_fr": [
+      {
+        "question": "50 Mbit/s est-il suffisant pour un couple ou une petite famille ?",
+        "answer": "Pour un couple ou une famille de trois personnes effectuant des activit\u00e9s quotidiennes comme la diffusion HD, la navigation Web et l'appel vid\u00e9o occasionnel, 50 Mbit/s est ad\u00e9quat. Les probl\u00e8mes surviennent lorsque plusieurs personnes tentent de diffuser des vid\u00e9os ou de faire des appels vid\u00e9o en m\u00eame temps. Les foyers avec une utilisation simultan\u00e9e plus lourde devraient consid\u00e9rer le niveau 50\u2013100 Mbit/s."
+      },
+      {
+        "question": "Puis-je diffuser Netflix en 4K \u00e0 50 Mbit/s ?",
+        "answer": "Netflix recommande 25 Mbit/s pour un seul flux 4K Ultra HD. \u00c0 50 Mbit/s, vous pouvez regarder un flux 4K et avoir encore de la bande passante pour la navigation l\u00e9g\u00e8re ou le courriel sur un autre appareil. Cependant, deux flux 4K simultan\u00e9s consommeraient toute votre bande passante disponible."
+      },
+      {
+        "question": "Que signifie l'objectif 50/10 du CRTC pour moi ?",
+        "answer": "Le CRTC a \u00e9tabli 50 Mbit/s en t\u00e9l\u00e9chargement et 10 Mbit/s en t\u00e9l\u00e9versement comme base d'un haut d\u00e9bit acceptable au Canada en 2016. Si votre forfait offre au moins 50/10, vous atteignez la norme nationale minimale. Les forfaits en dessous de ce seuil sont consid\u00e9r\u00e9s comme mal desservis, et des programmes de financement gouvernementaux travaillent \u00e0 offrir le service 50/10 \u00e0 tous les Canadiens."
+      },
+      {
+        "question": "25 Mbit/s est-il suffisant pour la vid\u00e9oconf\u00e9rence ?",
+        "answer": "Pour un seul appel vid\u00e9o, oui. Zoom recommande 3,8 Mbit/s pour un appel de groupe HD. \u00c0 25 Mbit/s, vous pouvez g\u00e9rer un appel vid\u00e9o plus une navigation l\u00e9g\u00e8re, mais si une deuxi\u00e8me personne dans votre foyer lance un appel vid\u00e9o ou diffuse en HD, la qualit\u00e9 peut se d\u00e9grader sensiblement."
+      },
+      {
+        "question": "Devrais-je passer de 25 Mbit/s \u00e0 50 Mbit/s ?",
+        "answer": "Si plus de deux personnes utilisent Internet r\u00e9guli\u00e8rement, si vous faites de la vid\u00e9oconf\u00e9rence ou si vous diffusez du contenu HD sur plus d'un appareil, passer \u00e0 50 Mbit/s en vaut la peine. La diff\u00e9rence de prix est g\u00e9n\u00e9ralement de seulement 10 \u00e0 20 $ par mois, et l'am\u00e9lioration de l'exp\u00e9rience au quotidien est significative."
+      }
+    ]
+  },
+  {
+    "slug": "50-100-mbps",
+    "name_en": "50\u2013100 Mbps",
+    "name_fr": "50\u2013100 Mbit/s",
+    "range_en": "50\u2013100 Mbps",
+    "range_fr": "50\u2013100 Mbit/s",
+    "description_en": "The sweet spot for most Canadian households. This tier meets the CRTC's minimum 50/10 Mbps universal service objective and comfortably handles the demands of a modern connected home, including 4K streaming, video conferencing, online gaming, and working from home. It offers an excellent balance of capability and value.",
+    "description_fr": "Le point id\u00e9al pour la plupart des foyers canadiens. Ce niveau atteint le minimum de 50/10 Mbit/s de l'objectif de service universel du CRTC et g\u00e8re confortablement les exigences d'un foyer connect\u00e9 moderne, y compris la diffusion 4K, la vid\u00e9oconf\u00e9rence, les jeux en ligne et le t\u00e9l\u00e9travail. Il offre un excellent \u00e9quilibre entre capacit\u00e9 et rapport qualit\u00e9-prix.",
+    "crtc_classification_en": "Meets CRTC Universal Service Objective (50/10 Mbps minimum)",
+    "crtc_classification_fr": "Atteint l'objectif du service universel du CRTC (minimum 50/10 Mbit/s)",
+    "suitable_activities_en": [
+      "4K video streaming on one or two devices",
+      "Video conferencing while others in the household stream",
+      "Online gaming with solid performance",
+      "Working from home with cloud tools and VPN",
+      "Moderate file downloads and cloud syncing",
+      "Smart home devices including security cameras"
+    ],
+    "suitable_activities_fr": [
+      "Diffusion vid\u00e9o 4K sur un ou deux appareils",
+      "Vid\u00e9oconf\u00e9rence pendant que d'autres membres du foyer diffusent",
+      "Jeux en ligne avec une performance solide",
+      "T\u00e9l\u00e9travail avec des outils infonuagiques et un VPN",
+      "T\u00e9l\u00e9chargements de fichiers mod\u00e9r\u00e9s et synchronisation en nuage",
+      "Appareils domestiques intelligents, y compris les cam\u00e9ras de s\u00e9curit\u00e9"
+    ],
+    "not_suitable_en": [
+      "4K streaming on four or more devices simultaneously",
+      "Constant heavy uploading such as professional video production",
+      "Very large households with eight or more heavy users"
+    ],
+    "not_suitable_fr": [
+      "Diffusion 4K sur quatre appareils ou plus simultan\u00e9ment",
+      "T\u00e9l\u00e9versement intensif constant comme la production vid\u00e9o professionnelle",
+      "Tr\u00e8s grands foyers de huit utilisateurs intensifs ou plus"
+    ],
+    "household_size": "2\u20134 people",
+    "device_count": "5\u20138 devices",
+    "typical_technologies": ["cable", "fibre", "fixed-wireless"],
+    "typical_price_range_en": "$50\u2013$75/month",
+    "typical_price_range_fr": "50 $\u201375 $/mois",
+    "faqs_en": [
+      {
+        "question": "Is 100 Mbps fast enough for a family of four?",
+        "answer": "Yes. A 100 Mbps connection comfortably supports a family of four doing everyday activities including simultaneous HD and 4K streaming, video conferencing, gaming, and general browsing. It is the most common speed tier chosen by Canadian families, and for good reason."
+      },
+      {
+        "question": "Is 50 Mbps or 100 Mbps better for working from home?",
+        "answer": "If you are the only person in the household during work hours, 50 Mbps is usually fine. However, 100 Mbps provides considerably more headroom when other family members are also online. A single video call on Zoom consumes a noticeable share of a 50 Mbps connection but barely registers on a 100 Mbps line."
+      },
+      {
+        "question": "Can I game online at 75 Mbps?",
+        "answer": "Absolutely. Online gaming typically requires only 3\u201310 Mbps of bandwidth. What matters far more for gaming is latency (ping time), which depends on your connection type and distance to game servers rather than your speed tier. At 75 Mbps, you have plenty of bandwidth for gaming while other household members browse or stream."
+      },
+      {
+        "question": "How many 4K streams can 100 Mbps handle?",
+        "answer": "Netflix recommends 25 Mbps per 4K stream. At 100 Mbps you could theoretically run four simultaneous 4K streams, but accounting for overhead and other device usage, two simultaneous 4K streams is a comfortable real-world maximum with bandwidth to spare for other activities."
+      },
+      {
+        "question": "Is 50\u2013100 Mbps the best value in Canada?",
+        "answer": "For most households, this tier delivers the best balance of performance and price. Plans in this range cost $50\u2013$75 per month and cover the everyday needs of the majority of families. Upgrading to gigabit speeds only makes sense for very large households, content creators, or anyone with specific high-bandwidth demands."
+      }
+    ],
+    "faqs_fr": [
+      {
+        "question": "100 Mbit/s est-il assez rapide pour une famille de quatre ?",
+        "answer": "Oui. Une connexion de 100 Mbit/s supporte confortablement une famille de quatre personnes effectuant des activit\u00e9s quotidiennes, y compris la diffusion simultan\u00e9e HD et 4K, la vid\u00e9oconf\u00e9rence, les jeux et la navigation g\u00e9n\u00e9rale. C'est le niveau de vitesse le plus couramment choisi par les familles canadiennes, et pour cause."
+      },
+      {
+        "question": "50 Mbit/s ou 100 Mbit/s, lequel est meilleur pour le t\u00e9l\u00e9travail ?",
+        "answer": "Si vous \u00eates la seule personne dans le foyer pendant les heures de travail, 50 Mbit/s est g\u00e9n\u00e9ralement suffisant. Cependant, 100 Mbit/s offre consid\u00e9rablement plus de marge lorsque d'autres membres de la famille sont \u00e9galement en ligne. Un seul appel vid\u00e9o sur Zoom consomme une part notable d'une connexion de 50 Mbit/s mais se fait \u00e0 peine remarquer sur une ligne de 100 Mbit/s."
+      },
+      {
+        "question": "Puis-je jouer en ligne \u00e0 75 Mbit/s ?",
+        "answer": "Absolument. Les jeux en ligne ne n\u00e9cessitent g\u00e9n\u00e9ralement que 3 \u00e0 10 Mbit/s de bande passante. Ce qui compte beaucoup plus pour le jeu est la latence (temps de ping), qui d\u00e9pend du type de connexion et de la distance aux serveurs de jeu plut\u00f4t que du niveau de vitesse. \u00c0 75 Mbit/s, vous avez amplement de bande passante pour jouer pendant que d'autres membres du foyer naviguent ou diffusent."
+      },
+      {
+        "question": "Combien de flux 4K 100 Mbit/s peut-il g\u00e9rer ?",
+        "answer": "Netflix recommande 25 Mbit/s par flux 4K. \u00c0 100 Mbit/s, vous pourriez th\u00e9oriquement faire fonctionner quatre flux 4K simultan\u00e9s, mais en tenant compte de la surcharge et de l'utilisation des autres appareils, deux flux 4K simultan\u00e9s est un maximum confortable en conditions r\u00e9elles avec de la bande passante restante pour d'autres activit\u00e9s."
+      },
+      {
+        "question": "50\u2013100 Mbit/s est-il le meilleur rapport qualit\u00e9-prix au Canada ?",
+        "answer": "Pour la plupart des foyers, ce niveau offre le meilleur \u00e9quilibre entre performance et prix. Les forfaits dans cette gamme co\u00fbtent 50 \u00e0 75 $ par mois et couvrent les besoins quotidiens de la majorit\u00e9 des familles. Passer \u00e0 des vitesses gigabit n'a de sens que pour les tr\u00e8s grands foyers, les cr\u00e9ateurs de contenu ou quiconque ayant des besoins sp\u00e9cifiques de haute bande passante."
+      }
+    ]
+  },
+  {
+    "slug": "100-500-mbps",
+    "name_en": "100\u2013500 Mbps",
+    "name_fr": "100\u2013500 Mbit/s",
+    "range_en": "100\u2013500 Mbps",
+    "range_fr": "100\u2013500 Mbit/s",
+    "description_en": "High-performance internet that well exceeds the CRTC's universal service objective. Designed for larger households with multiple heavy users, this tier handles simultaneous 4K streaming on several TVs, large file transfers, cloud gaming, smart home ecosystems, and demanding work-from-home setups with ease. It is the go-to choice for power users and growing families.",
+    "description_fr": "Internet haute performance qui d\u00e9passe largement l'objectif de service universel du CRTC. Con\u00e7u pour les grands foyers avec plusieurs utilisateurs intensifs, ce niveau g\u00e8re la diffusion 4K simultan\u00e9e sur plusieurs t\u00e9l\u00e9viseurs, les transferts de gros fichiers, les jeux en nuage, les \u00e9cosyst\u00e8mes de maison intelligente et les configurations exigeantes de t\u00e9l\u00e9travail avec facilit\u00e9. C'est le choix de pr\u00e9dilection des utilisateurs intensifs et des familles grandissantes.",
+    "crtc_classification_en": "Exceeds CRTC Universal Service Objective",
+    "crtc_classification_fr": "D\u00e9passe l'objectif du service universel du CRTC",
+    "suitable_activities_en": [
+      "4K streaming on multiple TVs simultaneously",
+      "Large file transfers and rapid cloud backups",
+      "Cloud gaming services like GeForce NOW or Xbox Cloud Gaming",
+      "Smart home with many connected devices and security cameras",
+      "Video production and content creation uploads",
+      "Multiple remote workers in one household"
+    ],
+    "suitable_activities_fr": [
+      "Diffusion 4K sur plusieurs t\u00e9l\u00e9viseurs simultan\u00e9ment",
+      "Transferts de gros fichiers et sauvegardes rapides en nuage",
+      "Services de jeux en nuage comme GeForce NOW ou Xbox Cloud Gaming",
+      "Maison intelligente avec de nombreux appareils connect\u00e9s et cam\u00e9ras de s\u00e9curit\u00e9",
+      "T\u00e9l\u00e9versements de production vid\u00e9o et de cr\u00e9ation de contenu",
+      "Plusieurs t\u00e9l\u00e9travailleurs dans un m\u00eame foyer"
+    ],
+    "not_suitable_en": [
+      "Overkill if you only browse email and social media",
+      "Unnecessary expense for a single-person household with light usage",
+      "May not deliver full value if your Wi-Fi router is outdated"
+    ],
+    "not_suitable_fr": [
+      "Excessif si vous ne faites que consulter vos courriels et les m\u00e9dias sociaux",
+      "D\u00e9pense inutile pour un foyer d'une seule personne avec une utilisation l\u00e9g\u00e8re",
+      "Peut ne pas offrir toute sa valeur si votre routeur Wi-Fi est d\u00e9suet"
+    ],
+    "household_size": "3\u20135+ people",
+    "device_count": "8\u201315 devices",
+    "typical_technologies": ["cable", "fibre"],
+    "typical_price_range_en": "$65\u2013$100/month",
+    "typical_price_range_fr": "65 $\u2013100 $/mois",
+    "faqs_en": [
+      {
+        "question": "Do I really need 300 Mbps internet?",
+        "answer": "If your household has four or more people, multiple 4K-capable TVs, and several members working or studying from home, 300 Mbps provides the headroom to keep everything running without slowdowns. For one- or two-person households, 50\u2013100 Mbps is typically sufficient and more cost-effective."
+      },
+      {
+        "question": "What is the difference between 100 Mbps and 500 Mbps in everyday use?",
+        "answer": "For typical activities like browsing, email, and streaming a single show, most people will not notice a difference. The gap becomes apparent when downloading large game updates (a 50 GB game takes about 13 minutes at 500 Mbps versus over an hour at 100 Mbps) or when many devices are active at the same time."
+      },
+      {
+        "question": "Should I choose fibre or cable at this speed tier?",
+        "answer": "Both fibre and cable can deliver 100\u2013500 Mbps download speeds reliably. The critical difference is upload speed: fibre plans in this range typically offer symmetrical or near-symmetrical uploads (100\u2013500 Mbps up), while cable may only provide 20\u2013100 Mbps upload. If upload speed matters for your work or hobbies, fibre is the better choice."
+      },
+      {
+        "question": "Is 500 Mbps good for gaming?",
+        "answer": "Gaming itself requires only about 10\u201325 Mbps of bandwidth. The real advantage of 500 Mbps for gamers is that your gameplay will not be disrupted when other household members are streaming 4K video, downloading files, or making video calls at the same time. Game downloads and updates will also complete much faster."
+      },
+      {
+        "question": "What upload speed should I expect at 300 Mbps?",
+        "answer": "On fibre, expect symmetrical uploads around 300 Mbps. On cable, expect 15\u201350 Mbps upload. Upload speed matters if you regularly do video conferencing, upload large files, live stream, or back up data to the cloud. For most users, even cable's lower upload is adequate for everyday needs."
+      }
+    ],
+    "faqs_fr": [
+      {
+        "question": "Ai-je vraiment besoin de 300 Mbit/s ?",
+        "answer": "Si votre foyer compte quatre personnes ou plus, plusieurs t\u00e9l\u00e9viseurs compatibles 4K et plusieurs membres qui travaillent ou \u00e9tudient \u00e0 domicile, 300 Mbit/s offre la marge n\u00e9cessaire pour que tout fonctionne sans ralentissements. Pour les foyers d'une ou deux personnes, 50\u2013100 Mbit/s est g\u00e9n\u00e9ralement suffisant et plus \u00e9conomique."
+      },
+      {
+        "question": "Quelle est la diff\u00e9rence entre 100 Mbit/s et 500 Mbit/s au quotidien ?",
+        "answer": "Pour les activit\u00e9s typiques comme la navigation, le courriel et la diffusion d'une seule \u00e9mission, la plupart des gens ne remarqueront pas de diff\u00e9rence. L'\u00e9cart devient apparent lors du t\u00e9l\u00e9chargement de grosses mises \u00e0 jour de jeux (un jeu de 50 Go prend environ 13 minutes \u00e0 500 Mbit/s contre plus d'une heure \u00e0 100 Mbit/s) ou lorsque de nombreux appareils sont actifs en m\u00eame temps."
+      },
+      {
+        "question": "Devrais-je choisir la fibre ou le c\u00e2ble \u00e0 ce niveau de vitesse ?",
+        "answer": "La fibre et le c\u00e2ble peuvent tous deux offrir des vitesses de t\u00e9l\u00e9chargement de 100 \u00e0 500 Mbit/s de mani\u00e8re fiable. La diff\u00e9rence cruciale est la vitesse de t\u00e9l\u00e9versement : les forfaits fibre dans cette gamme offrent g\u00e9n\u00e9ralement des t\u00e9l\u00e9versements sym\u00e9triques ou quasi sym\u00e9triques (100\u2013500 Mbit/s), tandis que le c\u00e2ble peut n'offrir que 20\u2013100 Mbit/s. Si la vitesse de t\u00e9l\u00e9versement est importante pour votre travail ou vos loisirs, la fibre est le meilleur choix."
+      },
+      {
+        "question": "500 Mbit/s est-il bon pour le jeu ?",
+        "answer": "Le jeu en lui-m\u00eame ne n\u00e9cessite qu'environ 10 \u00e0 25 Mbit/s de bande passante. Le v\u00e9ritable avantage de 500 Mbit/s pour les joueurs est que votre jeu ne sera pas perturb\u00e9 lorsque d'autres membres du foyer diffusent de la vid\u00e9o 4K, t\u00e9l\u00e9chargent des fichiers ou font des appels vid\u00e9o en m\u00eame temps. Les t\u00e9l\u00e9chargements de jeux et les mises \u00e0 jour se termineront \u00e9galement beaucoup plus rapidement."
+      },
+      {
+        "question": "Quelle vitesse de t\u00e9l\u00e9versement devrais-je attendre \u00e0 300 Mbit/s ?",
+        "answer": "En fibre, attendez-vous \u00e0 des t\u00e9l\u00e9versements sym\u00e9triques d'environ 300 Mbit/s. En c\u00e2ble, attendez-vous \u00e0 15\u201350 Mbit/s en t\u00e9l\u00e9versement. La vitesse de t\u00e9l\u00e9versement compte si vous faites r\u00e9guli\u00e8rement de la vid\u00e9oconf\u00e9rence, t\u00e9l\u00e9versez de gros fichiers, diffusez en direct ou sauvegardez des donn\u00e9es en nuage. Pour la plupart des utilisateurs, m\u00eame le t\u00e9l\u00e9versement inf\u00e9rieur du c\u00e2ble est ad\u00e9quat pour les besoins quotidiens."
+      }
+    ]
+  },
+  {
+    "slug": "500-plus-mbps",
+    "name_en": "500+ Mbps",
+    "name_fr": "500+ Mbit/s",
+    "range_en": "500+ Mbps",
+    "range_fr": "500+ Mbit/s",
+    "description_en": "Premium ultra-high-speed internet for the most demanding households and professional users. Gigabit and multi-gigabit plans deliver virtually instant downloads, seamless 4K and 8K streaming on many devices simultaneously, the fastest upload speeds available, and future-proof connectivity for emerging technologies like virtual reality and cloud gaming.",
+    "description_fr": "Internet ultra haute vitesse premium pour les foyers les plus exigeants et les utilisateurs professionnels. Les forfaits gigabit et multi-gigabit offrent des t\u00e9l\u00e9chargements pratiquement instantan\u00e9s, une diffusion 4K et 8K sans faille sur de nombreux appareils simultan\u00e9ment, les vitesses de t\u00e9l\u00e9versement les plus rapides disponibles et une connectivit\u00e9 \u00e0 l'\u00e9preuve du temps pour les technologies \u00e9mergentes comme la r\u00e9alit\u00e9 virtuelle et les jeux en nuage.",
+    "crtc_classification_en": "Premium tier, far exceeds CRTC Universal Service Objective",
+    "crtc_classification_fr": "Niveau premium, d\u00e9passe largement l'objectif du service universel du CRTC",
+    "suitable_activities_en": [
+      "Everything \u2014 no practical bandwidth limitations",
+      "Multiple simultaneous 4K and 8K streams",
+      "Competitive online gaming with minimal latency",
+      "Home office with heavy upload requirements and video production",
+      "Large household with many connected devices and smart home systems",
+      "Content creation, live streaming, and professional broadcasting"
+    ],
+    "suitable_activities_fr": [
+      "Tout \u2014 aucune limitation pratique de bande passante",
+      "Plusieurs flux simultan\u00e9s en 4K et 8K",
+      "Jeux en ligne comp\u00e9titifs avec latence minimale",
+      "Bureau \u00e0 domicile avec de lourds besoins de t\u00e9l\u00e9versement et production vid\u00e9o",
+      "Grand foyer avec de nombreux appareils connect\u00e9s et syst\u00e8mes de maison intelligente",
+      "Cr\u00e9ation de contenu, diffusion en direct et radiodiffusion professionnelle"
+    ],
+    "not_suitable_en": [
+      "Small households with basic browsing and email needs (overpriced for the value)",
+      "Areas without fibre infrastructure (these speeds require fibre or advanced cable)",
+      "Households without Wi-Fi 6 or newer equipment (older routers bottleneck the connection)"
+    ],
+    "not_suitable_fr": [
+      "Petits foyers avec des besoins de base en navigation et courriel (prix excessif pour la valeur)",
+      "Zones sans infrastructure fibre (ces vitesses n\u00e9cessitent la fibre ou le c\u00e2ble avanc\u00e9)",
+      "Foyers sans \u00e9quipement Wi-Fi 6 ou plus r\u00e9cent (les routeurs plus anciens limitent la connexion)"
+    ],
+    "household_size": "4+ people",
+    "device_count": "15+ devices",
+    "typical_technologies": ["fibre", "cable"],
+    "typical_price_range_en": "$80\u2013$150+/month",
+    "typical_price_range_fr": "80 $\u2013150 $+/mois",
+    "faqs_en": [
+      {
+        "question": "Do I actually need gigabit internet?",
+        "answer": "Most Canadian households do not need gigabit speeds for their current daily activities. A plan in the 100\u2013300 Mbps range covers the vast majority of families comfortably. Gigabit is worthwhile for large households with five or more heavy users, professional content creators, remote workers with significant upload needs, or anyone who wants connectivity that will remain future-proof for years to come."
+      },
+      {
+        "question": "How fast is 1 Gbps in real-world use?",
+        "answer": "At 1 Gbps (1000 Mbps), a full HD movie downloads in roughly 40 seconds, a 50 GB video game in about 7 minutes, and you could theoretically support more than 40 simultaneous 4K streams. In practice, your Wi-Fi router is often the bottleneck. A wired Ethernet connection (Cat 5e or Cat 6 cable) is needed to experience the full speed."
+      },
+      {
+        "question": "What is multi-gigabit internet?",
+        "answer": "Multi-gigabit refers to plans offering speeds above 1 Gbps. Bell offers up to 8 Gbps in select areas, and TELUS offers up to 2.5 Gbps. These plans target technology enthusiasts and households with extreme bandwidth needs. You will need a compatible router and network adapters to take full advantage of multi-gigabit speeds."
+      },
+      {
+        "question": "Why can I not reach gigabit speeds on Wi-Fi?",
+        "answer": "Older Wi-Fi standards like Wi-Fi 5 (802.11ac) cannot deliver full gigabit throughput, especially at a distance from the router. You need a Wi-Fi 6 (802.11ax) or Wi-Fi 6E router, along with compatible devices, to approach gigabit speeds wirelessly. For the absolute fastest and most consistent speeds, a wired Ethernet connection is recommended."
+      },
+      {
+        "question": "Is gigabit fibre worth the extra cost over 300 Mbps?",
+        "answer": "Gigabit fibre typically costs $20\u2013$40 more per month than a 300 Mbps plan. It is worth the premium if you regularly transfer very large files, have a large household with many simultaneous users, need the best possible symmetrical upload speeds for content creation or cloud computing, or simply want the fastest connection available. For casual users, 300 Mbps is more than enough and the extra cost is hard to justify."
+      }
+    ],
+    "faqs_fr": [
+      {
+        "question": "Ai-je vraiment besoin de l'Internet gigabit ?",
+        "answer": "La plupart des foyers canadiens n'ont pas besoin de vitesses gigabit pour leurs activit\u00e9s quotidiennes actuelles. Un forfait de 100 \u00e0 300 Mbit/s couvre confortablement la grande majorit\u00e9 des familles. Le gigabit en vaut la peine pour les grands foyers de cinq utilisateurs intensifs ou plus, les cr\u00e9ateurs de contenu professionnels, les t\u00e9l\u00e9travailleurs avec d'importants besoins de t\u00e9l\u00e9versement ou quiconque veut une connectivit\u00e9 \u00e0 l'\u00e9preuve du temps pour les ann\u00e9es \u00e0 venir."
+      },
+      {
+        "question": "Quelle est la vitesse r\u00e9elle de 1 Gbit/s en utilisation quotidienne ?",
+        "answer": "\u00c0 1 Gbit/s (1000 Mbit/s), un film HD complet se t\u00e9l\u00e9charge en environ 40 secondes, un jeu vid\u00e9o de 50 Go en environ 7 minutes, et vous pourriez th\u00e9oriquement supporter plus de 40 flux 4K simultan\u00e9s. En pratique, votre routeur Wi-Fi est souvent le goulot d'\u00e9tranglement. Une connexion Ethernet filaire (c\u00e2ble Cat 5e ou Cat 6) est n\u00e9cessaire pour profiter de la pleine vitesse."
+      },
+      {
+        "question": "Qu'est-ce que l'Internet multi-gigabit ?",
+        "answer": "Le multi-gigabit d\u00e9signe les forfaits offrant des vitesses sup\u00e9rieures \u00e0 1 Gbit/s. Bell offre jusqu'\u00e0 8 Gbit/s dans certaines zones, et TELUS offre jusqu'\u00e0 2,5 Gbit/s. Ces forfaits ciblent les passionn\u00e9s de technologie et les foyers ayant des besoins extr\u00eames en bande passante. Vous aurez besoin d'un routeur compatible et d'adaptateurs r\u00e9seau pour profiter pleinement des vitesses multi-gigabit."
+      },
+      {
+        "question": "Pourquoi ne puis-je pas atteindre les vitesses gigabit en Wi-Fi ?",
+        "answer": "Les anciennes normes Wi-Fi comme le Wi-Fi 5 (802.11ac) ne peuvent pas offrir un d\u00e9bit gigabit complet, surtout \u00e0 distance du routeur. Vous avez besoin d'un routeur Wi-Fi 6 (802.11ax) ou Wi-Fi 6E, ainsi que d'appareils compatibles, pour approcher les vitesses gigabit sans fil. Pour les vitesses les plus rapides et les plus constantes, une connexion Ethernet filaire est recommand\u00e9e."
+      },
+      {
+        "question": "La fibre gigabit vaut-elle le co\u00fbt suppl\u00e9mentaire par rapport \u00e0 300 Mbit/s ?",
+        "answer": "La fibre gigabit co\u00fbte g\u00e9n\u00e9ralement 20 \u00e0 40 $ de plus par mois qu'un forfait de 300 Mbit/s. Le suppl\u00e9ment en vaut la peine si vous transf\u00e9rez r\u00e9guli\u00e8rement de tr\u00e8s gros fichiers, avez un grand foyer avec de nombreux utilisateurs simultan\u00e9s, avez besoin des meilleures vitesses de t\u00e9l\u00e9versement sym\u00e9triques pour la cr\u00e9ation de contenu ou l'infonuagique, ou voulez simplement la connexion la plus rapide disponible. Pour les utilisateurs occasionnels, 300 Mbit/s est amplement suffisant et le co\u00fbt suppl\u00e9mentaire est difficile \u00e0 justifier."
+      }
+    ]
+  }
+]

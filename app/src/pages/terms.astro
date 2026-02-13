@@ -1,0 +1,117 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+
+export const prerender = true;
+
+const locale = "en";
+---
+
+<BaseLayout
+  title="Terms of Use — ISP by Address Canada"
+  description="Terms of use for ISP by Address Canada. Understand the conditions for using our broadband coverage lookup service."
+  locale={locale}
+  canonicalPath="/terms"
+>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={[
+        { name: "Home", href: "/" },
+        { name: "Terms of Use", href: "/terms" },
+      ]} />
+
+      <article class="prose mx-auto max-w-3xl">
+        <h1 class="text-3xl font-bold tracking-tight text-[var(--color-text-primary)] md:text-4xl">
+          Terms of Use
+        </h1>
+        <p class="mt-2 text-sm text-[var(--color-text-muted)]">Last updated: February 2026</p>
+
+        <div class="mt-8 space-y-8 text-[var(--color-text-secondary)] leading-relaxed">
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Acceptance of Terms</h2>
+            <p class="mt-3">
+              By accessing and using ISP by Address Canada (ispbyaddress.ca), you agree to be bound by these Terms of Use. If you do not agree, please do not use this service.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Service Description</h2>
+            <p class="mt-3">
+              ISP by Address Canada provides broadband internet coverage information based on publicly available data from Innovation, Science and Economic Development Canada (ISED). The service allows users to check which internet service providers may be available at a given Canadian address.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Data Accuracy Disclaimer</h2>
+            <p class="mt-3">
+              The coverage data presented on this site is derived from the ISED National Broadband Data and is provided on an "as-is" basis. While we strive for accuracy, we cannot guarantee that:
+            </p>
+            <ul class="mt-3 list-disc space-y-2 pl-6">
+              <li>All internet service providers available at a location are listed.</li>
+              <li>Speeds, technologies, or pricing are current or accurate.</li>
+              <li>Coverage maps reflect real-time availability at your specific address.</li>
+            </ul>
+            <p class="mt-3">
+              Each lookup result includes a <strong>confidence score</strong> indicating the reliability of the data. Results with lower confidence should be verified directly with service providers.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">No Endorsement</h2>
+            <p class="mt-3">
+              Listing a provider or plan does not constitute an endorsement or recommendation. We are not affiliated with any internet service provider unless explicitly stated. Users should independently verify plan details, pricing, and availability before making purchasing decisions.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Limitation of Liability</h2>
+            <p class="mt-3">
+              ISP by Address Canada shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of this service, including but not limited to decisions made based on the coverage data displayed. This service is for informational purposes only.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Intellectual Property</h2>
+            <p class="mt-3">
+              The underlying broadband coverage data is open data from the Government of Canada, subject to the <a href="https://open.canada.ca/en/open-government-licence-canada" target="_blank" rel="noopener noreferrer" class="text-[var(--color-primary-500)] underline underline-offset-2 hover:text-[var(--color-primary-600)]">Open Government Licence — Canada</a>. The website design, code, and original content are the property of ISP by Address Canada.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">User Submissions</h2>
+            <p class="mt-3">
+              By submitting a data discrepancy report or correction, you grant us a non-exclusive, royalty-free right to use that information to improve the accuracy of our data.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Modifications</h2>
+            <p class="mt-3">
+              We reserve the right to modify these terms at any time. Changes will be posted on this page with an updated revision date. Continued use of the service constitutes acceptance of the updated terms.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Governing Law</h2>
+            <p class="mt-3">
+              These terms are governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Contact</h2>
+            <p class="mt-3">
+              If you have questions about these terms, please contact us at <span class="font-mono text-[var(--color-text-primary)]">legal@ispbyaddress.ca</span>.
+            </p>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

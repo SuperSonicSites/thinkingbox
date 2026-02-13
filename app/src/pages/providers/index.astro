@@ -1,0 +1,63 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import { t } from "@/i18n/utils";
+import { getISPs } from "@/lib/seo/data";
+
+export const prerender = true;
+
+const locale = "en";
+const isps = getISPs().sort((a, b) => a.name.localeCompare(b.name));
+
+const seoTitle = t(locale, "seo.providers_title");
+const seoDesc = t(locale, "seo.providers_description").replace("{{count}}", String(isps.length));
+
+const crumbs = [
+  { name: "Home", href: "/" },
+  { name: t(locale, "common.provider_directory"), href: "/providers" },
+];
+---
+
+<BaseLayout title={seoTitle} description={seoDesc} locale={locale} canonicalPath="/providers">
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={crumbs} />
+
+      <div class="max-w-3xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
+          {t(locale, "common.provider_directory")}
+        </h1>
+        <p class="mt-4 text-lg text-text-secondary">
+          Browse all {isps.length} Canadian internet service providers. Compare coverage, technologies, and plans.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {isps.map((isp) => (
+          <a
+            href={`/providers/${isp.slug}`}
+            class="group rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-5 shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover hover:-translate-y-0.5"
+          >
+            <div class="font-[var(--font-display)] font-bold text-text-primary group-hover:text-primary-600 transition-colors">
+              {isp.name}
+            </div>
+            <div class="mt-1.5 flex flex-wrap gap-1.5">
+              {isp.technologies.slice(0, 3).map((tech) => (
+                <span class="rounded-full bg-primary-50 px-2 py-0.5 text-xs font-medium text-primary-700">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div class="mt-2 text-xs text-text-muted capitalize">{isp.ownership_type} &middot; {isp.provinces_served.length} provinces</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

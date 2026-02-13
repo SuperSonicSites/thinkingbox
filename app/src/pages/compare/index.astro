@@ -1,0 +1,46 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import { t } from "@/i18n/utils";
+import { getComparisons } from "@/lib/seo/data";
+
+export const prerender = true;
+
+const locale = "en";
+const comparisons = getComparisons();
+
+const crumbs = [
+  { name: "Home", href: "/" },
+  { name: t(locale, "common.comparisons_hub"), href: "/compare" },
+];
+---
+
+<BaseLayout title={t(locale, "seo.comparisons_title")} description={t(locale, "seo.comparisons_description")} locale={locale} canonicalPath="/compare">
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={crumbs} />
+
+      <div class="max-w-3xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">{t(locale, "common.comparisons_hub")}</h1>
+        <p class="mt-4 text-lg text-text-secondary">Side-by-side comparisons of Canada's top internet providers.</p>
+      </div>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {comparisons.map((c) => (
+          <a href={`/compare/${c.slug}`} class="group rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-5 shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover hover:-translate-y-0.5">
+            <div class="font-[var(--font-display)] font-bold text-text-primary group-hover:text-primary-600 transition-colors">
+              {c.provider_a_name} vs {c.provider_b_name}
+            </div>
+            <p class="mt-2 text-sm text-text-secondary line-clamp-2">{c.verdict_en}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

@@ -1,0 +1,126 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import FAQSection from "@/components/seo/FAQSection.astro";
+import RelatedLinks from "@/components/seo/RelatedLinks.astro";
+import { t } from "@/i18n/utils";
+import { provinces, getCitiesByProvince, getISPsByProvince, getProvinceByCode } from "@/lib/seo/data";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return provinces.map((p) => ({ params: { region: p.code } }));
+}
+
+const locale = "en";
+const { region } = Astro.params;
+const prov = getProvinceByCode(region ?? "");
+if (!prov) return Astro.redirect("/coverage");
+
+const cities = getCitiesByProvince(prov.code);
+const isps = getISPsByProvince(prov.code);
+const fibreISPs = isps.filter((i) => i.technologies.includes("fibre"));
+
+const seoTitle = `Internet Providers in ${prov.name_en} \u2014 ISP by Address Canada`;
+const seoDesc = `Explore broadband internet coverage in ${prov.name_en}. ${isps.length} ISPs, ${cities.length} cities. Find fibre, cable, DSL, and wireless providers.`;
+
+const crumbs = [
+  { name: "Home", href: "/" },
+  { name: "Coverage", href: "/coverage" },
+  { name: prov.name_en, href: `/coverage/${prov.code}` },
+];
+
+const faqs = [
+  { question: `How many internet providers are in ${prov.name_en}?`, answer: `There are ${isps.length} internet providers serving ${prov.name_en}, including major carriers and regional ISPs. Availability varies by address.` },
+  { question: `Is fibre internet available in ${prov.name_en}?`, answer: `Yes, ${fibreISPs.length} providers offer fibre internet in ${prov.name_en}. Fibre availability varies by city and neighbourhood.` },
+  { question: `What is the fastest internet in ${prov.name_en}?`, answer: `The fastest speeds in ${prov.name_en} are available through fibre connections, reaching up to 1.5 Gbps or more in major cities.` },
+  { question: `How do I find internet providers at my address in ${prov.name_en}?`, answer: `Use our address lookup tool to check exactly which providers and speeds are available at your specific location in ${prov.name_en}.` },
+  { question: `What is the CRTC broadband target for ${prov.name_en}?`, answer: `The CRTC's universal service objective targets 50/10 Mbps for all Canadians. Coverage progress varies by region within ${prov.name_en}.` },
+];
+---
+
+<BaseLayout title={seoTitle} description={seoDesc} locale={locale} canonicalPath={`/coverage/${prov.code}`}>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={crumbs} />
+
+      <div class="max-w-3xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
+          Internet Providers in {prov.name_en}
+        </h1>
+        <p class="mt-4 text-lg text-text-secondary">
+          Explore broadband internet coverage data for {prov.name_en}. Compare ISP availability, speed tiers, and technologies across {cities.length} cities.
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-8 grid grid-cols-3 gap-4">
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{isps.length}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.isps")}</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{fibreISPs.length}</div>
+          <div class="mt-1 text-xs text-text-muted">Fibre ISPs</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{cities.length}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.cities")}</div>
+        </div>
+      </div>
+
+      <!-- ISP Grid -->
+      <section class="mt-12">
+        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">
+          ISPs in {prov.name_en}
+        </h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {isps.map((isp) => (
+            <a href={`/providers/${isp.slug}`} class="group rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-5 shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover hover:-translate-y-0.5">
+              <div class="font-[var(--font-display)] font-bold text-text-primary group-hover:text-primary-600 transition-colors">{isp.name}</div>
+              <div class="mt-1.5 flex flex-wrap gap-1.5">
+                {isp.technologies.slice(0, 3).map((tech) => (
+                  <span class="rounded-full bg-primary-50 px-2 py-0.5 text-xs font-medium text-primary-700">{tech}</span>
+                ))}
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- City List -->
+      {cities.length > 0 && (
+        <section class="mt-12">
+          <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">
+            Cities in {prov.name_en}
+          </h2>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {cities.sort((a, b) => b.population - a.population).map((city) => (
+              <a href={`/internet/${prov.code}/${city.slug}`} class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised px-5 py-4 shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover hover:-translate-y-0.5">
+                <div class="font-medium text-text-primary">{city.name_en}</div>
+                <div class="mt-1 text-xs text-text-muted">{city.population.toLocaleString("en-CA")} pop. &middot; {city.major_isps.length} ISPs</div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <!-- CTA -->
+      <section class="mt-12">
+        <div class="rounded-[var(--radius-xl)] bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-center text-white shadow-card-hover md:p-12">
+          <h2 class="font-[var(--font-display)] text-2xl font-bold md:text-3xl">{t(locale, "common.check_address_cta")}</h2>
+          <p class="mx-auto mt-3 max-w-lg text-primary-100">See exactly which providers serve your specific address in {prov.name_en}.</p>
+          <a href="/" class="mt-6 inline-flex items-center gap-2 rounded-[var(--radius-md)] bg-white px-6 py-3 font-[var(--font-display)] font-semibold text-primary-700 shadow-card transition-colors hover:bg-primary-50">{t(locale, "nav.lookup")}</a>
+        </div>
+      </section>
+
+      <FAQSection title={t(locale, "seo.faq_title")} faqs={faqs} />
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

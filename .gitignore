@@ -1,0 +1,47 @@
+# Dependencies
+app/node_modules/
+
+# Environment
+app/.env.local
+app/.env.production
+app/.env
+
+# Build output
+app/dist/
+app/.astro/
+
+# Data files (large CSVs — tracked separately or in R2)
+NBD_PHH_Speeds/
+NBD_Roads_TAB/
+Map_Data_CSV/
+PHH_ID_2021/
+Digital Boundary Files/
+Municipal CSD Boundaries/
+
+# Docker volumes
+docker/pgdata/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Wrangler
+app/.wrangler/
+
+# Claude Code
+.claude/
+
+# SEO audit artifacts
+seo-report.xml
+seomator.toml
+
+# Playwright
+app/test-results/
+app/playwright-report/
+
+# Windows artifacts
+nul

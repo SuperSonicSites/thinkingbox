@@ -1,0 +1,167 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import FAQSection from "@/components/seo/FAQSection.astro";
+import RelatedLinks from "@/components/seo/RelatedLinks.astro";
+import { t } from "@/i18n/utils";
+import { getISPs, getISPBySlug, getProvinceByCode, getCitiesByProvince, getTechnologyBySlug } from "@/lib/seo/data";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return getISPs().map((isp) => ({ params: { slug: isp.slug } }));
+}
+
+const locale = "en";
+const { slug } = Astro.params;
+const isp = getISPBySlug(slug ?? "");
+if (!isp) return Astro.redirect("/providers");
+
+const seoTitle = `${isp.name} Internet Plans & Coverage \u2014 ISP by Address Canada`;
+const seoDesc = `${isp.name} internet coverage, plans, and technologies. Serving ${isp.provinces_served.map((p) => getProvinceByCode(p)?.name_en ?? p.toUpperCase()).join(", ")}. Check availability at your address.`;
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: isp.legal_name,
+  url: isp.website,
+  foundingDate: String(isp.founded_year),
+  areaServed: isp.provinces_served.map((p) => ({
+    "@type": "AdministrativeArea",
+    name: getProvinceByCode(p)?.name_en ?? p.toUpperCase(),
+  })),
+};
+
+const faqs = [
+  { question: `What internet plans does ${isp.name} offer?`, answer: `${isp.name} offers internet service using ${isp.technologies.join(", ")} technology. Plans vary by location and technology. Use our lookup tool to see specific plans available at your address.` },
+  { question: `Where is ${isp.name} available?`, answer: `${isp.name} provides service in ${isp.provinces_served.map((p) => getProvinceByCode(p)?.name_en ?? p.toUpperCase()).join(", ")}. Coverage varies by address within these provinces.` },
+  { question: `Is ${isp.name} a good internet provider?`, answer: `${isp.name} is a ${isp.ownership_type} provider with approximately ${isp.customer_count_approx.toLocaleString("en-CA")} customers. The best provider depends on your location, speed needs, and budget.` },
+  { question: `Does ${isp.name} offer fibre internet?`, answer: isp.technologies.includes("fibre") ? `Yes, ${isp.name} offers fibre internet in select areas. Check your address to see if fibre is available at your location.` : `${isp.name} does not currently offer fibre internet. They provide service via ${isp.technologies.join(", ")}.` },
+  { question: `How do I switch to ${isp.name}?`, answer: `You can sign up for ${isp.name} through their website or by calling their sales team. Check availability at your address first using our lookup tool.` },
+];
+
+const crumbs = [
+  { name: "Home", href: "/" },
+  { name: t(locale, "common.provider_directory"), href: "/providers" },
+  { name: isp.name, href: `/providers/${isp.slug}` },
+];
+
+const cityLinks = isp.metro_markets.slice(0, 8).map((citySlug) => {
+  const provCode = isp.provinces_served[0] ?? "on";
+  return { text: citySlug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" "), href: `/internet/${provCode}/${citySlug}` };
+});
+---
+
+<BaseLayout title={seoTitle} description={seoDesc} locale={locale} canonicalPath={`/providers/${isp.slug}`} jsonLdExtra={[orgSchema]}>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={crumbs} />
+
+      <div class="max-w-3xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
+          {isp.name} Internet Plans & Coverage
+        </h1>
+        <p class="mt-4 text-lg text-text-secondary">
+          {isp.description_en}
+        </p>
+      </div>
+
+      <!-- Company Info -->
+      <section class="mt-10">
+        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">
+          {t(locale, "common.company_info")}
+        </h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-5 shadow-card">
+            <div class="text-xs font-medium uppercase tracking-wider text-text-muted">{t(locale, "common.founded")}</div>
+            <div class="mt-1 text-lg font-semibold text-text-primary">{isp.founded_year}</div>
+          </div>
+          <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-5 shadow-card">
+            <div class="text-xs font-medium uppercase tracking-wider text-text-muted">{t(locale, "common.headquarters")}</div>
+            <div class="mt-1 text-lg font-semibold text-text-primary">{isp.headquarters}</div>
+          </div>
+          <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-5 shadow-card">
+            <div class="text-xs font-medium uppercase tracking-wider text-text-muted">{t(locale, "common.ownership")}</div>
+            <div class="mt-1 text-lg font-semibold capitalize text-text-primary">{isp.ownership_type}</div>
+          </div>
+          <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-5 shadow-card">
+            <div class="text-xs font-medium uppercase tracking-wider text-text-muted">{t(locale, "common.customers")}</div>
+            <div class="mt-1 text-lg font-semibold text-text-primary">~{(isp.customer_count_approx / 1000).toFixed(0)}K</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies -->
+      <section class="mt-10">
+        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">
+          {t(locale, "common.technologies")}
+        </h2>
+        <div class="flex flex-wrap gap-3">
+          {isp.technologies.map((tech) => {
+            const techData = getTechnologyBySlug(tech);
+            return (
+              <a
+                href={`/technology/${tech}`}
+                class="flex items-center gap-2 rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised px-5 py-3 shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover"
+              >
+                <span class="font-semibold text-text-primary">{techData?.name_en ?? tech}</span>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+
+      <!-- Provinces Served -->
+      <section class="mt-10">
+        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">
+          {t(locale, "common.provinces_served")}
+        </h2>
+        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {isp.provinces_served.map((code) => {
+            const p = getProvinceByCode(code);
+            return (
+              <a
+                href={`/coverage/${code}`}
+                class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised px-5 py-4 text-center font-medium text-text-primary shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover hover:-translate-y-0.5"
+              >
+                {p?.name_en ?? code.toUpperCase()}
+              </a>
+            );
+          })}
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-12">
+        <div class="rounded-[var(--radius-xl)] bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-center text-white shadow-card-hover md:p-12">
+          <h2 class="font-[var(--font-display)] text-2xl font-bold md:text-3xl">
+            Is {isp.name} available at your address?
+          </h2>
+          <p class="mx-auto mt-3 max-w-lg text-primary-100">
+            Check your exact address to see if {isp.name} serves your location and compare available plans.
+          </p>
+          <a href="/" class="mt-6 inline-flex items-center gap-2 rounded-[var(--radius-md)] bg-white px-6 py-3 font-[var(--font-display)] font-semibold text-primary-700 shadow-card transition-colors hover:bg-primary-50">
+            {t(locale, "nav.lookup")}
+          </a>
+        </div>
+      </section>
+
+      {isp.website && (
+        <div class="mt-8 text-center">
+          <a href={isp.website} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-primary-600 transition-colors hover:text-primary-700">
+            {t(locale, "common.visit_website")} &rarr;
+            <span class="sr-only">{t(locale, "accessibility.new_tab")}</span>
+          </a>
+        </div>
+      )}
+
+      <FAQSection title={t(locale, "seo.faq_title")} faqs={faqs} />
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

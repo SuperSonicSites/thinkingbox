@@ -1,0 +1,48 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import { t } from "@/i18n/utils";
+import { getTechnologies } from "@/lib/seo/data";
+
+export const prerender = true;
+
+const locale = "fr";
+const technologies = getTechnologies();
+
+const crumbs = [
+  { name: "Accueil", href: "/fr" },
+  { name: t(locale, "common.technology_hub"), href: "/fr/technology" },
+];
+---
+
+<BaseLayout title={t(locale, "seo.technology_title")} description={t(locale, "seo.technology_description")} locale={locale} canonicalPath="/fr/technology">
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={crumbs} />
+
+      <div class="max-w-3xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">{t(locale, "common.technology_hub")}</h1>
+        <p class="mt-4 text-lg text-text-secondary">D\u00e9couvrez les diff\u00e9rentes technologies Internet disponibles au Canada.</p>
+      </div>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {technologies.map((tech) => (
+          <a href={`/fr/technology/${tech.slug}`} class="group rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-6 shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover hover:-translate-y-0.5">
+            <div class="font-[var(--font-display)] text-lg font-bold text-text-primary group-hover:text-primary-600 transition-colors">{tech.name_fr}</div>
+            <p class="mt-2 text-sm text-text-secondary line-clamp-2">{tech.description_fr}</p>
+            <div class="mt-4 flex items-center gap-4 text-xs text-text-muted">
+              <span>{tech.speed_range_down} Mbit/s</span>
+              <span>{tech.availability_percent}\u00a0% disponibilit\u00e9</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

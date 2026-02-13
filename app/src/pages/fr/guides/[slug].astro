@@ -1,0 +1,114 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import FAQSection from "@/components/seo/FAQSection.astro";
+import RelatedLinks from "@/components/seo/RelatedLinks.astro";
+import { t } from "@/i18n/utils";
+import { getGuides, getGuideBySlug, getTechnologyBySlug, getSpeedTierBySlug } from "@/lib/seo/data";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return getGuides().map((g) => ({ params: { slug: g.slug } }));
+}
+
+const locale = "fr";
+const { slug } = Astro.params;
+const guide = getGuideBySlug(slug ?? "");
+if (!guide) return Astro.redirect("/fr/guides");
+
+const seoTitle = `${guide.title_fr} \u2014 FSI par adresse Canada`;
+const seoDesc = guide.description_fr;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: guide.title_fr,
+  description: guide.description_fr,
+  author: { "@type": "Organization", name: "FSI par adresse Canada" },
+  publisher: { "@type": "Organization", name: "FSI par adresse Canada" },
+  inLanguage: "fr-CA",
+};
+
+const crumbs = [
+  { name: "Accueil", href: "/fr" },
+  { name: t(locale, "common.guides_hub"), href: "/fr/guides" },
+  { name: guide.title_fr, href: `/fr/guides/${guide.slug}` },
+];
+
+const relatedLinks = guide.related_pages.map((rp) => {
+  if (rp.type === "guide") {
+    const g = getGuideBySlug(rp.slug);
+    return g ? { text: g.title_fr, href: `/fr/guides/${g.slug}` } : null;
+  }
+  if (rp.type === "technology") {
+    const tech = getTechnologyBySlug(rp.slug);
+    return tech ? { text: tech.name_fr, href: `/fr/technology/${tech.slug}` } : null;
+  }
+  if (rp.type === "speed-tier") {
+    const tier = getSpeedTierBySlug(rp.slug);
+    return tier ? { text: tier.name_fr, href: `/fr/speeds/${tier.slug}` } : null;
+  }
+  return null;
+}).filter(Boolean) as Array<{ text: string; href: string }>;
+---
+
+<BaseLayout title={seoTitle} description={seoDesc} locale={locale} canonicalPath={`/fr/guides/${guide.slug}`} ogType="article" jsonLdExtra={[articleSchema]}>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={crumbs} />
+
+      <div class="max-w-3xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">{guide.title_fr}</h1>
+        <p class="mt-4 text-lg text-text-secondary">{guide.description_fr}</p>
+        <div class="mt-3 flex items-center gap-4 text-sm text-text-muted">
+          <span>{t(locale, "common.reading_time").replace("{{minutes}}", String(guide.reading_time_minutes))}</span>
+        </div>
+      </div>
+
+      <nav class="mt-8 rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-6 shadow-card" aria-label={t(locale, "common.table_of_contents")}>
+        <h2 class="font-[var(--font-display)] text-lg font-bold text-text-primary mb-3">{t(locale, "common.table_of_contents")}</h2>
+        <ol class="space-y-1.5 text-sm">
+          {guide.sections.map((section, idx) => (
+            <li>
+              <a href={`#section-${idx}`} class="text-primary-600 transition-colors hover:text-primary-700">{section.heading_fr}</a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      <article class="mt-10 max-w-3xl">
+        {guide.sections.map((section, idx) => (
+          <section id={`section-${idx}`} class="mt-10 first:mt-0">
+            <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-4">{section.heading_fr}</h2>
+            <div class="space-y-4 text-text-secondary leading-relaxed">
+              {section.content_fr.split("\n\n").map((para) => (
+                <p>{para}</p>
+              ))}
+            </div>
+          </section>
+        ))}
+      </article>
+
+      <section class="mt-12">
+        <div class="rounded-[var(--radius-xl)] bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-center text-white shadow-card-hover md:p-12">
+          <h2 class="font-[var(--font-display)] text-2xl font-bold md:text-3xl">{t(locale, "common.check_address_cta")}</h2>
+          <p class="mx-auto mt-3 max-w-lg text-primary-100">Mettez ces connaissances en pratique \u2014 v\u00e9rifiez ce qui est disponible \u00e0 votre adresse.</p>
+          <a href="/fr" class="mt-6 inline-flex items-center gap-2 rounded-[var(--radius-md)] bg-white px-6 py-3 font-[var(--font-display)] font-semibold text-primary-700 shadow-card transition-colors hover:bg-primary-50">{t(locale, "nav.lookup")}</a>
+        </div>
+      </section>
+
+      {relatedLinks.length > 0 && (
+        <RelatedLinks title={t(locale, "common.related_pages")} links={relatedLinks} />
+      )}
+
+      <FAQSection title={t(locale, "seo.faq_title")} faqs={guide.faqs_fr} />
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

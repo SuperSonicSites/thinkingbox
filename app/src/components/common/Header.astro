@@ -1,0 +1,223 @@
+---
+import { t } from "@/i18n/utils";
+import type { Locale } from "@/types/index";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const siteName = locale === "en" ? "ISP by Address" : "FSI par adresse";
+
+const navLinks = [
+  { key: "nav.lookup", href: locale === "en" ? "/" : "/fr" },
+  { key: "nav.coverage", href: locale === "en" ? "/coverage" : "/fr/coverage" },
+  { key: "nav.providers", href: locale === "en" ? "/providers" : "/fr/providers" },
+  { key: "nav.guides", href: locale === "en" ? "/guides" : "/fr/guides" },
+];
+
+const currentPath = Astro.url.pathname;
+const localeToggleHref = locale === "en"
+  ? `/fr${currentPath}`
+  : currentPath.replace(/^\/fr/, "") || "/";
+---
+
+<header
+  class="sticky top-0 z-40 w-full border-b border-border-subtle bg-surface-raised/95 backdrop-blur-sm transition-shadow duration-200"
+  data-header
+>
+  <nav
+    class="container-page flex h-16 items-center justify-between"
+    aria-label={locale === "en" ? "Main navigation" : "Navigation principale"}
+  >
+    <!-- Logo / Site Name -->
+    <a
+      href={locale === "en" ? "/" : "/fr"}
+      class="flex items-center gap-2 font-display text-lg font-bold text-primary-500 transition-colors hover:text-primary-600"
+    >
+      <svg
+        class="h-7 w-7 shrink-0"
+        viewBox="0 0 28 28"
+        fill="none"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="14" cy="14" r="13" stroke="currentColor" stroke-width="2" />
+        <path
+          d="M14 4a10 10 0 00-3 19.5M14 4a10 10 0 013 19.5M14 4v20M5 10h18M5 18h18"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <circle cx="14" cy="14" r="3" fill="currentColor" />
+      </svg>
+      <span>{siteName}</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="hidden items-center gap-1 md:flex" role="list">
+      {navLinks.map((link) => {
+        const isActive = currentPath === link.href || currentPath.startsWith(`${link.href}/`);
+        return (
+          <li>
+            <a
+              href={link.href}
+              class:list={[
+                "rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                isActive
+                  ? "bg-primary-50 text-primary-600"
+                  : "text-text-secondary hover:bg-surface-sunken hover:text-text-primary",
+              ]}
+              aria-current={isActive ? "page" : undefined}
+            >
+              {t(locale, link.key)}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+
+    <!-- Right side: locale switcher + mobile menu toggle -->
+    <div class="flex items-center gap-2">
+      <!-- Locale Switcher -->
+      <div class="flex items-center rounded-md border border-border bg-surface-sunken text-sm font-medium" role="group" aria-label={locale === "en" ? "Language selection" : "Choix de la langue"}>
+        <a
+          href={locale === "en" ? currentPath : localeToggleHref}
+          class:list={[
+            "rounded-l-md px-2.5 py-1.5 transition-colors",
+            locale === "en"
+              ? "bg-primary-500 text-white"
+              : "text-text-secondary hover:text-text-primary",
+          ]}
+          aria-current={locale === "en" ? "true" : undefined}
+          aria-label="English"
+          lang="en"
+        >
+          EN
+        </a>
+        <span class="text-border" aria-hidden="true">|</span>
+        <a
+          href={locale === "fr" ? currentPath : localeToggleHref}
+          class:list={[
+            "rounded-r-md px-2.5 py-1.5 transition-colors",
+            locale === "fr"
+              ? "bg-primary-500 text-white"
+              : "text-text-secondary hover:text-text-primary",
+          ]}
+          aria-current={locale === "fr" ? "true" : undefined}
+          aria-label="Fran&#231;ais"
+          lang="fr"
+        >
+          FR
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        type="button"
+        class="inline-flex items-center justify-center rounded-md p-2 text-text-secondary transition-colors hover:bg-surface-sunken hover:text-text-primary md:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label={locale === "en" ? "Open menu" : "Ouvrir le menu"}
+        data-menu-toggle
+      >
+        <!-- Hamburger icon -->
+        <svg class="h-6 w-6 data-[open]:hidden" data-icon-menu fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <!-- Close icon -->
+        <svg class="hidden h-6 w-6 data-[open]:block" data-icon-close fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-border-subtle md:hidden"
+    data-mobile-menu
+  >
+    <ul class="container-page space-y-1 py-3" role="list">
+      {navLinks.map((link) => {
+        const isActive = currentPath === link.href || currentPath.startsWith(`${link.href}/`);
+        return (
+          <li>
+            <a
+              href={link.href}
+              class:list={[
+                "block rounded-md px-3 py-2.5 text-base font-medium transition-colors",
+                isActive
+                  ? "bg-primary-50 text-primary-600"
+                  : "text-text-secondary hover:bg-surface-sunken hover:text-text-primary",
+              ]}
+              aria-current={isActive ? "page" : undefined}
+            >
+              {t(locale, link.key)}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    const header = document.querySelector("[data-header]") as HTMLElement | null;
+    const toggle = document.querySelector("[data-menu-toggle]") as HTMLButtonElement | null;
+    const menu = document.querySelector("[data-mobile-menu]") as HTMLElement | null;
+    const iconMenu = document.querySelector("[data-icon-menu]") as SVGElement | null;
+    const iconClose = document.querySelector("[data-icon-close]") as SVGElement | null;
+
+    if (!header || !toggle || !menu || !iconMenu || !iconClose) return;
+
+    // Sticky header shadow on scroll
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        header.classList.toggle("shadow-card", !entry.isIntersecting);
+      },
+      { threshold: [1] }
+    );
+
+    const sentinel = document.createElement("div");
+    sentinel.className = "h-0 w-0";
+    sentinel.setAttribute("aria-hidden", "true");
+    header.before(sentinel);
+    observer.observe(sentinel);
+
+    // Mobile menu toggle
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      menu.classList.toggle("hidden", isOpen);
+      iconMenu.classList.toggle("hidden", !isOpen);
+      iconClose.classList.toggle("hidden", isOpen);
+
+      if (!isOpen) {
+        toggle.setAttribute(
+          "aria-label",
+          document.documentElement.lang === "fr" ? "Fermer le menu" : "Close menu"
+        );
+      } else {
+        toggle.setAttribute(
+          "aria-label",
+          document.documentElement.lang === "fr" ? "Ouvrir le menu" : "Open menu"
+        );
+      }
+    });
+
+    // Close menu on Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+        toggle.click();
+        toggle.focus();
+      }
+    });
+  }
+
+  initHeader();
+  document.addEventListener("astro:after-swap", initHeader);
+</script>

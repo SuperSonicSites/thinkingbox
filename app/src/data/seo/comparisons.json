@@ -1,0 +1,662 @@
+[
+  {
+    "slug": "bell-vs-rogers",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "rogers",
+    "provider_a_name": "Bell",
+    "provider_b_name": "Rogers",
+    "verdict_en": "Bell leads in fiber coverage with its Fibe network, while Rogers offers competitive cable speeds and better bundling options. Bell is the better choice for pure fiber internet, but Rogers often wins on price in cable-served areas.",
+    "verdict_fr": "Bell mène en couverture fibre avec son réseau Fibe, tandis que Rogers offre des vitesses câble concurrentielles et de meilleures options de forfaits groupés. Bell est le meilleur choix pour l'Internet fibre pur, mais Rogers l'emporte souvent sur le prix dans les zones câblées.",
+    "common_provinces": ["on"],
+    "faqs_en": [
+      {"question": "Is Bell or Rogers better for internet?", "answer": "It depends on your location and needs. Bell offers faster fiber speeds in areas with Fibe coverage, while Rogers provides competitive cable internet with often lower introductory pricing."},
+      {"question": "Which is cheaper, Bell or Rogers?", "answer": "Rogers typically offers lower promotional prices for the first 12-24 months. However, Bell's regular pricing can be more competitive for high-speed fiber plans."},
+      {"question": "Do Bell and Rogers use the same technology?", "answer": "No. Bell primarily uses fiber optic (FTTH) and DSL technology, while Rogers uses cable (DOCSIS) and is expanding its fiber network."},
+      {"question": "Can I get Bell or Rogers everywhere in Ontario?", "answer": "Both providers have extensive coverage in Ontario, but availability varies by address. Bell's fiber network is concentrated in urban and suburban areas, while Rogers cable covers most populated regions."}
+    ],
+    "faqs_fr": [
+      {"question": "Bell ou Rogers, lequel est meilleur pour Internet ?", "answer": "Cela dépend de votre emplacement et de vos besoins. Bell offre des vitesses fibre plus rapides dans les zones couvertes par Fibe, tandis que Rogers propose un Internet câble concurrentiel avec souvent des prix de lancement plus bas."},
+      {"question": "Lequel est moins cher, Bell ou Rogers ?", "answer": "Rogers offre généralement des prix promotionnels plus bas pour les 12 à 24 premiers mois. Cependant, les tarifs réguliers de Bell peuvent être plus concurrentiels pour les forfaits fibre haute vitesse."},
+      {"question": "Bell et Rogers utilisent-ils la même technologie ?", "answer": "Non. Bell utilise principalement la fibre optique (FTTH) et la technologie DSL, tandis que Rogers utilise le câble (DOCSIS) et étend son réseau de fibre."},
+      {"question": "Puis-je obtenir Bell ou Rogers partout en Ontario ?", "answer": "Les deux fournisseurs ont une couverture étendue en Ontario, mais la disponibilité varie selon l'adresse. Le réseau fibre de Bell est concentré dans les zones urbaines et suburbaines, tandis que le câble de Rogers couvre la plupart des régions peuplées."}
+    ]
+  },
+  {
+    "slug": "bell-vs-telus",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "telus",
+    "provider_a_name": "Bell",
+    "provider_b_name": "TELUS",
+    "verdict_en": "Bell and TELUS are Canada's two largest fiber providers, but they serve different regions. Bell dominates Eastern Canada (Ontario, Quebec, Atlantic) while TELUS leads in Western Canada (BC, Alberta). Both offer symmetrical gigabit fiber with similar pricing, so the choice comes down to geography.",
+    "verdict_fr": "Bell et TELUS sont les deux plus grands fournisseurs de fibre au Canada, mais ils desservent des régions différentes. Bell domine l'Est du Canada (Ontario, Québec, Atlantique) tandis que TELUS mène dans l'Ouest canadien (C.-B., Alberta). Les deux offrent de la fibre gigabit symétrique à des prix similaires, donc le choix dépend de la géographie.",
+    "common_provinces": [],
+    "faqs_en": [
+      {"question": "Is Bell or TELUS better for internet?", "answer": "Both offer excellent fiber networks, but they serve different regions. Bell is the better choice in Ontario, Quebec, and Atlantic Canada, while TELUS is preferred in British Columbia and Alberta."},
+      {"question": "Which has faster internet, Bell or TELUS?", "answer": "Both providers offer comparable top speeds. Bell's fastest plan reaches 8 Gbps in select areas, while TELUS offers up to 2.5 Gbps on its PureFibre network. For most users, both deliver equally fast fiber."},
+      {"question": "Are Bell and TELUS the same company?", "answer": "No, they are separate publicly traded companies. Bell is owned by BCE Inc. and based in Montreal, while TELUS is headquartered in Vancouver. They are direct competitors in the Canadian telecom market."},
+      {"question": "Can I get both Bell and TELUS at my address?", "answer": "In most cases, no. Bell and TELUS serve largely non-overlapping regions. There are some limited areas in Ontario where both are available, but generally you will have access to one or the other."}
+    ],
+    "faqs_fr": [
+      {"question": "Bell ou TELUS, lequel est meilleur pour Internet ?", "answer": "Les deux offrent d'excellents réseaux fibre, mais ils desservent des régions différentes. Bell est le meilleur choix en Ontario, au Québec et dans les provinces atlantiques, tandis que TELUS est préféré en Colombie-Britannique et en Alberta."},
+      {"question": "Lequel a l'Internet le plus rapide, Bell ou TELUS ?", "answer": "Les deux fournisseurs offrent des vitesses maximales comparables. Le forfait le plus rapide de Bell atteint 8 Gbit/s dans certaines zones, tandis que TELUS offre jusqu'à 2,5 Gbit/s sur son réseau PureFibre. Pour la plupart des utilisateurs, les deux offrent une fibre tout aussi rapide."},
+      {"question": "Bell et TELUS sont-ils la même entreprise ?", "answer": "Non, ce sont des entreprises cotées en bourse distinctes. Bell appartient à BCE Inc. et est basée à Montréal, tandis que TELUS a son siège social à Vancouver. Ce sont des concurrents directs sur le marché canadien des télécommunications."},
+      {"question": "Puis-je obtenir Bell et TELUS à mon adresse ?", "answer": "Dans la plupart des cas, non. Bell et TELUS desservent des régions largement non chevauchantes. Il y a quelques zones limitées en Ontario où les deux sont disponibles, mais en général, vous aurez accès à l'un ou à l'autre."}
+    ]
+  },
+  {
+    "slug": "rogers-vs-telus",
+    "provider_a_slug": "rogers",
+    "provider_b_slug": "telus",
+    "provider_a_name": "Rogers",
+    "provider_b_name": "TELUS",
+    "verdict_en": "Rogers and TELUS compete primarily in Alberta and BC after Rogers acquired Shaw. TELUS has the edge with its extensive PureFibre network offering symmetrical speeds, while Rogers relies on Shaw's cable infrastructure. TELUS is the stronger pick for fiber availability, but Rogers/Shaw cable offers good value on mid-tier plans.",
+    "verdict_fr": "Rogers et TELUS se font concurrence principalement en Alberta et en C.-B. depuis l'acquisition de Shaw par Rogers. TELUS a l'avantage avec son vaste réseau PureFibre offrant des vitesses symétriques, tandis que Rogers s'appuie sur l'infrastructure câble de Shaw. TELUS est le meilleur choix pour la disponibilité de la fibre, mais le câble Rogers/Shaw offre un bon rapport qualité-prix pour les forfaits de milieu de gamme.",
+    "common_provinces": ["ab", "bc"],
+    "faqs_en": [
+      {"question": "Is Rogers or TELUS better in Alberta?", "answer": "TELUS has the advantage in Alberta with its extensive PureFibre fiber optic network. Since Rogers acquired Shaw, it competes using Shaw's cable network, which is reliable but generally offers slower upload speeds than TELUS fiber."},
+      {"question": "Did Rogers replace Shaw?", "answer": "Rogers acquired Shaw Communications in 2023. Shaw's internet services are being transitioned to the Rogers brand, though the underlying cable network infrastructure remains the same."},
+      {"question": "Which has better upload speeds, Rogers or TELUS?", "answer": "TELUS offers significantly better upload speeds thanks to its symmetrical fiber network. A TELUS 1 Gbps plan offers 1 Gbps upload, while a comparable Rogers cable plan may only offer 100-200 Mbps upload."},
+      {"question": "Is Rogers or TELUS cheaper in BC?", "answer": "Pricing is competitive between the two in BC. Rogers (formerly Shaw) cable plans tend to have lower starting prices, while TELUS fiber plans offer better value at higher speed tiers due to symmetrical speeds."}
+    ],
+    "faqs_fr": [
+      {"question": "Rogers ou TELUS, lequel est meilleur en Alberta ?", "answer": "TELUS a l'avantage en Alberta avec son vaste réseau de fibre optique PureFibre. Depuis que Rogers a acquis Shaw, il concurrence avec le réseau câble de Shaw, qui est fiable mais offre généralement des vitesses de téléversement plus lentes que la fibre TELUS."},
+      {"question": "Rogers a-t-il remplacé Shaw ?", "answer": "Rogers a acquis Shaw Communications en 2023. Les services Internet de Shaw sont en cours de transition vers la marque Rogers, bien que l'infrastructure du réseau câble sous-jacent reste la même."},
+      {"question": "Lequel a de meilleures vitesses de téléversement, Rogers ou TELUS ?", "answer": "TELUS offre des vitesses de téléversement nettement meilleures grâce à son réseau fibre symétrique. Un forfait TELUS de 1 Gbit/s offre 1 Gbit/s en téléversement, tandis qu'un forfait câble Rogers comparable peut n'offrir que 100 à 200 Mbit/s en téléversement."},
+      {"question": "Rogers ou TELUS, lequel est moins cher en C.-B. ?", "answer": "Les prix sont concurrentiels entre les deux en C.-B. Les forfaits câble Rogers (anciennement Shaw) ont tendance à avoir des prix de départ plus bas, tandis que les forfaits fibre TELUS offrent un meilleur rapport qualité-prix aux niveaux de vitesse supérieurs grâce aux vitesses symétriques."}
+    ]
+  },
+  {
+    "slug": "bell-vs-videotron",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "videotron",
+    "provider_a_name": "Bell",
+    "provider_b_name": "Vidéotron",
+    "verdict_en": "Bell and Vidéotron are the two dominant ISPs in Quebec. Bell's Fibe fiber network delivers superior symmetrical speeds, but Vidéotron's cable network covers more of the province and often undercuts Bell on price. Vidéotron is the better value pick for most Quebec households, while Bell wins for those who need top-tier fiber performance.",
+    "verdict_fr": "Bell et Vidéotron sont les deux FAI dominants au Québec. Le réseau fibre Fibe de Bell offre des vitesses symétriques supérieures, mais le réseau câble de Vidéotron couvre plus de la province et est souvent moins cher que Bell. Vidéotron est le meilleur choix rapport qualité-prix pour la plupart des foyers québécois, tandis que Bell l'emporte pour ceux qui ont besoin de performances fibre de pointe.",
+    "common_provinces": ["qc"],
+    "faqs_en": [
+      {"question": "Is Bell or Vidéotron better in Quebec?", "answer": "Vidéotron offers better value for most Quebec households with competitive cable speeds and lower pricing. Bell is the better choice if fiber is available at your address and you need symmetrical upload speeds."},
+      {"question": "Which is cheaper, Bell or Vidéotron?", "answer": "Vidéotron is generally cheaper than Bell for comparable speed tiers. Vidéotron also includes features like Helix TV bundling that can reduce the overall cost for households needing TV and internet."},
+      {"question": "Does Vidéotron have fiber internet?", "answer": "Vidéotron primarily uses cable (DOCSIS 3.1) technology but has been expanding its fiber-to-the-home network in select areas. Its cable network still delivers fast download speeds up to 1 Gbps in many areas."},
+      {"question": "Is Bell Fibe available everywhere in Quebec?", "answer": "No. Bell's fiber network covers major urban centres like Montreal, Quebec City, and Gatineau, but many suburban and rural areas in Quebec only have access to Bell DSL or no Bell service at all."}
+    ],
+    "faqs_fr": [
+      {"question": "Bell ou Vidéotron, lequel est meilleur au Québec ?", "answer": "Vidéotron offre un meilleur rapport qualité-prix pour la plupart des foyers québécois avec des vitesses câble concurrentielles et des prix plus bas. Bell est le meilleur choix si la fibre est disponible à votre adresse et que vous avez besoin de vitesses de téléversement symétriques."},
+      {"question": "Lequel est moins cher, Bell ou Vidéotron ?", "answer": "Vidéotron est généralement moins cher que Bell pour des niveaux de vitesse comparables. Vidéotron inclut également des fonctionnalités comme le groupement Helix TV qui peuvent réduire le coût global pour les foyers ayant besoin de télé et d'Internet."},
+      {"question": "Vidéotron offre-t-il l'Internet fibre ?", "answer": "Vidéotron utilise principalement la technologie câble (DOCSIS 3.1) mais étend son réseau fibre jusqu'au domicile dans certaines zones. Son réseau câble offre tout de même des vitesses de téléchargement rapides allant jusqu'à 1 Gbit/s dans de nombreuses zones."},
+      {"question": "Bell Fibe est-il disponible partout au Québec ?", "answer": "Non. Le réseau fibre de Bell couvre les grands centres urbains comme Montréal, Québec et Gatineau, mais de nombreuses zones suburbaines et rurales du Québec n'ont accès qu'au DSL de Bell ou n'ont aucun service Bell du tout."}
+    ]
+  },
+  {
+    "slug": "rogers-vs-shaw",
+    "provider_a_slug": "rogers",
+    "provider_b_slug": "shaw",
+    "provider_a_name": "Rogers",
+    "provider_b_name": "Shaw",
+    "verdict_en": "Rogers acquired Shaw in 2023, so these brands are now part of the same company. Shaw's cable network in Western Canada is being gradually rebranded under Rogers. If you're a current Shaw customer, your service remains the same on the same infrastructure, but new plans are now sold under the Rogers brand with Rogers pricing.",
+    "verdict_fr": "Rogers a acquis Shaw en 2023, ces marques font donc maintenant partie de la même entreprise. Le réseau câble de Shaw dans l'Ouest canadien est progressivement renommé sous Rogers. Si vous êtes un client Shaw actuel, votre service reste le même sur la même infrastructure, mais les nouveaux forfaits sont maintenant vendus sous la marque Rogers avec les tarifs Rogers.",
+    "common_provinces": ["ab", "bc", "mb", "sk"],
+    "faqs_en": [
+      {"question": "Are Rogers and Shaw the same company now?", "answer": "Yes. Rogers completed the acquisition of Shaw Communications in April 2023. Shaw's internet and TV services are being transitioned to the Rogers brand, though the physical cable network remains unchanged."},
+      {"question": "Will my Shaw internet service change?", "answer": "Existing Shaw customers can keep their current plans and equipment for now. Over time, Shaw branding will transition to Rogers, and new plans will be offered under Rogers pricing and packaging."},
+      {"question": "Is Rogers or Shaw better in Alberta?", "answer": "Since they are now the same company, there is no meaningful difference. The underlying cable network is identical. New customers in Alberta will sign up for Rogers plans that run on the former Shaw infrastructure."},
+      {"question": "Did Shaw internet speeds change after the Rogers merger?", "answer": "The physical cable infrastructure has not changed, so speeds remain comparable. Rogers has introduced its own plan lineup in Western Canada, which may differ from legacy Shaw plans in terms of pricing and speed tiers."}
+    ],
+    "faqs_fr": [
+      {"question": "Rogers et Shaw sont-ils maintenant la même entreprise ?", "answer": "Oui. Rogers a finalisé l'acquisition de Shaw Communications en avril 2023. Les services Internet et télé de Shaw sont en cours de transition vers la marque Rogers, bien que le réseau câble physique reste inchangé."},
+      {"question": "Mon service Internet Shaw va-t-il changer ?", "answer": "Les clients Shaw existants peuvent conserver leurs forfaits et équipements actuels pour le moment. Avec le temps, la marque Shaw passera à Rogers et de nouveaux forfaits seront offerts avec les tarifs et forfaits Rogers."},
+      {"question": "Rogers ou Shaw, lequel est meilleur en Alberta ?", "answer": "Puisqu'ils sont maintenant la même entreprise, il n'y a pas de différence significative. Le réseau câble sous-jacent est identique. Les nouveaux clients en Alberta s'inscriront aux forfaits Rogers qui fonctionnent sur l'ancienne infrastructure Shaw."},
+      {"question": "Les vitesses Internet de Shaw ont-elles changé après la fusion avec Rogers ?", "answer": "L'infrastructure câble physique n'a pas changé, donc les vitesses restent comparables. Rogers a introduit sa propre gamme de forfaits dans l'Ouest canadien, qui peut différer des forfaits Shaw existants en termes de tarifs et de niveaux de vitesse."}
+    ]
+  },
+  {
+    "slug": "telus-vs-shaw",
+    "provider_a_slug": "telus",
+    "provider_b_slug": "shaw",
+    "provider_a_name": "TELUS",
+    "provider_b_name": "Shaw",
+    "verdict_en": "TELUS PureFibre is the superior technology choice in Western Canada, offering symmetrical gigabit speeds that Shaw's cable network cannot match on uploads. Shaw (now Rogers) remains competitive on price for lower-tier plans. Since Shaw is now owned by Rogers, this comparison is effectively TELUS vs Rogers in Western Canada.",
+    "verdict_fr": "TELUS PureFibre est le choix technologique supérieur dans l'Ouest canadien, offrant des vitesses gigabit symétriques que le réseau câble de Shaw ne peut pas égaler en téléversement. Shaw (maintenant Rogers) reste concurrentiel en prix pour les forfaits d'entrée de gamme. Puisque Shaw appartient maintenant à Rogers, cette comparaison est effectivement TELUS contre Rogers dans l'Ouest canadien.",
+    "common_provinces": ["ab", "bc"],
+    "faqs_en": [
+      {"question": "Is TELUS or Shaw better for internet in BC?", "answer": "TELUS PureFibre is the better technology choice if available at your address, offering symmetrical gigabit speeds. Shaw (now Rogers) cable is a solid alternative with competitive pricing, especially for plans under 500 Mbps."},
+      {"question": "Does TELUS have better upload speeds than Shaw?", "answer": "Yes, significantly. TELUS fiber offers symmetrical speeds (e.g., 1 Gbps down and 1 Gbps up), while Shaw/Rogers cable typically offers upload speeds of only 100-200 Mbps even on its fastest plans."},
+      {"question": "Is Shaw still available or is it all Rogers now?", "answer": "Shaw was acquired by Rogers in 2023. Existing Shaw customers may still see Shaw branding, but new customers sign up through Rogers. The underlying cable network in Western Canada remains the same."},
+      {"question": "Which is more reliable, TELUS or Shaw?", "answer": "TELUS fiber tends to be more reliable as fiber optic connections are less susceptible to signal degradation, interference, and congestion compared to Shaw's cable network. However, both maintain high uptime standards."}
+    ],
+    "faqs_fr": [
+      {"question": "TELUS ou Shaw, lequel est meilleur pour Internet en C.-B. ?", "answer": "TELUS PureFibre est le meilleur choix technologique s'il est disponible à votre adresse, offrant des vitesses gigabit symétriques. Le câble Shaw (maintenant Rogers) est une bonne alternative avec des prix concurrentiels, surtout pour les forfaits de moins de 500 Mbit/s."},
+      {"question": "TELUS a-t-il de meilleures vitesses de téléversement que Shaw ?", "answer": "Oui, nettement. La fibre TELUS offre des vitesses symétriques (par exemple, 1 Gbit/s en téléchargement et 1 Gbit/s en téléversement), tandis que le câble Shaw/Rogers n'offre généralement que 100 à 200 Mbit/s en téléversement, même sur ses forfaits les plus rapides."},
+      {"question": "Shaw est-il encore disponible ou est-ce tout Rogers maintenant ?", "answer": "Shaw a été acquis par Rogers en 2023. Les clients Shaw existants peuvent encore voir la marque Shaw, mais les nouveaux clients s'inscrivent par Rogers. Le réseau câble sous-jacent dans l'Ouest canadien reste le même."},
+      {"question": "Lequel est le plus fiable, TELUS ou Shaw ?", "answer": "La fibre TELUS tend à être plus fiable car les connexions fibre optique sont moins susceptibles à la dégradation du signal, aux interférences et à la congestion par rapport au réseau câble de Shaw. Cependant, les deux maintiennent des normes de disponibilité élevées."}
+    ]
+  },
+  {
+    "slug": "bell-vs-teksavvy",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "teksavvy",
+    "provider_a_name": "Bell",
+    "provider_b_name": "TekSavvy",
+    "verdict_en": "TekSavvy is a popular independent ISP that resells access on Bell's network at lower prices with no contracts. Bell offers faster top-tier speeds and direct fiber access, but TekSavvy delivers strong value for budget-conscious users who don't need gigabit speeds. TekSavvy also scores well on customer satisfaction and transparency.",
+    "verdict_fr": "TekSavvy est un FAI indépendant populaire qui revend l'accès sur le réseau de Bell à des prix inférieurs sans contrat. Bell offre des vitesses de pointe plus rapides et un accès fibre direct, mais TekSavvy offre un excellent rapport qualité-prix pour les utilisateurs soucieux de leur budget qui n'ont pas besoin de vitesses gigabit. TekSavvy obtient également de bons résultats en satisfaction client et en transparence.",
+    "common_provinces": ["on", "qc"],
+    "faqs_en": [
+      {"question": "Is TekSavvy as fast as Bell?", "answer": "TekSavvy can match Bell's speeds on DSL and cable plans since it uses Bell's network infrastructure. However, TekSavvy does not currently offer Bell's fastest fiber-to-the-home plans (1 Gbps+), so Bell has the edge at the top end."},
+      {"question": "Why is TekSavvy cheaper than Bell?", "answer": "TekSavvy is a wholesale ISP that leases network access from Bell at CRTC-regulated rates. With lower overhead, no retail stores, and no bundled TV services, TekSavvy passes savings to customers through lower monthly prices."},
+      {"question": "Does TekSavvy use Bell's network?", "answer": "Yes. In Bell's service areas, TekSavvy resells internet using Bell's DSL and fiber infrastructure under CRTC wholesale access rules. The physical connection is the same, but TekSavvy manages billing, customer service, and routing."},
+      {"question": "Is TekSavvy reliable compared to Bell?", "answer": "TekSavvy uses the same physical network as Bell, so connection reliability is comparable. However, during outages, TekSavvy relies on Bell for last-mile repairs, which can sometimes result in slightly longer resolution times."}
+    ],
+    "faqs_fr": [
+      {"question": "TekSavvy est-il aussi rapide que Bell ?", "answer": "TekSavvy peut égaler les vitesses de Bell sur les forfaits DSL et câble puisqu'il utilise l'infrastructure réseau de Bell. Cependant, TekSavvy n'offre pas actuellement les forfaits fibre jusqu'au domicile les plus rapides de Bell (1 Gbit/s+), donc Bell a l'avantage au niveau supérieur."},
+      {"question": "Pourquoi TekSavvy est-il moins cher que Bell ?", "answer": "TekSavvy est un FAI de gros qui loue l'accès réseau de Bell à des tarifs réglementés par le CRTC. Avec des frais généraux plus bas, pas de magasins de détail et pas de services télé groupés, TekSavvy transmet les économies aux clients par des prix mensuels plus bas."},
+      {"question": "TekSavvy utilise-t-il le réseau de Bell ?", "answer": "Oui. Dans les zones de service de Bell, TekSavvy revend l'Internet en utilisant l'infrastructure DSL et fibre de Bell selon les règles d'accès de gros du CRTC. La connexion physique est la même, mais TekSavvy gère la facturation, le service client et le routage."},
+      {"question": "TekSavvy est-il fiable comparé à Bell ?", "answer": "TekSavvy utilise le même réseau physique que Bell, donc la fiabilité de la connexion est comparable. Cependant, lors de pannes, TekSavvy dépend de Bell pour les réparations du dernier kilomètre, ce qui peut parfois entraîner des délais de résolution légèrement plus longs."}
+    ]
+  },
+  {
+    "slug": "rogers-vs-teksavvy",
+    "provider_a_slug": "rogers",
+    "provider_b_slug": "teksavvy",
+    "provider_a_name": "Rogers",
+    "provider_b_name": "TekSavvy",
+    "verdict_en": "TekSavvy offers internet on Rogers' cable network at substantially lower prices with no contracts or data caps on most plans. Rogers offers faster top-tier speeds (up to 2.5 Gbps) and bundles with wireless and TV. For most households, TekSavvy's cable plans provide the best value, while Rogers is worth the premium only for heavy users needing gigabit-plus speeds.",
+    "verdict_fr": "TekSavvy offre l'Internet sur le réseau câble de Rogers à des prix nettement inférieurs, sans contrat ni limites de données sur la plupart des forfaits. Rogers offre des vitesses de pointe plus rapides (jusqu'à 2,5 Gbit/s) et des forfaits groupés avec sans-fil et télé. Pour la plupart des foyers, les forfaits câble de TekSavvy offrent le meilleur rapport qualité-prix, tandis que Rogers ne vaut la prime que pour les gros utilisateurs ayant besoin de vitesses gigabit et plus.",
+    "common_provinces": ["on"],
+    "faqs_en": [
+      {"question": "Is TekSavvy as good as Rogers?", "answer": "For most users, yes. TekSavvy uses Rogers' cable network so the connection quality is identical. TekSavvy's plans are typically $15-30 cheaper per month for comparable speeds, with no contracts and generous or unlimited data."},
+      {"question": "Does TekSavvy have data caps like Rogers?", "answer": "TekSavvy offers unlimited data on most of its plans at no extra charge. Rogers includes unlimited data on some plans but charges extra for it on lower-tier plans, making TekSavvy the better value for heavy data users."},
+      {"question": "Can I use my own modem with TekSavvy on Rogers cable?", "answer": "TekSavvy provides a cable modem that works on the Rogers network. You may be able to use your own compatible DOCSIS 3.1 modem, but it must be approved by TekSavvy to ensure proper provisioning."},
+      {"question": "Is TekSavvy customer service better than Rogers?", "answer": "TekSavvy consistently ranks higher than Rogers in CCTS complaint statistics and customer satisfaction surveys. TekSavvy is known for transparent pricing and responsive Canadian-based customer support."}
+    ],
+    "faqs_fr": [
+      {"question": "TekSavvy est-il aussi bon que Rogers ?", "answer": "Pour la plupart des utilisateurs, oui. TekSavvy utilise le réseau câble de Rogers, donc la qualité de connexion est identique. Les forfaits de TekSavvy sont généralement 15 à 30 $ moins chers par mois pour des vitesses comparables, sans contrat et avec des données généreuses ou illimitées."},
+      {"question": "TekSavvy a-t-il des limites de données comme Rogers ?", "answer": "TekSavvy offre des données illimitées sur la plupart de ses forfaits sans frais supplémentaires. Rogers inclut des données illimitées sur certains forfaits mais facture un supplément sur les forfaits d'entrée de gamme, ce qui fait de TekSavvy le meilleur choix pour les gros consommateurs de données."},
+      {"question": "Puis-je utiliser mon propre modem avec TekSavvy sur le câble Rogers ?", "answer": "TekSavvy fournit un modem câble qui fonctionne sur le réseau Rogers. Vous pouvez peut-être utiliser votre propre modem compatible DOCSIS 3.1, mais il doit être approuvé par TekSavvy pour assurer un provisionnement correct."},
+      {"question": "Le service client de TekSavvy est-il meilleur que celui de Rogers ?", "answer": "TekSavvy se classe régulièrement plus haut que Rogers dans les statistiques de plaintes du CPRST et les sondages de satisfaction client. TekSavvy est connu pour ses prix transparents et son service client réactif basé au Canada."}
+    ]
+  },
+  {
+    "slug": "bell-vs-cogeco",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "cogeco",
+    "provider_a_name": "Bell",
+    "provider_b_name": "Cogeco",
+    "verdict_en": "Cogeco is a strong regional cable provider in Ontario and Quebec, often offering competitive pricing against Bell. Bell has the technology advantage with fiber, but Cogeco's cable plans deliver good speeds at lower price points. In areas where both are available, Bell fiber is faster but Cogeco often provides better value on mid-range plans.",
+    "verdict_fr": "Cogeco est un fournisseur câble régional solide en Ontario et au Québec, offrant souvent des prix concurrentiels face à Bell. Bell a l'avantage technologique avec la fibre, mais les forfaits câble de Cogeco offrent de bonnes vitesses à des prix inférieurs. Dans les zones où les deux sont disponibles, la fibre Bell est plus rapide, mais Cogeco offre souvent un meilleur rapport qualité-prix sur les forfaits de milieu de gamme.",
+    "common_provinces": ["on", "qc"],
+    "faqs_en": [
+      {"question": "Is Bell or Cogeco better for internet?", "answer": "Bell is better if you can get Fibe fiber at your address, as it offers faster symmetrical speeds. Cogeco cable is a solid choice for mid-range speeds at lower prices, especially in smaller Ontario and Quebec cities where it has strong coverage."},
+      {"question": "Where does Cogeco offer internet?", "answer": "Cogeco serves parts of Ontario (Hamilton, Burlington, Niagara, Kingston, Windsor, and other mid-sized cities) and Quebec (Trois-Rivières, Drummondville, and surrounding areas). It does not cover Toronto or Ottawa directly."},
+      {"question": "Is Cogeco cheaper than Bell?", "answer": "Generally, yes. Cogeco's cable plans are typically $5-20 per month less than comparable Bell plans. Cogeco also frequently offers promotional pricing for new customers without requiring long-term contracts."},
+      {"question": "Does Cogeco have fiber internet?", "answer": "Cogeco primarily uses cable (DOCSIS 3.1) technology. While it has begun some fiber deployment, its network is predominantly cable-based, which means upload speeds are slower than Bell's symmetrical fiber."}
+    ],
+    "faqs_fr": [
+      {"question": "Bell ou Cogeco, lequel est meilleur pour Internet ?", "answer": "Bell est meilleur si vous pouvez obtenir la fibre Fibe à votre adresse, car elle offre des vitesses symétriques plus rapides. Le câble Cogeco est un choix solide pour des vitesses moyennes à des prix inférieurs, surtout dans les petites villes de l'Ontario et du Québec où il a une bonne couverture."},
+      {"question": "Où Cogeco offre-t-il l'Internet ?", "answer": "Cogeco dessert des parties de l'Ontario (Hamilton, Burlington, Niagara, Kingston, Windsor et d'autres villes moyennes) et du Québec (Trois-Rivières, Drummondville et les environs). Il ne couvre pas directement Toronto ou Ottawa."},
+      {"question": "Cogeco est-il moins cher que Bell ?", "answer": "En général, oui. Les forfaits câble de Cogeco sont généralement 5 à 20 $ par mois moins chers que les forfaits Bell comparables. Cogeco offre aussi fréquemment des prix promotionnels pour les nouveaux clients sans exiger de contrats à long terme."},
+      {"question": "Cogeco offre-t-il l'Internet fibre ?", "answer": "Cogeco utilise principalement la technologie câble (DOCSIS 3.1). Bien qu'il ait commencé un certain déploiement de fibre, son réseau est principalement basé sur le câble, ce qui signifie que les vitesses de téléversement sont plus lentes que la fibre symétrique de Bell."}
+    ]
+  },
+  {
+    "slug": "rogers-vs-cogeco",
+    "provider_a_slug": "rogers",
+    "provider_b_slug": "cogeco",
+    "provider_a_name": "Rogers",
+    "provider_b_name": "Cogeco",
+    "verdict_en": "Rogers and Cogeco both use cable technology in Ontario, but they serve largely different areas. Rogers dominates the GTA and major urban centres, while Cogeco focuses on mid-sized cities like Hamilton, Kingston, and Burlington. Where they overlap, Rogers offers faster top-tier speeds, but Cogeco tends to have more competitive pricing and better customer service ratings.",
+    "verdict_fr": "Rogers et Cogeco utilisent tous deux la technologie câble en Ontario, mais desservent des zones largement différentes. Rogers domine le Grand Toronto et les grands centres urbains, tandis que Cogeco se concentre sur les villes moyennes comme Hamilton, Kingston et Burlington. Là où ils se chevauchent, Rogers offre des vitesses de pointe plus rapides, mais Cogeco tend à avoir des prix plus concurrentiels et de meilleures cotes de service client.",
+    "common_provinces": ["on"],
+    "faqs_en": [
+      {"question": "Is Rogers or Cogeco available in my area?", "answer": "Rogers covers most of the GTA, Ottawa, and major Ontario urban centres. Cogeco covers mid-sized cities like Hamilton, Burlington, Niagara, Kingston, and Windsor. In some areas like Hamilton and Burlington, both are available."},
+      {"question": "Which has faster speeds, Rogers or Cogeco?", "answer": "Rogers offers faster maximum speeds (up to 2.5 Gbps) compared to Cogeco (up to 1 Gbps). For typical household needs of 100-500 Mbps, both providers deliver similar performance on their cable networks."},
+      {"question": "Is Cogeco more affordable than Rogers?", "answer": "Yes, Cogeco generally offers lower monthly prices than Rogers for comparable speed tiers. Cogeco's plans are typically $10-25 less per month, and the company runs frequent promotions for new subscribers."},
+      {"question": "Do Rogers and Cogeco use the same technology?", "answer": "Both use cable (DOCSIS 3.1) technology, but they operate separate independent cable networks. A Rogers modem will not work on Cogeco's network and vice versa."}
+    ],
+    "faqs_fr": [
+      {"question": "Rogers ou Cogeco est-il disponible dans ma région ?", "answer": "Rogers couvre la majeure partie du Grand Toronto, Ottawa et les grands centres urbains de l'Ontario. Cogeco couvre les villes moyennes comme Hamilton, Burlington, Niagara, Kingston et Windsor. Dans certaines zones comme Hamilton et Burlington, les deux sont disponibles."},
+      {"question": "Lequel a les vitesses les plus rapides, Rogers ou Cogeco ?", "answer": "Rogers offre des vitesses maximales plus rapides (jusqu'à 2,5 Gbit/s) par rapport à Cogeco (jusqu'à 1 Gbit/s). Pour les besoins typiques d'un foyer de 100 à 500 Mbit/s, les deux fournisseurs offrent des performances similaires sur leurs réseaux câble."},
+      {"question": "Cogeco est-il plus abordable que Rogers ?", "answer": "Oui, Cogeco offre généralement des prix mensuels plus bas que Rogers pour des niveaux de vitesse comparables. Les forfaits de Cogeco sont généralement 10 à 25 $ moins chers par mois, et l'entreprise lance fréquemment des promotions pour les nouveaux abonnés."},
+      {"question": "Rogers et Cogeco utilisent-ils la même technologie ?", "answer": "Les deux utilisent la technologie câble (DOCSIS 3.1), mais exploitent des réseaux câble indépendants distincts. Un modem Rogers ne fonctionnera pas sur le réseau de Cogeco et vice versa."}
+    ]
+  },
+  {
+    "slug": "bell-vs-eastlink",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "eastlink",
+    "provider_a_name": "Bell",
+    "provider_b_name": "Eastlink",
+    "verdict_en": "In Atlantic Canada, Bell and Eastlink are the primary competitors. Bell offers fiber internet through its Fibe network in many urban areas of Nova Scotia, New Brunswick, and PEI. Eastlink provides cable internet with strong regional coverage and often more straightforward pricing. Bell fiber wins on raw speed, but Eastlink is a reliable alternative with good local customer service.",
+    "verdict_fr": "Au Canada atlantique, Bell et Eastlink sont les principaux concurrents. Bell offre l'Internet fibre via son réseau Fibe dans de nombreuses zones urbaines de la Nouvelle-Écosse, du Nouveau-Brunswick et de l'Île-du-Prince-Édouard. Eastlink fournit l'Internet câble avec une forte couverture régionale et des prix souvent plus simples. La fibre Bell l'emporte en vitesse brute, mais Eastlink est une alternative fiable avec un bon service client local.",
+    "common_provinces": ["ns", "nb", "pe"],
+    "faqs_en": [
+      {"question": "Is Bell or Eastlink better in Nova Scotia?", "answer": "Bell is better if Fibe fiber is available at your address in Halifax or other major centres. Eastlink is a strong alternative with broad cable coverage across Nova Scotia, including many smaller communities that Bell's fiber doesn't reach."},
+      {"question": "Does Eastlink have fiber internet?", "answer": "Eastlink primarily operates a cable network but has been investing in fiber expansion in select markets. Its cable service uses DOCSIS 3.1 technology, offering speeds up to 1 Gbps download in many areas."},
+      {"question": "Is Eastlink cheaper than Bell in Atlantic Canada?", "answer": "Eastlink is often comparable to or slightly cheaper than Bell for mid-range plans. Eastlink's pricing tends to be more transparent with fewer hidden fees, while Bell frequently offers aggressive promotional pricing for new customers."},
+      {"question": "Which has better coverage in New Brunswick?", "answer": "Bell has broader overall coverage in New Brunswick through its DSL and fiber networks. Eastlink covers major centres like Moncton, Fredericton, and Saint John. In rural areas, Bell DSL or fixed wireless may be the only wired options."}
+    ],
+    "faqs_fr": [
+      {"question": "Bell ou Eastlink, lequel est meilleur en Nouvelle-Écosse ?", "answer": "Bell est meilleur si la fibre Fibe est disponible à votre adresse à Halifax ou dans d'autres grands centres. Eastlink est une bonne alternative avec une large couverture câble à travers la Nouvelle-Écosse, y compris de nombreuses petites communautés que la fibre de Bell n'atteint pas."},
+      {"question": "Eastlink offre-t-il l'Internet fibre ?", "answer": "Eastlink exploite principalement un réseau câble mais investit dans l'expansion de la fibre dans certains marchés. Son service câble utilise la technologie DOCSIS 3.1, offrant des vitesses allant jusqu'à 1 Gbit/s en téléchargement dans de nombreuses zones."},
+      {"question": "Eastlink est-il moins cher que Bell au Canada atlantique ?", "answer": "Eastlink est souvent comparable ou légèrement moins cher que Bell pour les forfaits de milieu de gamme. Les prix d'Eastlink tendent à être plus transparents avec moins de frais cachés, tandis que Bell offre fréquemment des prix promotionnels agressifs pour les nouveaux clients."},
+      {"question": "Lequel a une meilleure couverture au Nouveau-Brunswick ?", "answer": "Bell a une couverture globale plus large au Nouveau-Brunswick grâce à ses réseaux DSL et fibre. Eastlink couvre les grands centres comme Moncton, Fredericton et Saint John. Dans les zones rurales, le DSL ou le sans-fil fixe de Bell peuvent être les seules options filaires."}
+    ]
+  },
+  {
+    "slug": "bell-vs-starlink",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "starlink",
+    "provider_a_name": "Bell",
+    "provider_b_name": "Starlink",
+    "verdict_en": "Bell and Starlink serve fundamentally different markets. Bell's fiber and DSL are the better choice wherever available, offering faster speeds, lower latency, and lower costs. Starlink is a game-changer for rural and remote Canadians who can't get Bell fiber or adequate DSL, delivering 50-200 Mbps with no data caps where traditional broadband doesn't reach.",
+    "verdict_fr": "Bell et Starlink desservent des marchés fondamentalement différents. La fibre et le DSL de Bell sont le meilleur choix partout où ils sont disponibles, offrant des vitesses plus rapides, une latence plus faible et des coûts inférieurs. Starlink est une révolution pour les Canadiens ruraux et éloignés qui ne peuvent pas obtenir la fibre Bell ou un DSL adéquat, offrant 50 à 200 Mbit/s sans limites de données là où le haut débit traditionnel ne se rend pas.",
+    "common_provinces": ["on", "qc", "nb", "ns", "pe", "nl", "mb"],
+    "faqs_en": [
+      {"question": "Is Bell or Starlink better for internet?", "answer": "Bell is better wherever its fiber or high-speed DSL is available, offering faster speeds, lower latency, and lower monthly costs. Starlink is the better choice only in rural or remote areas where Bell's wired services are unavailable or too slow."},
+      {"question": "How much does Starlink cost compared to Bell?", "answer": "Starlink costs approximately $140/month plus a one-time equipment fee of around $499-$799. Bell fiber plans typically range from $60-$150/month with minimal equipment fees. Bell is significantly cheaper for comparable or better performance."},
+      {"question": "Is Starlink faster than Bell DSL?", "answer": "In many cases, yes. Starlink typically delivers 50-200 Mbps, which is faster than many Bell DSL connections (especially those limited to 5-25 Mbps in rural areas). However, Bell fiber is much faster than Starlink."},
+      {"question": "Can I use Starlink instead of Bell in the city?", "answer": "Technically yes, but it's not recommended. Starlink performs best in less populated areas. In dense urban areas, Starlink speeds can be slower due to network congestion, and Bell fiber offers much faster, more reliable service at a lower price."}
+    ],
+    "faqs_fr": [
+      {"question": "Bell ou Starlink, lequel est meilleur pour Internet ?", "answer": "Bell est meilleur partout où sa fibre ou son DSL haute vitesse est disponible, offrant des vitesses plus rapides, une latence plus faible et des coûts mensuels inférieurs. Starlink est le meilleur choix uniquement dans les zones rurales ou éloignées où les services filaires de Bell sont indisponibles ou trop lents."},
+      {"question": "Combien coûte Starlink par rapport à Bell ?", "answer": "Starlink coûte environ 140 $/mois plus des frais d'équipement uniques d'environ 499 à 799 $. Les forfaits fibre Bell varient généralement de 60 à 150 $/mois avec des frais d'équipement minimaux. Bell est nettement moins cher pour des performances comparables ou meilleures."},
+      {"question": "Starlink est-il plus rapide que le DSL de Bell ?", "answer": "Dans de nombreux cas, oui. Starlink offre généralement 50 à 200 Mbit/s, ce qui est plus rapide que de nombreuses connexions DSL Bell (surtout celles limitées à 5-25 Mbit/s dans les zones rurales). Cependant, la fibre Bell est beaucoup plus rapide que Starlink."},
+      {"question": "Puis-je utiliser Starlink au lieu de Bell en ville ?", "answer": "Techniquement oui, mais ce n'est pas recommandé. Starlink fonctionne mieux dans les zones moins peuplées. Dans les zones urbaines denses, les vitesses Starlink peuvent être plus lentes en raison de la congestion du réseau, et la fibre Bell offre un service beaucoup plus rapide et fiable à un prix inférieur."}
+    ]
+  },
+  {
+    "slug": "telus-vs-starlink",
+    "provider_a_slug": "telus",
+    "provider_b_slug": "starlink",
+    "provider_a_name": "TELUS",
+    "provider_b_name": "Starlink",
+    "verdict_en": "TELUS PureFibre is vastly superior wherever available, with symmetrical gigabit speeds and low latency at a lower monthly cost. Starlink serves as a vital alternative for rural BC and Alberta residents outside TELUS fiber coverage, delivering usable broadband where TELUS wired options fall short. The choice is geographic: fiber if you can get it, Starlink if you can't.",
+    "verdict_fr": "TELUS PureFibre est nettement supérieur partout où il est disponible, avec des vitesses gigabit symétriques et une faible latence à un coût mensuel inférieur. Starlink sert d'alternative vitale pour les résidents ruraux de la C.-B. et de l'Alberta hors de la couverture fibre TELUS, offrant un haut débit utilisable là où les options filaires de TELUS sont insuffisantes. Le choix est géographique : la fibre si vous pouvez l'obtenir, Starlink si vous ne pouvez pas.",
+    "common_provinces": ["bc", "ab"],
+    "faqs_en": [
+      {"question": "Is TELUS or Starlink better in rural BC?", "answer": "If TELUS fiber or high-speed DSL reaches your rural BC address, it will generally be faster and cheaper than Starlink. But many rural BC areas have no TELUS wired service, making Starlink the only viable high-speed option."},
+      {"question": "How does Starlink compare to TELUS PureFibre?", "answer": "TELUS PureFibre offers speeds up to 2.5 Gbps symmetrical with 1-5ms latency. Starlink delivers 50-200 Mbps with 20-60ms latency. Fiber is superior in every performance metric, but Starlink works virtually anywhere with a clear view of the sky."},
+      {"question": "Is Starlink worth it if I can get TELUS?", "answer": "No. If TELUS fiber or fast DSL is available at your address, it will deliver better performance at a lower monthly cost. Starlink is designed for locations without adequate terrestrial broadband options."},
+      {"question": "Can I get Starlink in Alberta?", "answer": "Yes, Starlink is available across Alberta. It's particularly valuable in rural areas outside Edmonton and Calgary where TELUS fiber coverage is limited. You can check Starlink availability on their website or use our lookup tool."}
+    ],
+    "faqs_fr": [
+      {"question": "TELUS ou Starlink, lequel est meilleur en C.-B. rurale ?", "answer": "Si la fibre ou le DSL haute vitesse de TELUS atteint votre adresse rurale en C.-B., ce sera généralement plus rapide et moins cher que Starlink. Mais de nombreuses zones rurales de la C.-B. n'ont aucun service filaire TELUS, faisant de Starlink la seule option haute vitesse viable."},
+      {"question": "Comment Starlink se compare-t-il à TELUS PureFibre ?", "answer": "TELUS PureFibre offre des vitesses allant jusqu'à 2,5 Gbit/s symétriques avec une latence de 1 à 5 ms. Starlink offre 50 à 200 Mbit/s avec une latence de 20 à 60 ms. La fibre est supérieure dans toutes les mesures de performance, mais Starlink fonctionne pratiquement partout avec une vue dégagée du ciel."},
+      {"question": "Starlink en vaut-il la peine si je peux obtenir TELUS ?", "answer": "Non. Si la fibre ou le DSL rapide de TELUS est disponible à votre adresse, il offrira de meilleures performances à un coût mensuel inférieur. Starlink est conçu pour les endroits sans options de haut débit terrestre adéquates."},
+      {"question": "Puis-je obtenir Starlink en Alberta ?", "answer": "Oui, Starlink est disponible partout en Alberta. Il est particulièrement utile dans les zones rurales à l'extérieur d'Edmonton et de Calgary où la couverture fibre de TELUS est limitée. Vous pouvez vérifier la disponibilité de Starlink sur leur site Web ou utiliser notre outil de recherche."}
+    ]
+  },
+  {
+    "slug": "rogers-vs-starlink",
+    "provider_a_slug": "rogers",
+    "provider_b_slug": "starlink",
+    "provider_a_name": "Rogers",
+    "provider_b_name": "Starlink",
+    "verdict_en": "Rogers cable internet is the clearly better option wherever it's available, with faster speeds, lower latency, and significantly lower monthly costs. Starlink fills the gap in areas where Rogers cable doesn't reach, primarily rural Ontario, Alberta, and BC communities. This isn't really a head-to-head competition - they serve different geographies.",
+    "verdict_fr": "L'Internet câble Rogers est clairement la meilleure option partout où il est disponible, avec des vitesses plus rapides, une latence plus faible et des coûts mensuels nettement inférieurs. Starlink comble le vide dans les zones que le câble Rogers n'atteint pas, principalement les communautés rurales de l'Ontario, de l'Alberta et de la C.-B. Ce n'est pas vraiment une compétition directe — ils desservent des géographies différentes.",
+    "common_provinces": ["on", "ab", "bc"],
+    "faqs_en": [
+      {"question": "Is Rogers cable better than Starlink?", "answer": "Yes, in virtually every measurable way. Rogers cable offers faster speeds (up to 2.5 Gbps vs 50-200 Mbps), lower latency (10-30ms vs 20-60ms), and costs $50-100 less per month. The only advantage Starlink has is availability in areas Rogers doesn't serve."},
+      {"question": "Should I get Starlink if Rogers is available?", "answer": "No. If Rogers cable internet is available at your address, it will provide faster, more reliable, and cheaper internet than Starlink. Starlink is designed for rural areas without access to cable or fiber providers."},
+      {"question": "Can Starlink replace Rogers in rural Ontario?", "answer": "Yes. For rural Ontario addresses where Rogers cable is not available, Starlink can deliver 50-200 Mbps broadband, which is a major improvement over slow DSL or no broadband at all. It meets the CRTC's 50/10 Mbps universal service objective."},
+      {"question": "Is Starlink good for gaming compared to Rogers?", "answer": "Rogers is much better for gaming due to its lower latency (10-30ms vs 20-60ms for Starlink). Starlink's satellite latency can cause issues with competitive online games, while Rogers cable provides a consistently responsive gaming experience."}
+    ],
+    "faqs_fr": [
+      {"question": "Le câble Rogers est-il meilleur que Starlink ?", "answer": "Oui, de pratiquement toutes les façons mesurables. Le câble Rogers offre des vitesses plus rapides (jusqu'à 2,5 Gbit/s contre 50 à 200 Mbit/s), une latence plus faible (10-30 ms contre 20-60 ms) et coûte 50 à 100 $ de moins par mois. Le seul avantage de Starlink est la disponibilité dans les zones que Rogers ne dessert pas."},
+      {"question": "Devrais-je prendre Starlink si Rogers est disponible ?", "answer": "Non. Si l'Internet câble Rogers est disponible à votre adresse, il fournira un Internet plus rapide, plus fiable et moins cher que Starlink. Starlink est conçu pour les zones rurales sans accès aux fournisseurs câble ou fibre."},
+      {"question": "Starlink peut-il remplacer Rogers en Ontario rural ?", "answer": "Oui. Pour les adresses rurales de l'Ontario où le câble Rogers n'est pas disponible, Starlink peut offrir un haut débit de 50 à 200 Mbit/s, ce qui est une amélioration majeure par rapport au DSL lent ou à l'absence totale de haut débit. Il respecte l'objectif de service universel de 50/10 Mbit/s du CRTC."},
+      {"question": "Starlink est-il bon pour le jeu comparé à Rogers ?", "answer": "Rogers est bien meilleur pour le jeu en raison de sa latence plus faible (10-30 ms contre 20-60 ms pour Starlink). La latence satellite de Starlink peut causer des problèmes avec les jeux en ligne compétitifs, tandis que le câble Rogers offre une expérience de jeu constamment réactive."}
+    ]
+  },
+  {
+    "slug": "videotron-vs-teksavvy",
+    "provider_a_slug": "videotron",
+    "provider_b_slug": "teksavvy",
+    "provider_a_name": "Vidéotron",
+    "provider_b_name": "TekSavvy",
+    "verdict_en": "In Quebec, TekSavvy resells internet on Vidéotron's cable network at lower prices with no contracts. Vidéotron offers faster top speeds and Helix TV bundles, but TekSavvy provides better value for internet-only customers. If you don't need TV bundling and want straightforward low pricing, TekSavvy is the smart pick in Quebec.",
+    "verdict_fr": "Au Québec, TekSavvy revend l'Internet sur le réseau câble de Vidéotron à des prix inférieurs sans contrat. Vidéotron offre des vitesses maximales plus rapides et des forfaits Helix TV groupés, mais TekSavvy offre un meilleur rapport qualité-prix pour les clients Internet uniquement. Si vous n'avez pas besoin de forfaits télé groupés et voulez des prix bas et simples, TekSavvy est le choix intelligent au Québec.",
+    "common_provinces": ["qc"],
+    "faqs_en": [
+      {"question": "Does TekSavvy use Vidéotron's network in Quebec?", "answer": "Yes. In Vidéotron's service territory, TekSavvy resells internet access on Vidéotron's cable network under CRTC wholesale access regulations. The physical cable connection is the same, but TekSavvy handles billing and customer service."},
+      {"question": "Is TekSavvy cheaper than Vidéotron?", "answer": "Yes, typically by $10-25 per month for comparable speed plans. TekSavvy achieves lower prices by operating without retail stores, TV bundles, or promotional pricing gimmicks. The price you see is the regular ongoing price."},
+      {"question": "Can I get TekSavvy in Montreal?", "answer": "Yes, TekSavvy is available in Montreal and throughout most of Vidéotron's Quebec service territory. You can check availability at your specific address on TekSavvy's website or use our lookup tool."},
+      {"question": "Is TekSavvy's service reliable on Vidéotron's network?", "answer": "Yes. Since TekSavvy uses the same physical cable infrastructure as Vidéotron, the connection quality and reliability are comparable. The main difference is in customer support and billing experience."}
+    ],
+    "faqs_fr": [
+      {"question": "TekSavvy utilise-t-il le réseau de Vidéotron au Québec ?", "answer": "Oui. Dans le territoire de service de Vidéotron, TekSavvy revend l'accès Internet sur le réseau câble de Vidéotron selon les règlements d'accès de gros du CRTC. La connexion câble physique est la même, mais TekSavvy gère la facturation et le service client."},
+      {"question": "TekSavvy est-il moins cher que Vidéotron ?", "answer": "Oui, généralement de 10 à 25 $ par mois pour des forfaits de vitesse comparable. TekSavvy atteint des prix plus bas en fonctionnant sans magasins de détail, forfaits télé ou astuces de prix promotionnels. Le prix que vous voyez est le prix régulier continu."},
+      {"question": "Puis-je obtenir TekSavvy à Montréal ?", "answer": "Oui, TekSavvy est disponible à Montréal et dans la majeure partie du territoire de service québécois de Vidéotron. Vous pouvez vérifier la disponibilité à votre adresse spécifique sur le site Web de TekSavvy ou utiliser notre outil de recherche."},
+      {"question": "Le service de TekSavvy est-il fiable sur le réseau de Vidéotron ?", "answer": "Oui. Puisque TekSavvy utilise la même infrastructure câble physique que Vidéotron, la qualité et la fiabilité de la connexion sont comparables. La principale différence réside dans l'expérience de support client et de facturation."}
+    ]
+  },
+  {
+    "slug": "bell-vs-virgin-plus",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "virgin-plus",
+    "provider_a_name": "Bell",
+    "provider_b_name": "Virgin Plus",
+    "verdict_en": "Virgin Plus is Bell's flanker brand, operating on the exact same network. Virgin Plus offers slightly lower prices and simpler plans aimed at younger, digital-first customers, but with a more limited plan selection. If you want Bell's network at a discount and don't need the absolute fastest fiber tier, Virgin Plus is the better deal.",
+    "verdict_fr": "Virgin Plus est la marque économique de Bell, fonctionnant sur exactement le même réseau. Virgin Plus offre des prix légèrement inférieurs et des forfaits plus simples destinés aux clients plus jeunes et axés sur le numérique, mais avec une sélection de forfaits plus limitée. Si vous voulez le réseau Bell à prix réduit et n'avez pas besoin du niveau de fibre le plus rapide, Virgin Plus est la meilleure affaire.",
+    "common_provinces": ["on", "qc", "nb", "ns", "pe"],
+    "faqs_en": [
+      {"question": "Is Virgin Plus the same as Bell?", "answer": "Virgin Plus is owned by Bell and uses Bell's exact network infrastructure. The difference is in branding, pricing, and plan simplicity. Virgin Plus typically offers fewer plan options at slightly lower price points compared to Bell's full lineup."},
+      {"question": "Is Virgin Plus cheaper than Bell?", "answer": "Yes, Virgin Plus home internet plans are generally $5-15 per month cheaper than equivalent Bell plans. However, Virgin Plus may not offer Bell's fastest fiber tiers or some premium features like whole-home Wi-Fi pods."},
+      {"question": "Does Virgin Plus have fiber internet?", "answer": "Yes, Virgin Plus offers fiber internet plans in areas where Bell Fibe fiber is available. The speeds and technology are identical since both brands use the same Bell fiber network."},
+      {"question": "Should I choose Bell or Virgin Plus?", "answer": "Choose Virgin Plus if you want a straightforward internet plan at a lower price. Choose Bell if you need the absolute fastest fiber speeds, want TV bundling options, or prefer Bell's full-service customer support experience."}
+    ],
+    "faqs_fr": [
+      {"question": "Virgin Plus est-il la même chose que Bell ?", "answer": "Virgin Plus appartient à Bell et utilise exactement la même infrastructure réseau de Bell. La différence réside dans la marque, les prix et la simplicité des forfaits. Virgin Plus offre généralement moins d'options de forfaits à des prix légèrement inférieurs par rapport à la gamme complète de Bell."},
+      {"question": "Virgin Plus est-il moins cher que Bell ?", "answer": "Oui, les forfaits Internet résidentiel de Virgin Plus sont généralement 5 à 15 $ par mois moins chers que les forfaits Bell équivalents. Cependant, Virgin Plus peut ne pas offrir les niveaux de fibre les plus rapides de Bell ou certaines fonctionnalités premium comme les pods Wi-Fi pour toute la maison."},
+      {"question": "Virgin Plus offre-t-il l'Internet fibre ?", "answer": "Oui, Virgin Plus offre des forfaits Internet fibre dans les zones où la fibre Bell Fibe est disponible. Les vitesses et la technologie sont identiques puisque les deux marques utilisent le même réseau fibre de Bell."},
+      {"question": "Devrais-je choisir Bell ou Virgin Plus ?", "answer": "Choisissez Virgin Plus si vous voulez un forfait Internet simple à un prix inférieur. Choisissez Bell si vous avez besoin des vitesses fibre les plus rapides, voulez des options de forfaits télé groupés ou préférez l'expérience de service client complète de Bell."}
+    ]
+  },
+  {
+    "slug": "rogers-vs-fido",
+    "provider_a_slug": "rogers",
+    "provider_b_slug": "fido",
+    "provider_a_name": "Rogers",
+    "provider_b_name": "Fido",
+    "verdict_en": "Fido is Rogers' flanker brand offering the same cable network at slightly lower prices. Fido internet plans are simpler and more affordable, but don't include Rogers' fastest speed tiers or premium bundling options. For households that need 75-500 Mbps without the bells and whistles, Fido delivers Rogers quality at a friendlier price point.",
+    "verdict_fr": "Fido est la marque économique de Rogers offrant le même réseau câble à des prix légèrement inférieurs. Les forfaits Internet Fido sont plus simples et plus abordables, mais n'incluent pas les niveaux de vitesse les plus rapides de Rogers ni les options de forfaits groupés premium. Pour les foyers qui ont besoin de 75 à 500 Mbit/s sans les extras, Fido offre la qualité Rogers à un prix plus accessible.",
+    "common_provinces": ["on", "nb"],
+    "faqs_en": [
+      {"question": "Is Fido internet the same as Rogers?", "answer": "Fido uses Rogers' cable network, so the underlying internet service is identical. The difference is that Fido offers a simplified plan selection at lower prices, targeting budget-conscious customers who don't need the fastest speed tiers."},
+      {"question": "Is Fido cheaper than Rogers for internet?", "answer": "Yes. Fido home internet plans are typically $5-15 per month less than comparable Rogers plans. The savings come from a simpler plan lineup and fewer premium add-ons."},
+      {"question": "Does Fido offer gigabit internet?", "answer": "Fido's plan lineup may not always include Rogers' fastest gigabit and multi-gigabit tiers. Fido focuses on mid-range speeds (75-500 Mbps) that suit most household needs at competitive prices."},
+      {"question": "Can I bundle Fido internet with Fido mobile?", "answer": "Yes. Fido offers discounts when you bundle home internet with a Fido mobile plan, similar to Rogers' bundling discounts. This can make the combined cost even more competitive versus separate Rogers services."}
+    ],
+    "faqs_fr": [
+      {"question": "L'Internet Fido est-il le même que Rogers ?", "answer": "Fido utilise le réseau câble de Rogers, donc le service Internet sous-jacent est identique. La différence est que Fido offre une sélection de forfaits simplifiée à des prix inférieurs, ciblant les clients soucieux de leur budget qui n'ont pas besoin des niveaux de vitesse les plus rapides."},
+      {"question": "Fido est-il moins cher que Rogers pour Internet ?", "answer": "Oui. Les forfaits Internet résidentiel de Fido sont généralement 5 à 15 $ par mois de moins que les forfaits Rogers comparables. Les économies proviennent d'une gamme de forfaits plus simple et de moins de compléments premium."},
+      {"question": "Fido offre-t-il l'Internet gigabit ?", "answer": "La gamme de forfaits de Fido peut ne pas toujours inclure les niveaux gigabit et multi-gigabit les plus rapides de Rogers. Fido se concentre sur des vitesses de milieu de gamme (75-500 Mbit/s) qui conviennent à la plupart des besoins des foyers à des prix concurrentiels."},
+      {"question": "Puis-je combiner l'Internet Fido avec le mobile Fido ?", "answer": "Oui. Fido offre des rabais lorsque vous combinez l'Internet résidentiel avec un forfait mobile Fido, similaire aux rabais de forfaits groupés de Rogers. Cela peut rendre le coût combiné encore plus concurrentiel par rapport aux services Rogers séparés."}
+    ]
+  },
+  {
+    "slug": "telus-vs-koodo",
+    "provider_a_slug": "telus",
+    "provider_b_slug": "koodo",
+    "provider_a_name": "TELUS",
+    "provider_b_name": "Koodo",
+    "verdict_en": "Koodo is TELUS' value-oriented flanker brand. While Koodo is best known for mobile plans, it also offers home internet on TELUS' network in Western Canada. Koodo home internet provides the same TELUS fiber or copper connection at a reduced price, with simpler plan options. Choose Koodo for savings, TELUS for maximum speed tiers and premium support.",
+    "verdict_fr": "Koodo est la marque économique de TELUS axée sur la valeur. Bien que Koodo soit surtout connu pour les forfaits mobiles, il offre également l'Internet résidentiel sur le réseau de TELUS dans l'Ouest canadien. L'Internet résidentiel Koodo fournit la même connexion fibre ou cuivre de TELUS à un prix réduit, avec des options de forfaits plus simples. Choisissez Koodo pour les économies, TELUS pour les niveaux de vitesse maximum et le support premium.",
+    "common_provinces": ["bc", "ab"],
+    "faqs_en": [
+      {"question": "Does Koodo offer home internet?", "answer": "Yes. Koodo offers home internet plans in TELUS service areas in British Columbia and Alberta. These plans run on TELUS' network infrastructure, including PureFibre where available."},
+      {"question": "Is Koodo internet the same as TELUS?", "answer": "Koodo home internet uses the same TELUS network, so connection quality is identical. The main differences are simplified plan options, slightly lower prices, and a more self-serve customer experience compared to TELUS' full-service approach."},
+      {"question": "Is Koodo internet cheaper than TELUS?", "answer": "Yes, Koodo plans are typically $5-15 per month cheaper than comparable TELUS plans. However, Koodo may not offer TELUS' fastest speed tiers or premium features like TELUS Wi-Fi Plus whole-home mesh."},
+      {"question": "Should I get Koodo or TELUS for internet?", "answer": "Choose Koodo if you want a good internet plan at a lower price and are comfortable with self-serve support. Choose TELUS if you want the fastest available speeds, full-service installation, and premium support options."}
+    ],
+    "faqs_fr": [
+      {"question": "Koodo offre-t-il l'Internet résidentiel ?", "answer": "Oui. Koodo offre des forfaits Internet résidentiel dans les zones de service de TELUS en Colombie-Britannique et en Alberta. Ces forfaits fonctionnent sur l'infrastructure réseau de TELUS, y compris PureFibre là où il est disponible."},
+      {"question": "L'Internet Koodo est-il le même que TELUS ?", "answer": "L'Internet résidentiel Koodo utilise le même réseau TELUS, donc la qualité de connexion est identique. Les principales différences sont des options de forfaits simplifiées, des prix légèrement inférieurs et une expérience client plus en libre-service par rapport à l'approche service complet de TELUS."},
+      {"question": "L'Internet Koodo est-il moins cher que TELUS ?", "answer": "Oui, les forfaits Koodo sont généralement 5 à 15 $ par mois moins chers que les forfaits TELUS comparables. Cependant, Koodo peut ne pas offrir les niveaux de vitesse les plus rapides de TELUS ou les fonctionnalités premium comme le maillage Wi-Fi Plus de TELUS pour toute la maison."},
+      {"question": "Devrais-je prendre Koodo ou TELUS pour Internet ?", "answer": "Choisissez Koodo si vous voulez un bon forfait Internet à un prix inférieur et êtes à l'aise avec le support en libre-service. Choisissez TELUS si vous voulez les vitesses les plus rapides disponibles, une installation service complet et des options de support premium."}
+    ]
+  },
+  {
+    "slug": "bell-vs-oxio",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "oxio",
+    "provider_a_name": "Bell",
+    "provider_b_name": "Oxio",
+    "verdict_en": "Oxio is a modern independent ISP that resells Bell's network with a focus on transparent pricing and no contracts. Oxio's monthly prices are consistently lower than Bell's, and their simple online-first experience appeals to tech-savvy customers. Bell wins on raw speed and fiber availability at the top end, but Oxio is an excellent value for 100-500 Mbps plans.",
+    "verdict_fr": "Oxio est un FAI indépendant moderne qui revend le réseau de Bell en misant sur la transparence des prix et l'absence de contrats. Les prix mensuels d'Oxio sont systématiquement inférieurs à ceux de Bell, et leur expérience en ligne simple plaît aux clients technophiles. Bell l'emporte en vitesse brute et en disponibilité fibre au niveau supérieur, mais Oxio est une excellente valeur pour les forfaits de 100 à 500 Mbit/s.",
+    "common_provinces": ["on", "qc"],
+    "faqs_en": [
+      {"question": "What is Oxio internet?", "answer": "Oxio is a Canadian independent ISP that resells internet access on major networks (including Bell) at lower prices. Founded in 2019, Oxio focuses on transparent pricing, no contracts, and a fully online customer experience."},
+      {"question": "Is Oxio cheaper than Bell?", "answer": "Yes. Oxio plans are typically $15-30 per month cheaper than comparable Bell plans. Oxio achieves these savings through an online-only model with no retail stores, no promotional pricing tricks, and straightforward month-to-month billing."},
+      {"question": "Does Oxio use Bell's network?", "answer": "Yes. In Bell's service territory, Oxio accesses Bell's infrastructure through CRTC-regulated wholesale agreements. The physical connection is the same Bell network, but Oxio provides its own billing, customer support, and account management."},
+      {"question": "Is Oxio reliable?", "answer": "Oxio uses the same physical network as Bell, so connection reliability is comparable. Oxio has earned positive reviews for customer service responsiveness and pricing transparency, though it's a newer company with a smaller support team than Bell."}
+    ],
+    "faqs_fr": [
+      {"question": "Qu'est-ce qu'Oxio Internet ?", "answer": "Oxio est un FAI indépendant canadien qui revend l'accès Internet sur les grands réseaux (dont Bell) à des prix inférieurs. Fondé en 2019, Oxio mise sur la transparence des prix, l'absence de contrats et une expérience client entièrement en ligne."},
+      {"question": "Oxio est-il moins cher que Bell ?", "answer": "Oui. Les forfaits Oxio sont généralement 15 à 30 $ par mois moins chers que les forfaits Bell comparables. Oxio réalise ces économies grâce à un modèle entièrement en ligne sans magasins de détail, sans astuces de prix promotionnels et avec une facturation simple au mois."},
+      {"question": "Oxio utilise-t-il le réseau de Bell ?", "answer": "Oui. Dans le territoire de service de Bell, Oxio accède à l'infrastructure de Bell par des ententes de gros réglementées par le CRTC. La connexion physique est le même réseau Bell, mais Oxio fournit sa propre facturation, son support client et la gestion des comptes."},
+      {"question": "Oxio est-il fiable ?", "answer": "Oxio utilise le même réseau physique que Bell, donc la fiabilité de la connexion est comparable. Oxio a obtenu des avis positifs pour la réactivité de son service client et la transparence de ses prix, bien que ce soit une entreprise plus récente avec une équipe de support plus petite que Bell."}
+    ]
+  },
+  {
+    "slug": "rogers-vs-oxio",
+    "provider_a_slug": "rogers",
+    "provider_b_slug": "oxio",
+    "provider_a_name": "Rogers",
+    "provider_b_name": "Oxio",
+    "verdict_en": "Oxio resells Rogers' cable network at significantly lower monthly prices with no contracts or hidden fees. Rogers offers higher maximum speeds and bundle deals with wireless and TV, but Oxio is the better pure-value internet option. For typical household speeds of 75-500 Mbps, Oxio saves you $15-30/month versus Rogers for the same underlying cable connection.",
+    "verdict_fr": "Oxio revend le réseau câble de Rogers à des prix mensuels nettement inférieurs, sans contrat ni frais cachés. Rogers offre des vitesses maximales plus élevées et des forfaits groupés avec sans-fil et télé, mais Oxio est la meilleure option Internet en termes de valeur pure. Pour les vitesses typiques d'un foyer de 75 à 500 Mbit/s, Oxio vous fait économiser 15 à 30 $/mois par rapport à Rogers pour la même connexion câble sous-jacente.",
+    "common_provinces": ["on"],
+    "faqs_en": [
+      {"question": "Does Oxio use Rogers' cable network?", "answer": "Yes. In Rogers' service territory in Ontario, Oxio resells cable internet access through CRTC-regulated wholesale agreements. You get the same Rogers cable connection with Oxio's billing and customer service."},
+      {"question": "How much cheaper is Oxio than Rogers?", "answer": "Oxio is typically $15-30 per month cheaper for comparable speeds. For example, a 500 Mbps plan might cost $60-70 with Oxio versus $90-100 with Rogers, depending on current promotions."},
+      {"question": "Is Oxio available in the GTA?", "answer": "Yes. Oxio is available throughout the Greater Toronto Area and most of Rogers' Ontario service territory. You can verify availability at your specific address through Oxio's website or our lookup tool."},
+      {"question": "Does Oxio have data caps?", "answer": "Oxio offers unlimited data on its plans. This is a significant advantage over some Rogers plans that include data caps on lower-tier options, with unlimited data available as an add-on for an extra monthly fee."}
+    ],
+    "faqs_fr": [
+      {"question": "Oxio utilise-t-il le réseau câble de Rogers ?", "answer": "Oui. Dans le territoire de service de Rogers en Ontario, Oxio revend l'accès Internet câble par des ententes de gros réglementées par le CRTC. Vous obtenez la même connexion câble Rogers avec la facturation et le service client d'Oxio."},
+      {"question": "Combien Oxio est-il moins cher que Rogers ?", "answer": "Oxio est généralement 15 à 30 $ par mois moins cher pour des vitesses comparables. Par exemple, un forfait de 500 Mbit/s pourrait coûter 60 à 70 $ avec Oxio contre 90 à 100 $ avec Rogers, selon les promotions en cours."},
+      {"question": "Oxio est-il disponible dans le Grand Toronto ?", "answer": "Oui. Oxio est disponible dans tout le Grand Toronto et la majeure partie du territoire de service ontarien de Rogers. Vous pouvez vérifier la disponibilité à votre adresse spécifique sur le site Web d'Oxio ou notre outil de recherche."},
+      {"question": "Oxio a-t-il des limites de données ?", "answer": "Oxio offre des données illimitées sur ses forfaits. C'est un avantage significatif par rapport à certains forfaits Rogers qui incluent des limites de données sur les options d'entrée de gamme, les données illimitées étant disponibles comme ajout moyennant des frais mensuels supplémentaires."}
+    ]
+  },
+  {
+    "slug": "bell-vs-start-ca",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "start-ca",
+    "provider_a_name": "Bell",
+    "provider_b_name": "Start.ca",
+    "verdict_en": "Start.ca is a well-regarded Ontario independent ISP that resells Bell's network with a focus on transparent pricing and excellent customer service. Start.ca consistently wins awards for customer satisfaction, beating Bell in CCTS complaint rankings. Bell offers faster top-end fiber speeds, but Start.ca provides outstanding value with honest pricing and truly unlimited data.",
+    "verdict_fr": "Start.ca est un FAI indépendant ontarien réputé qui revend le réseau de Bell en misant sur la transparence des prix et un excellent service client. Start.ca remporte régulièrement des prix de satisfaction client, battant Bell dans les classements de plaintes du CPRST. Bell offre des vitesses fibre de pointe plus rapides, mais Start.ca offre une valeur exceptionnelle avec des prix honnêtes et des données véritablement illimitées.",
+    "common_provinces": ["on"],
+    "faqs_en": [
+      {"question": "What is Start.ca?", "answer": "Start.ca is an Ontario-based independent ISP founded in 1995 in London, Ontario. It resells internet access on Bell's and Rogers' networks at competitive prices and is consistently rated as one of Canada's best ISPs for customer satisfaction."},
+      {"question": "Is Start.ca better than Bell?", "answer": "Start.ca uses Bell's network so speeds are comparable. Where Start.ca excels is customer service, pricing transparency, and no-contract plans. Bell offers faster top-tier speeds and wider technology options, but Start.ca wins on value and experience."},
+      {"question": "Is Start.ca available outside Ontario?", "answer": "Start.ca primarily serves Ontario. Its coverage area includes most of the province where Bell and Rogers networks are available. It does not currently offer service in other provinces."},
+      {"question": "Does Start.ca have unlimited data?", "answer": "Yes. Start.ca offers truly unlimited data on all its plans at no extra charge. This is one of its key advantages over Bell, which may charge extra for unlimited data on certain plans."}
+    ],
+    "faqs_fr": [
+      {"question": "Qu'est-ce que Start.ca ?", "answer": "Start.ca est un FAI indépendant basé en Ontario, fondé en 1995 à London, Ontario. Il revend l'accès Internet sur les réseaux de Bell et Rogers à des prix concurrentiels et est régulièrement classé parmi les meilleurs FAI du Canada pour la satisfaction client."},
+      {"question": "Start.ca est-il meilleur que Bell ?", "answer": "Start.ca utilise le réseau de Bell donc les vitesses sont comparables. Là où Start.ca excelle, c'est dans le service client, la transparence des prix et les forfaits sans contrat. Bell offre des vitesses de pointe plus rapides et des options technologiques plus larges, mais Start.ca l'emporte en valeur et en expérience."},
+      {"question": "Start.ca est-il disponible hors de l'Ontario ?", "answer": "Start.ca dessert principalement l'Ontario. Sa zone de couverture comprend la majeure partie de la province où les réseaux de Bell et Rogers sont disponibles. Il n'offre actuellement pas de service dans les autres provinces."},
+      {"question": "Start.ca offre-t-il des données illimitées ?", "answer": "Oui. Start.ca offre des données véritablement illimitées sur tous ses forfaits sans frais supplémentaires. C'est l'un de ses principaux avantages par rapport à Bell, qui peut facturer un supplément pour les données illimitées sur certains forfaits."}
+    ]
+  },
+  {
+    "slug": "teksavvy-vs-start-ca",
+    "provider_a_slug": "teksavvy",
+    "provider_b_slug": "start-ca",
+    "provider_a_name": "TekSavvy",
+    "provider_b_name": "Start.ca",
+    "verdict_en": "TekSavvy and Start.ca are both excellent Ontario independent ISPs competing on value, transparency, and customer service. Both use Bell and Rogers networks at similar price points. Start.ca edges ahead on customer satisfaction ratings, while TekSavvy has broader availability and more plan options. Either is a strong choice over the big incumbents.",
+    "verdict_fr": "TekSavvy et Start.ca sont tous deux d'excellents FAI indépendants ontariens qui rivalisent sur la valeur, la transparence et le service client. Les deux utilisent les réseaux de Bell et Rogers à des prix similaires. Start.ca a un léger avantage en cotes de satisfaction client, tandis que TekSavvy a une disponibilité plus large et plus d'options de forfaits. L'un ou l'autre est un choix solide par rapport aux grands titulaires.",
+    "common_provinces": ["on"],
+    "faqs_en": [
+      {"question": "Is TekSavvy or Start.ca better?", "answer": "Both are excellent independent ISPs with very similar offerings. Start.ca has slightly higher customer satisfaction ratings and more personalized support. TekSavvy has broader national availability and has been more vocal on net neutrality and consumer advocacy."},
+      {"question": "Are TekSavvy and Start.ca the same price?", "answer": "Their pricing is very close, usually within $5/month of each other for comparable plans. Both are significantly cheaper than Bell and Rogers for similar speeds. It's worth comparing current pricing at both as promotions change."},
+      {"question": "Do TekSavvy and Start.ca use the same network?", "answer": "Yes, both resell internet access on Bell's DSL/fiber network and Rogers' cable network in Ontario under CRTC wholesale regulations. The underlying connection is identical for both providers."},
+      {"question": "Which has better customer service, TekSavvy or Start.ca?", "answer": "Both rank well above Bell and Rogers for customer service. Start.ca has won numerous customer service awards and maintains a particularly strong reputation for responsive, friendly support. TekSavvy also has good support and is praised for its advocacy on behalf of Canadian internet consumers."}
+    ],
+    "faqs_fr": [
+      {"question": "TekSavvy ou Start.ca, lequel est meilleur ?", "answer": "Les deux sont d'excellents FAI indépendants avec des offres très similaires. Start.ca a des cotes de satisfaction client légèrement plus élevées et un support plus personnalisé. TekSavvy a une disponibilité nationale plus large et a été plus vocal sur la neutralité du net et la défense des consommateurs."},
+      {"question": "TekSavvy et Start.ca ont-ils le même prix ?", "answer": "Leurs prix sont très proches, généralement à 5 $/mois l'un de l'autre pour des forfaits comparables. Les deux sont nettement moins chers que Bell et Rogers pour des vitesses similaires. Il vaut la peine de comparer les prix actuels des deux car les promotions changent."},
+      {"question": "TekSavvy et Start.ca utilisent-ils le même réseau ?", "answer": "Oui, les deux revendent l'accès Internet sur le réseau DSL/fibre de Bell et le réseau câble de Rogers en Ontario selon les règlements de gros du CRTC. La connexion sous-jacente est identique pour les deux fournisseurs."},
+      {"question": "Lequel a un meilleur service client, TekSavvy ou Start.ca ?", "answer": "Les deux se classent bien au-dessus de Bell et Rogers pour le service client. Start.ca a remporté de nombreux prix de service client et maintient une réputation particulièrement solide pour un support réactif et amical. TekSavvy a également un bon support et est apprécié pour sa défense des consommateurs Internet canadiens."}
+    ]
+  },
+  {
+    "slug": "bell-vs-beanfield",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "beanfield",
+    "provider_a_name": "Bell",
+    "provider_b_name": "Beanfield",
+    "verdict_en": "Beanfield is a Toronto-based independent fiber provider building its own network in condos and multi-residential buildings. Where Beanfield is available, it offers symmetrical gigabit fiber at significantly lower prices than Bell, with unlimited data and no contracts. The catch is limited availability - Beanfield only serves select buildings in Toronto and a few other areas.",
+    "verdict_fr": "Beanfield est un fournisseur de fibre indépendant basé à Toronto qui construit son propre réseau dans les condos et les immeubles multirésidentiels. Là où Beanfield est disponible, il offre de la fibre gigabit symétrique à des prix nettement inférieurs à ceux de Bell, avec des données illimitées et sans contrat. Le hic est la disponibilité limitée — Beanfield ne dessert que certains immeubles à Toronto et quelques autres zones.",
+    "common_provinces": ["on"],
+    "faqs_en": [
+      {"question": "What is Beanfield internet?", "answer": "Beanfield is an independent Toronto-based ISP that builds and operates its own fiber optic network. Unlike resellers, Beanfield owns its infrastructure, delivering symmetrical gigabit speeds directly to condominiums and multi-unit buildings."},
+      {"question": "Is Beanfield cheaper than Bell?", "answer": "Yes, significantly. Beanfield's 1 Gbps symmetrical fiber plan is typically $50-60/month, compared to $100-130/month for Bell's comparable gigabit fiber. Beanfield includes unlimited data at no extra charge."},
+      {"question": "Is Beanfield available in my building?", "answer": "Beanfield availability is limited to specific condominium and multi-residential buildings in Toronto and select areas. You must check their website or our lookup tool to see if your building is connected to their fiber network."},
+      {"question": "Is Beanfield as reliable as Bell?", "answer": "Yes. Beanfield operates its own fiber network, which gives it full control over service quality. The company has built a strong reputation for reliability and responsive local customer support in its coverage area."}
+    ],
+    "faqs_fr": [
+      {"question": "Qu'est-ce que Beanfield Internet ?", "answer": "Beanfield est un FAI indépendant basé à Toronto qui construit et exploite son propre réseau fibre optique. Contrairement aux revendeurs, Beanfield possède son infrastructure, offrant des vitesses gigabit symétriques directement aux condominiums et immeubles à logements multiples."},
+      {"question": "Beanfield est-il moins cher que Bell ?", "answer": "Oui, de manière significative. Le forfait fibre symétrique 1 Gbit/s de Beanfield coûte généralement 50 à 60 $/mois, contre 100 à 130 $/mois pour la fibre gigabit comparable de Bell. Beanfield inclut des données illimitées sans frais supplémentaires."},
+      {"question": "Beanfield est-il disponible dans mon immeuble ?", "answer": "La disponibilité de Beanfield est limitée à des condominiums et immeubles multirésidentiels spécifiques à Toronto et dans certaines zones. Vous devez vérifier sur leur site Web ou notre outil de recherche si votre immeuble est connecté à leur réseau fibre."},
+      {"question": "Beanfield est-il aussi fiable que Bell ?", "answer": "Oui. Beanfield exploite son propre réseau fibre, ce qui lui donne un contrôle total sur la qualité du service. L'entreprise a bâti une solide réputation de fiabilité et de service client local réactif dans sa zone de couverture."}
+    ]
+  },
+  {
+    "slug": "sasktel-vs-starlink",
+    "provider_a_slug": "sasktel",
+    "provider_b_slug": "starlink",
+    "provider_a_name": "SaskTel",
+    "provider_b_name": "Starlink",
+    "verdict_en": "SaskTel is Saskatchewan's Crown corporation telecom provider, offering fiber (infiNET) in cities and DSL in rural areas. Where SaskTel fiber or fast DSL is available, it beats Starlink on speed, latency, and cost. Starlink is the better choice for remote Saskatchewan farms and communities where SaskTel's wired service tops out at low DSL speeds or is unavailable entirely.",
+    "verdict_fr": "SaskTel est le fournisseur de télécommunications de la Couronne de la Saskatchewan, offrant la fibre (infiNET) dans les villes et le DSL dans les zones rurales. Là où la fibre ou le DSL rapide de SaskTel est disponible, il bat Starlink en vitesse, latence et coût. Starlink est le meilleur choix pour les fermes et communautés éloignées de la Saskatchewan où le service filaire de SaskTel plafonne à de faibles vitesses DSL ou est entièrement indisponible.",
+    "common_provinces": ["sk"],
+    "faqs_en": [
+      {"question": "Is SaskTel or Starlink better in Saskatchewan?", "answer": "SaskTel is better in cities like Saskatoon and Regina where its infiNET fiber service offers fast, affordable internet. Starlink is better for rural Saskatchewan where SaskTel may only offer slow DSL or no wired service at all."},
+      {"question": "Does SaskTel have fiber internet?", "answer": "Yes. SaskTel's infiNET service delivers fiber-to-the-home internet in Saskatoon, Regina, and many other Saskatchewan communities. Plans offer speeds up to 940 Mbps with competitive pricing as a Crown corporation."},
+      {"question": "Is SaskTel cheaper than Starlink?", "answer": "Yes, where SaskTel's wired service is available. SaskTel fiber plans start around $65-80/month with no equipment fees, compared to Starlink's $140/month plus $499+ in equipment costs."},
+      {"question": "Can I get Starlink on a Saskatchewan farm?", "answer": "Yes. Starlink works anywhere in Saskatchewan with a clear view of the sky. For farms and rural properties where SaskTel service is limited to slow DSL or unavailable, Starlink provides a significant improvement in internet speeds."}
+    ],
+    "faqs_fr": [
+      {"question": "SaskTel ou Starlink, lequel est meilleur en Saskatchewan ?", "answer": "SaskTel est meilleur dans les villes comme Saskatoon et Regina où son service fibre infiNET offre un Internet rapide et abordable. Starlink est meilleur pour la Saskatchewan rurale où SaskTel peut ne proposer que du DSL lent ou aucun service filaire du tout."},
+      {"question": "SaskTel offre-t-il l'Internet fibre ?", "answer": "Oui. Le service infiNET de SaskTel offre la fibre jusqu'au domicile à Saskatoon, Regina et de nombreuses autres communautés de la Saskatchewan. Les forfaits offrent des vitesses allant jusqu'à 940 Mbit/s avec des prix concurrentiels en tant que société de la Couronne."},
+      {"question": "SaskTel est-il moins cher que Starlink ?", "answer": "Oui, là où le service filaire de SaskTel est disponible. Les forfaits fibre SaskTel commencent autour de 65 à 80 $/mois sans frais d'équipement, contre 140 $/mois pour Starlink plus 499 $+ en frais d'équipement."},
+      {"question": "Puis-je obtenir Starlink sur une ferme en Saskatchewan ?", "answer": "Oui. Starlink fonctionne partout en Saskatchewan avec une vue dégagée du ciel. Pour les fermes et propriétés rurales où le service SaskTel est limité au DSL lent ou indisponible, Starlink offre une amélioration significative des vitesses Internet."}
+    ]
+  },
+  {
+    "slug": "eastlink-vs-bell",
+    "provider_a_slug": "eastlink",
+    "provider_b_slug": "bell",
+    "provider_a_name": "Eastlink",
+    "provider_b_name": "Bell",
+    "verdict_en": "This matchup mirrors bell-vs-eastlink from the Atlantic Canada perspective. Eastlink is the homegrown cable provider with strong brand loyalty in the Maritimes, while Bell brings fiber technology advantages. Eastlink's straightforward plans and local presence make it the preferred choice for many Atlantic Canadians, even where Bell fiber is technically faster.",
+    "verdict_fr": "Ce comparatif reflète bell-vs-eastlink du point de vue du Canada atlantique. Eastlink est le fournisseur câble local avec une forte fidélité à la marque dans les Maritimes, tandis que Bell apporte des avantages technologiques en fibre. Les forfaits simples d'Eastlink et sa présence locale en font le choix préféré de nombreux Canadiens de l'Atlantique, même là où la fibre Bell est techniquement plus rapide.",
+    "common_provinces": ["ns", "nb", "pe", "nl"],
+    "faqs_en": [
+      {"question": "Is Eastlink or Bell better in the Maritimes?", "answer": "Both are solid choices. Bell is better if you can get Fibe fiber for maximum speeds. Eastlink is preferred by many for its straightforward pricing, local customer service, and strong cable coverage throughout the Maritimes, including smaller towns."},
+      {"question": "Does Eastlink cover all of Atlantic Canada?", "answer": "Eastlink has extensive cable coverage across Nova Scotia, New Brunswick, PEI, and parts of Newfoundland. Coverage is strongest in urban and suburban areas, with some rural areas also served."},
+      {"question": "Is Eastlink a good ISP?", "answer": "Yes. Eastlink is well-regarded in Atlantic Canada for reliable service, fair pricing, and responsive local customer support. As a regional provider, it often provides a more personal customer experience than the national carriers."},
+      {"question": "Can I bundle TV with Eastlink internet?", "answer": "Yes. Eastlink offers TV, internet, and phone bundles across its service territory. Their TV service includes popular channel lineups and can be bundled for savings, similar to Bell's Fibe TV packages."}
+    ],
+    "faqs_fr": [
+      {"question": "Eastlink ou Bell, lequel est meilleur dans les Maritimes ?", "answer": "Les deux sont de bons choix. Bell est meilleur si vous pouvez obtenir la fibre Fibe pour des vitesses maximales. Eastlink est préféré par beaucoup pour ses prix simples, son service client local et sa forte couverture câble dans les Maritimes, y compris les petites villes."},
+      {"question": "Eastlink couvre-t-il tout le Canada atlantique ?", "answer": "Eastlink a une couverture câble étendue en Nouvelle-Écosse, au Nouveau-Brunswick, à l'Île-du-Prince-Édouard et dans certaines parties de Terre-Neuve. La couverture est la plus forte dans les zones urbaines et suburbaines, avec certaines zones rurales également desservies."},
+      {"question": "Eastlink est-il un bon FAI ?", "answer": "Oui. Eastlink est bien considéré au Canada atlantique pour un service fiable, des prix justes et un support client local réactif. En tant que fournisseur régional, il offre souvent une expérience client plus personnelle que les transporteurs nationaux."},
+      {"question": "Puis-je combiner la télé avec l'Internet Eastlink ?", "answer": "Oui. Eastlink offre des forfaits groupés télé, Internet et téléphone dans tout son territoire de service. Son service télé comprend des sélections de chaînes populaires et peut être groupé pour des économies, similaire aux forfaits Fibe TV de Bell."}
+    ]
+  },
+  {
+    "slug": "videotron-vs-fizz",
+    "provider_a_slug": "videotron",
+    "provider_b_slug": "fizz",
+    "provider_a_name": "Vidéotron",
+    "provider_b_name": "Fizz",
+    "verdict_en": "Fizz is Vidéotron's own digital-first flanker brand, operating on the identical cable network. Fizz offers lower prices with a unique gamification system that rewards loyalty with perks and data rollover. For straightforward internet at the best price on Vidéotron's network, Fizz is the smarter choice. Vidéotron is worth considering only for its Helix ecosystem and highest speed tiers.",
+    "verdict_fr": "Fizz est la propre marque numérique de Vidéotron, fonctionnant sur le réseau câble identique. Fizz offre des prix plus bas avec un système de ludification unique qui récompense la fidélité avec des avantages et le report de données. Pour un Internet simple au meilleur prix sur le réseau de Vidéotron, Fizz est le choix le plus judicieux. Vidéotron ne vaut la considération que pour son écosystème Helix et ses niveaux de vitesse les plus élevés.",
+    "common_provinces": ["qc"],
+    "faqs_en": [
+      {"question": "Is Fizz owned by Vidéotron?", "answer": "Yes. Fizz is a brand owned and operated by Vidéotron (Quebecor). It uses the exact same cable network infrastructure as Vidéotron but with a digital-first, lower-cost approach aimed at younger and more tech-savvy consumers."},
+      {"question": "Is Fizz cheaper than Vidéotron?", "answer": "Yes. Fizz internet plans are typically $5-20 per month cheaper than equivalent Vidéotron plans. Fizz achieves this through an online-only model with no physical stores and community-based customer support."},
+      {"question": "Does Fizz have the same speeds as Vidéotron?", "answer": "Fizz offers a selection of speed tiers on Vidéotron's network, but may not include the absolute highest speeds available from Vidéotron. For most speed tiers up to around 400 Mbps, the performance is identical."},
+      {"question": "What is Fizz's reward system?", "answer": "Fizz has a unique gamification system called 'My Rewards' where you earn points for loyalty, referrals, and community participation. Points can be redeemed for discounts, extra data, or perks, effectively lowering your monthly cost over time."}
+    ],
+    "faqs_fr": [
+      {"question": "Fizz appartient-il à Vidéotron ?", "answer": "Oui. Fizz est une marque détenue et exploitée par Vidéotron (Québecor). Elle utilise exactement la même infrastructure de réseau câble que Vidéotron, mais avec une approche numérique d'abord et à moindre coût destinée aux consommateurs plus jeunes et technophiles."},
+      {"question": "Fizz est-il moins cher que Vidéotron ?", "answer": "Oui. Les forfaits Internet Fizz sont généralement 5 à 20 $ par mois moins chers que les forfaits Vidéotron équivalents. Fizz y parvient grâce à un modèle entièrement en ligne sans magasins physiques et un support client communautaire."},
+      {"question": "Fizz a-t-il les mêmes vitesses que Vidéotron ?", "answer": "Fizz offre une sélection de niveaux de vitesse sur le réseau de Vidéotron, mais peut ne pas inclure les vitesses les plus élevées disponibles chez Vidéotron. Pour la plupart des niveaux de vitesse jusqu'à environ 400 Mbit/s, la performance est identique."},
+      {"question": "Quel est le système de récompenses de Fizz ?", "answer": "Fizz a un système de ludification unique appelé « Mes récompenses » où vous gagnez des points pour la fidélité, les références et la participation communautaire. Les points peuvent être échangés contre des rabais, des données supplémentaires ou des avantages, réduisant effectivement votre coût mensuel au fil du temps."}
+    ]
+  },
+  {
+    "slug": "xplore-vs-starlink",
+    "provider_a_slug": "xplore",
+    "provider_b_slug": "starlink",
+    "provider_a_name": "Xplore",
+    "provider_b_name": "Starlink",
+    "verdict_en": "Xplore (formerly Xplornet) and Starlink both target rural Canada, but with different technologies. Starlink's LEO satellite service delivers faster speeds (50-200 Mbps) with lower latency than Xplore's fixed wireless and legacy satellite offerings. Starlink has a higher upfront equipment cost but generally provides a better experience. Xplore's fixed wireless can be competitive where its LTE towers provide strong signal.",
+    "verdict_fr": "Xplore (anciennement Xplornet) et Starlink ciblent tous deux le Canada rural, mais avec des technologies différentes. Le service satellite LEO de Starlink offre des vitesses plus rapides (50-200 Mbit/s) avec une latence plus faible que les offres de sans-fil fixe et de satellite traditionnel de Xplore. Starlink a un coût d'équipement initial plus élevé mais offre généralement une meilleure expérience. Le sans-fil fixe de Xplore peut être concurrentiel là où ses tours LTE fournissent un signal fort.",
+    "common_provinces": ["on", "qc", "nb", "ns", "mb", "sk", "ab", "bc"],
+    "faqs_en": [
+      {"question": "Is Starlink better than Xplore for rural internet?", "answer": "In most cases, yes. Starlink typically delivers faster speeds (50-200 Mbps) with lower latency (20-60ms) compared to Xplore's fixed wireless (5-50 Mbps) and older satellite services. However, Xplore's LTE fixed wireless can be competitive in areas with strong tower coverage."},
+      {"question": "Is Xplore still called Xplornet?", "answer": "Xplornet rebranded to Xplore in 2022. The company continues to serve rural Canada with fixed wireless (LTE) and satellite internet services. It's the same company with the same network under a new name."},
+      {"question": "How much does Xplore cost compared to Starlink?", "answer": "Xplore's monthly plans typically range from $60-120/month depending on speed, with lower equipment costs. Starlink costs about $140/month with $499-799 in equipment. Xplore is cheaper monthly but Starlink generally provides better performance."},
+      {"question": "Does Xplore have data caps?", "answer": "Xplore has historically had data caps on many plans, though it has been expanding unlimited options. Starlink offers unlimited data with no caps. Check current Xplore plan details as data policies have been evolving."}
+    ],
+    "faqs_fr": [
+      {"question": "Starlink est-il meilleur que Xplore pour l'Internet rural ?", "answer": "Dans la plupart des cas, oui. Starlink offre généralement des vitesses plus rapides (50-200 Mbit/s) avec une latence plus faible (20-60 ms) par rapport au sans-fil fixe de Xplore (5-50 Mbit/s) et à ses anciens services satellite. Cependant, le sans-fil fixe LTE de Xplore peut être concurrentiel dans les zones avec une bonne couverture de tour."},
+      {"question": "Xplore s'appelle-t-il encore Xplornet ?", "answer": "Xplornet a changé de nom pour Xplore en 2022. L'entreprise continue de desservir le Canada rural avec des services Internet sans fil fixe (LTE) et par satellite. C'est la même entreprise avec le même réseau sous un nouveau nom."},
+      {"question": "Combien coûte Xplore par rapport à Starlink ?", "answer": "Les forfaits mensuels de Xplore varient généralement de 60 à 120 $/mois selon la vitesse, avec des coûts d'équipement inférieurs. Starlink coûte environ 140 $/mois avec 499 à 799 $ d'équipement. Xplore est moins cher mensuellement mais Starlink offre généralement de meilleures performances."},
+      {"question": "Xplore a-t-il des limites de données ?", "answer": "Xplore a historiquement eu des limites de données sur de nombreux forfaits, bien qu'il ait étendu les options illimitées. Starlink offre des données illimitées sans plafond. Vérifiez les détails actuels des forfaits Xplore car les politiques de données ont évolué."}
+    ]
+  },
+  {
+    "slug": "shaw-vs-teksavvy",
+    "provider_a_slug": "shaw",
+    "provider_b_slug": "teksavvy",
+    "provider_a_name": "Shaw",
+    "provider_b_name": "TekSavvy",
+    "verdict_en": "TekSavvy resells internet on Shaw's (now Rogers') cable network in Western Canada at lower prices with no contracts. Since Rogers acquired Shaw, the competitive dynamics have shifted, but TekSavvy continues to offer access to the same cable infrastructure at a discount. TekSavvy is the value pick, while Shaw/Rogers offers faster top-tier speeds and bundle options.",
+    "verdict_fr": "TekSavvy revend l'Internet sur le réseau câble de Shaw (maintenant Rogers) dans l'Ouest canadien à des prix inférieurs sans contrat. Depuis que Rogers a acquis Shaw, la dynamique concurrentielle a changé, mais TekSavvy continue d'offrir l'accès à la même infrastructure câble à prix réduit. TekSavvy est le choix économique, tandis que Shaw/Rogers offre des vitesses de pointe plus rapides et des options de forfaits groupés.",
+    "common_provinces": ["ab", "bc"],
+    "faqs_en": [
+      {"question": "Does TekSavvy work on Shaw's network in Western Canada?", "answer": "Yes. TekSavvy resells cable internet on what was Shaw's network (now owned by Rogers) in BC and Alberta. The physical cable connection is the same; TekSavvy simply offers it at lower monthly prices."},
+      {"question": "Is TekSavvy available in Calgary?", "answer": "Yes. TekSavvy offers cable internet plans in Calgary using the Shaw/Rogers cable network. You can check specific address availability on TekSavvy's website or our lookup tool."},
+      {"question": "Is TekSavvy cheaper than Shaw in BC?", "answer": "Yes. TekSavvy plans are typically $10-25 per month cheaper than comparable Shaw (now Rogers) plans for the same cable speeds. TekSavvy also includes unlimited data on most plans."},
+      {"question": "Did TekSavvy change after Rogers bought Shaw?", "answer": "TekSavvy's wholesale access to the cable network continues under CRTC regulations regardless of the ownership change. Customers may see the network branded as Rogers instead of Shaw, but the service quality and TekSavvy pricing remain unaffected."}
+    ],
+    "faqs_fr": [
+      {"question": "TekSavvy fonctionne-t-il sur le réseau de Shaw dans l'Ouest canadien ?", "answer": "Oui. TekSavvy revend l'Internet câble sur ce qui était le réseau de Shaw (maintenant propriété de Rogers) en C.-B. et en Alberta. La connexion câble physique est la même ; TekSavvy l'offre simplement à des prix mensuels plus bas."},
+      {"question": "TekSavvy est-il disponible à Calgary ?", "answer": "Oui. TekSavvy offre des forfaits Internet câble à Calgary en utilisant le réseau câble Shaw/Rogers. Vous pouvez vérifier la disponibilité à une adresse spécifique sur le site Web de TekSavvy ou notre outil de recherche."},
+      {"question": "TekSavvy est-il moins cher que Shaw en C.-B. ?", "answer": "Oui. Les forfaits TekSavvy sont généralement 10 à 25 $ par mois moins chers que les forfaits Shaw (maintenant Rogers) comparables pour les mêmes vitesses câble. TekSavvy inclut également des données illimitées sur la plupart des forfaits."},
+      {"question": "TekSavvy a-t-il changé après l'achat de Shaw par Rogers ?", "answer": "L'accès de gros de TekSavvy au réseau câble continue selon les règlements du CRTC indépendamment du changement de propriété. Les clients peuvent voir le réseau identifié comme Rogers au lieu de Shaw, mais la qualité du service et les prix de TekSavvy ne sont pas affectés."}
+    ]
+  },
+  {
+    "slug": "cogeco-vs-teksavvy",
+    "provider_a_slug": "cogeco",
+    "provider_b_slug": "teksavvy",
+    "provider_a_name": "Cogeco",
+    "provider_b_name": "TekSavvy",
+    "verdict_en": "In Cogeco's Ontario and Quebec service areas, TekSavvy resells Cogeco's cable network at lower prices. Cogeco offers faster maximum speeds and a full-service experience with retail support, while TekSavvy provides the same cable connection for $10-20 less per month. For budget-conscious internet-only customers, TekSavvy is the better value on Cogeco's infrastructure.",
+    "verdict_fr": "Dans les zones de service de Cogeco en Ontario et au Québec, TekSavvy revend le réseau câble de Cogeco à des prix inférieurs. Cogeco offre des vitesses maximales plus rapides et une expérience service complet avec support en magasin, tandis que TekSavvy fournit la même connexion câble pour 10 à 20 $ de moins par mois. Pour les clients Internet uniquement soucieux de leur budget, TekSavvy est la meilleure valeur sur l'infrastructure de Cogeco.",
+    "common_provinces": ["on", "qc"],
+    "faqs_en": [
+      {"question": "Does TekSavvy use Cogeco's cable network?", "answer": "Yes. In Cogeco's service areas (Hamilton, Burlington, Niagara, Kingston, etc.), TekSavvy can resell cable internet access on Cogeco's infrastructure under CRTC wholesale regulations. The physical connection is the same Cogeco cable network."},
+      {"question": "Is TekSavvy cheaper than Cogeco?", "answer": "Yes, typically by $10-20 per month for comparable speed plans. Since TekSavvy operates without retail stores and has lower overhead, it passes these savings on to customers through lower monthly pricing."},
+      {"question": "Which is faster, Cogeco or TekSavvy?", "answer": "Cogeco may offer faster top-tier speeds than TekSavvy since TekSavvy's wholesale plan options don't always include the very highest speed tiers. For plans up to about 300-500 Mbps, speeds should be equivalent on both."},
+      {"question": "Should I switch from Cogeco to TekSavvy?", "answer": "If you're looking to save money and don't need Cogeco's fastest speed tiers or in-person retail support, switching to TekSavvy is a straightforward way to reduce your monthly bill while keeping the same cable connection quality."}
+    ],
+    "faqs_fr": [
+      {"question": "TekSavvy utilise-t-il le réseau câble de Cogeco ?", "answer": "Oui. Dans les zones de service de Cogeco (Hamilton, Burlington, Niagara, Kingston, etc.), TekSavvy peut revendre l'accès Internet câble sur l'infrastructure de Cogeco selon les règlements de gros du CRTC. La connexion physique est le même réseau câble Cogeco."},
+      {"question": "TekSavvy est-il moins cher que Cogeco ?", "answer": "Oui, généralement de 10 à 20 $ par mois pour des forfaits de vitesse comparable. Puisque TekSavvy fonctionne sans magasins de détail et a des frais généraux plus bas, il transmet ces économies aux clients par des prix mensuels inférieurs."},
+      {"question": "Lequel est le plus rapide, Cogeco ou TekSavvy ?", "answer": "Cogeco peut offrir des vitesses de pointe plus rapides que TekSavvy puisque les options de forfaits de gros de TekSavvy n'incluent pas toujours les niveaux de vitesse les plus élevés. Pour les forfaits jusqu'à environ 300-500 Mbit/s, les vitesses devraient être équivalentes sur les deux."},
+      {"question": "Devrais-je passer de Cogeco à TekSavvy ?", "answer": "Si vous cherchez à économiser de l'argent et n'avez pas besoin des niveaux de vitesse les plus rapides de Cogeco ou du support en magasin, passer à TekSavvy est un moyen simple de réduire votre facture mensuelle tout en gardant la même qualité de connexion câble."}
+    ]
+  },
+  {
+    "slug": "bell-vs-fizz",
+    "provider_a_slug": "bell",
+    "provider_b_slug": "fizz",
+    "provider_a_name": "Bell",
+    "provider_b_name": "Fizz",
+    "verdict_en": "Fizz is Vidéotron's digital-first brand competing with Bell in Quebec at aggressively lower prices. Bell's Fibe fiber is the technology winner with symmetrical gigabit speeds, but Fizz's cable plans offer very competitive performance at $20-40 less per month. For most Quebec households that don't need Bell's fastest fiber, Fizz provides the best price-to-performance ratio.",
+    "verdict_fr": "Fizz est la marque numérique de Vidéotron qui concurrence Bell au Québec à des prix nettement plus bas. La fibre Fibe de Bell est le gagnant technologique avec des vitesses gigabit symétriques, mais les forfaits câble de Fizz offrent des performances très concurrentielles à 20 à 40 $ de moins par mois. Pour la plupart des foyers québécois qui n'ont pas besoin de la fibre la plus rapide de Bell, Fizz offre le meilleur rapport prix-performance.",
+    "common_provinces": ["qc"],
+    "faqs_en": [
+      {"question": "Is Fizz or Bell better in Quebec?", "answer": "Bell is better if you need fiber speeds and symmetrical uploads for remote work or heavy uploading. Fizz is the better value for most households, offering good cable speeds at significantly lower monthly prices on Vidéotron's reliable network."},
+      {"question": "How much cheaper is Fizz than Bell?", "answer": "Fizz is typically $20-40 per month cheaper than Bell for comparable download speeds. For example, a 120 Mbps Fizz plan might cost $45-55/month versus $75-90/month for a similar Bell plan."},
+      {"question": "Does Fizz use Bell's network?", "answer": "No. Fizz uses Vidéotron's cable network, not Bell's fiber or DSL network. Fizz and Bell are separate competitors using completely different infrastructure in Quebec."},
+      {"question": "Is Fizz good for working from home?", "answer": "Fizz is adequate for most work-from-home needs, including video calls and cloud applications. However, if you regularly upload large files, Bell fiber's symmetrical upload speeds provide a significant advantage over Fizz's cable upload speeds."}
+    ],
+    "faqs_fr": [
+      {"question": "Fizz ou Bell, lequel est meilleur au Québec ?", "answer": "Bell est meilleur si vous avez besoin de vitesses fibre et de téléversements symétriques pour le télétravail ou le téléversement intensif. Fizz est le meilleur rapport qualité-prix pour la plupart des foyers, offrant de bonnes vitesses câble à des prix mensuels nettement inférieurs sur le réseau fiable de Vidéotron."},
+      {"question": "Combien Fizz est-il moins cher que Bell ?", "answer": "Fizz est généralement 20 à 40 $ par mois moins cher que Bell pour des vitesses de téléchargement comparables. Par exemple, un forfait Fizz de 120 Mbit/s pourrait coûter 45 à 55 $/mois contre 75 à 90 $/mois pour un forfait Bell similaire."},
+      {"question": "Fizz utilise-t-il le réseau de Bell ?", "answer": "Non. Fizz utilise le réseau câble de Vidéotron, pas le réseau fibre ou DSL de Bell. Fizz et Bell sont des concurrents distincts utilisant des infrastructures complètement différentes au Québec."},
+      {"question": "Fizz est-il bon pour le télétravail ?", "answer": "Fizz est adéquat pour la plupart des besoins de télétravail, y compris les appels vidéo et les applications infonuagiques. Cependant, si vous téléversez régulièrement de gros fichiers, les vitesses de téléversement symétriques de la fibre Bell offrent un avantage significatif par rapport aux vitesses de téléversement câble de Fizz."}
+    ]
+  }
+]

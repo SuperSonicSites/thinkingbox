@@ -1,0 +1,126 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import FAQSection from "@/components/seo/FAQSection.astro";
+import RelatedLinks from "@/components/seo/RelatedLinks.astro";
+import { t } from "@/i18n/utils";
+import { getTechnologies, getTechnologyBySlug, getISPBySlug } from "@/lib/seo/data";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return getTechnologies().map((tech) => ({ params: { type: tech.slug } }));
+}
+
+const locale = "fr";
+const { type } = Astro.params;
+const tech = getTechnologyBySlug(type ?? "");
+if (!tech) return Astro.redirect("/fr/technology");
+
+const seoTitle = `${tech.name_fr} au Canada \u2014 FSI par adresse Canada`;
+const seoDesc = `D\u00e9couvrez le ${tech.name_fr.toLowerCase()} au Canada. Vitesses de ${tech.speed_range_down} Mbit/s, ${tech.availability_percent}\u00a0% de disponibilit\u00e9. Comparez les fournisseurs.`;
+
+const providerLinks = tech.major_providers.map((slug) => {
+  const isp = getISPBySlug(slug);
+  return isp ? { text: isp.name, href: `/fr/providers/${isp.slug}` } : null;
+}).filter(Boolean) as Array<{ text: string; href: string }>;
+
+const crumbs = [
+  { name: "Accueil", href: "/fr" },
+  { name: t(locale, "common.technology_hub"), href: "/fr/technology" },
+  { name: tech.name_fr, href: `/fr/technology/${tech.slug}` },
+];
+---
+
+<BaseLayout title={seoTitle} description={seoDesc} locale={locale} canonicalPath={`/fr/technology/${tech.slug}`}>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={crumbs} />
+
+      <div class="max-w-3xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">{tech.name_fr}</h1>
+        <p class="mt-4 text-lg text-text-secondary">{tech.description_fr}</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{tech.speed_range_down}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.speed_range")} (Mbit/s)</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{tech.typical_latency_ms}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.latency")} (ms)</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{tech.availability_percent}\u00a0%</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.availability")}</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{tech.major_providers.length}</div>
+          <div class="mt-1 text-xs text-text-muted">Fournisseurs majeurs</div>
+        </div>
+      </div>
+
+      <section class="mt-12">
+        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-4">Comment fonctionne le {tech.name_fr.toLowerCase()}</h2>
+        <div class="prose prose-slate max-w-3xl text-text-secondary">
+          {tech.how_it_works_fr.split("\n\n").map((para) => (
+            <p class="mb-4 leading-relaxed">{para}</p>
+          ))}
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-6 shadow-card">
+            <h3 class="font-[var(--font-display)] text-lg font-bold text-confidence-high mb-4">{t(locale, "common.pros")}</h3>
+            <ul class="space-y-2">
+              {tech.pros_fr.map((pro) => (
+                <li class="flex items-start gap-2 text-sm text-text-secondary">
+                  <svg class="mt-0.5 h-4 w-4 shrink-0 text-confidence-high" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  {pro}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-6 shadow-card">
+            <h3 class="font-[var(--font-display)] text-lg font-bold text-error mb-4">{t(locale, "common.cons")}</h3>
+            <ul class="space-y-2">
+              {tech.cons_fr.map((con) => (
+                <li class="flex items-start gap-2 text-sm text-text-secondary">
+                  <svg class="mt-0.5 h-4 w-4 shrink-0 text-error" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                  {con}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-10">
+        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-4">{t(locale, "common.best_for")}</h2>
+        <p class="text-text-secondary leading-relaxed">{tech.best_for_fr}</p>
+      </section>
+
+      {providerLinks.length > 0 && (
+        <RelatedLinks title="Fournisseurs majeurs" links={providerLinks} />
+      )}
+
+      <section class="mt-12">
+        <div class="rounded-[var(--radius-xl)] bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-center text-white shadow-card-hover md:p-12">
+          <h2 class="font-[var(--font-display)] text-2xl font-bold md:text-3xl">Le {tech.name_fr.toLowerCase()} est-il disponible \u00e0 votre adresse\u00a0?</h2>
+          <p class="mx-auto mt-3 max-w-lg text-primary-100">V\u00e9rifiez votre adresse exacte pour voir les technologies et fournisseurs disponibles.</p>
+          <a href="/fr" class="mt-6 inline-flex items-center gap-2 rounded-[var(--radius-md)] bg-white px-6 py-3 font-[var(--font-display)] font-semibold text-primary-700 shadow-card transition-colors hover:bg-primary-50">{t(locale, "nav.lookup")}</a>
+        </div>
+      </section>
+
+      <FAQSection title={t(locale, "seo.faq_title")} faqs={tech.faqs_fr} />
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

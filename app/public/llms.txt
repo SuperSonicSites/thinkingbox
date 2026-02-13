@@ -1,0 +1,38 @@
+# ISP by Address Canada
+
+> Check which internet service providers (ISPs) are available at any Canadian address. Compare speeds, technologies, and pricing using ISED National Broadband Data covering 16.6 million points.
+
+## What This Site Does
+
+ISP by Address Canada helps Canadians find internet providers at their exact address. It uses the Government of Canada's ISED broadband coverage dataset to show:
+
+- Which ISPs serve a given address
+- Available download and upload speeds (50/10, 25/5, 10/2, 5/1 Mbps tiers)
+- Connection technologies (fibre, cable, DSL, fixed wireless, LTE, satellite)
+- Coverage maps by province and territory
+- Data confidence scoring based on spatial accuracy and data freshness
+
+## Coverage
+
+All 13 provinces and territories:
+- Ontario, Quebec, British Columbia, Alberta, Manitoba, Saskatchewan
+- Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island
+- Northwest Territories, Yukon, Nunavut
+
+## Data Source
+
+ISED (Innovation, Science and Economic Development Canada) National Broadband Data.
+Updated periodically from the government's open dataset covering 16.6 million Populated Household (PHH) points.
+
+## Languages
+
+Available in English (ispbyaddress.ca) and French (ispbyaddress.ca/fr).
+
+## API
+
+REST API available at /api/v1/lookup for programmatic address lookups.
+Documentation: https://ispbyaddress.ca/api-docs
+
+## Contact
+
+Website: https://ispbyaddress.ca

@@ -1,0 +1,117 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import FAQSection from "@/components/seo/FAQSection.astro";
+import { t } from "@/i18n/utils";
+import { getSpeedTiers, getSpeedTierBySlug, getTechnologyBySlug } from "@/lib/seo/data";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return getSpeedTiers().map((tier) => ({ params: { tier: tier.slug } }));
+}
+
+const locale = "fr";
+const { tier: tierSlug } = Astro.params;
+const tier = getSpeedTierBySlug(tierSlug ?? "");
+if (!tier) return Astro.redirect("/fr/speeds");
+
+const seoTitle = `Internet ${tier.name_fr} \u2014 FSI par adresse Canada`;
+const seoDesc = `Internet ${tier.name_fr.toLowerCase()} est-il assez rapide\u00a0? ${tier.description_fr}`;
+
+const crumbs = [
+  { name: "Accueil", href: "/fr" },
+  { name: t(locale, "common.speed_guide"), href: "/fr/speeds" },
+  { name: tier.name_fr, href: `/fr/speeds/${tier.slug}` },
+];
+---
+
+<BaseLayout title={seoTitle} description={seoDesc} locale={locale} canonicalPath={`/fr/speeds/${tier.slug}`}>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={crumbs} />
+
+      <div class="max-w-3xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">Internet {tier.name_fr}\u00a0: est-ce suffisant\u00a0?</h1>
+        <p class="mt-4 text-lg text-text-secondary">{tier.description_fr}</p>
+        <p class="mt-2 text-sm text-text-muted">{tier.crtc_classification_fr}</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{tier.range_fr}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.speed_range")}</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{tier.household_size}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.household_size")}</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{tier.device_count}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.devices")}</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{tier.typical_price_range_fr}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.typical_price")}</div>
+        </div>
+      </div>
+
+      <section class="mt-12">
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-6 shadow-card">
+            <h2 class="font-[var(--font-display)] text-lg font-bold text-confidence-high mb-4">{t(locale, "common.suitable_for")}</h2>
+            <ul class="space-y-2">
+              {tier.suitable_activities_fr.map((activity) => (
+                <li class="flex items-start gap-2 text-sm text-text-secondary">
+                  <svg class="mt-0.5 h-4 w-4 shrink-0 text-confidence-high" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  {activity}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-6 shadow-card">
+            <h2 class="font-[var(--font-display)] text-lg font-bold text-error mb-4">{t(locale, "common.not_suitable_for")}</h2>
+            <ul class="space-y-2">
+              {tier.not_suitable_fr.map((activity) => (
+                <li class="flex items-start gap-2 text-sm text-text-secondary">
+                  <svg class="mt-0.5 h-4 w-4 shrink-0 text-error" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                  {activity}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-10">
+        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">{t(locale, "common.typical_technologies")}</h2>
+        <div class="flex flex-wrap gap-3">
+          {tier.typical_technologies.map((tech) => {
+            const techData = getTechnologyBySlug(tech);
+            return (
+              <a href={`/fr/technology/${tech}`} class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised px-5 py-3 font-semibold text-text-primary shadow-card transition-all hover:border-primary-300 hover:shadow-card-hover">
+                {techData?.name_fr ?? tech}
+              </a>
+            );
+          })}
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <div class="rounded-[var(--radius-xl)] bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-center text-white shadow-card-hover md:p-12">
+          <h2 class="font-[var(--font-display)] text-2xl font-bold md:text-3xl">{t(locale, "common.check_address_cta")}</h2>
+          <p class="mx-auto mt-3 max-w-lg text-primary-100">Voyez les vitesses disponibles \u00e0 votre adresse exacte.</p>
+          <a href="/fr" class="mt-6 inline-flex items-center gap-2 rounded-[var(--radius-md)] bg-white px-6 py-3 font-[var(--font-display)] font-semibold text-primary-700 shadow-card transition-colors hover:bg-primary-50">{t(locale, "nav.lookup")}</a>
+        </div>
+      </section>
+
+      <FAQSection title={t(locale, "seo.faq_title")} faqs={tier.faqs_fr} />
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

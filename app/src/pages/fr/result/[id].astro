@@ -1,0 +1,27 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import ResultsView from "@/components/results/ResultsView";
+import { t } from "@/i18n/utils";
+
+const locale = "fr";
+const { id } = Astro.params;
+---
+
+<BaseLayout
+  title={`${t(locale, "results.title")} — FSI par adresse Canada`}
+  description={t(locale, "seo.lookup_description")}
+  locale={locale}
+  canonicalPath={`/fr/result/${id}`}
+>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-8 md:py-12">
+    <div class="container-page">
+      <ResultsView lookupId={id ?? ""} locale={locale} client:load />
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

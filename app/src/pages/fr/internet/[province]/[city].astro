@@ -1,0 +1,163 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+import FAQSection from "@/components/seo/FAQSection.astro";
+import RelatedLinks from "@/components/seo/RelatedLinks.astro";
+import { t } from "@/i18n/utils";
+import { getCities, getCityBySlug, getISPBySlug, getProvinceByCode, getCitiesByProvince, type SEOCity } from "@/lib/seo/data";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  const cities = getCities();
+  return cities.map((city) => ({
+    params: { province: city.province_code, city: city.slug },
+  }));
+}
+
+const locale = "fr";
+const { province, city: citySlug } = Astro.params;
+const city = getCityBySlug(citySlug ?? "");
+if (!city) return Astro.redirect("/fr/coverage");
+
+const prov = getProvinceByCode(city.province_code);
+const provName = prov?.name_fr ?? province?.toUpperCase() ?? "";
+const ispDetails = city.major_isps.map((slug) => getISPBySlug(slug)).filter(Boolean);
+const nearbyCities = city.nearby_cities.map((s) => getCityBySlug(s)).filter((c): c is SEOCity => c !== undefined);
+const provinceCities = getCitiesByProvince(city.province_code).filter((c) => c.slug !== city.slug).slice(0, 6);
+const nearbyToShow = nearbyCities.length > 0 ? nearbyCities.slice(0, 6) : provinceCities.slice(0, 6);
+
+const ispNameList = ispDetails.slice(0, 3).map((i) => i!.name).join(", ");
+const seoTitle = `Fournisseurs Internet \u00e0 ${city.name_fr}, ${provName} \u2014 FSI par adresse Canada`;
+const seoDesc = `Comparez ${ispDetails.length} fournisseurs Internet \u00e0 ${city.name_fr}, ${provName}. Trouvez les vitesses de ${ispNameList} et plus. V\u00e9rifiez la disponibilit\u00e9 \u00e0 votre adresse.`;
+
+const faqs = [
+  { question: `Quels fournisseurs Internet sont disponibles \u00e0 ${city.name_fr}\u00a0?`, answer: `${city.name_fr} est desservie par ${ispDetails.map((i) => i!.name).join(", ")}. La disponibilit\u00e9 varie selon l\u2019adresse \u2014 utilisez notre outil de recherche pour v\u00e9rifier votre emplacement exact.` },
+  { question: `Quelle est la vitesse Internet la plus rapide \u00e0 ${city.name_fr}\u00a0?`, answer: `Les vitesses les plus rapides \u00e0 ${city.name_fr} d\u00e9pendent de votre adresse et de la technologie disponible. Les connexions fibre peuvent offrir jusqu\u2019\u00e0 1,5 Gbit/s ou plus, tandis que le c\u00e2ble atteint g\u00e9n\u00e9ralement 1 Gbit/s.` },
+  { question: `Combien co\u00fbte Internet \u00e0 ${city.name_fr}\u00a0?`, answer: `Les forfaits Internet \u00e0 ${city.name_fr} varient g\u00e9n\u00e9ralement de 50\u00a0$ \u00e0 120\u00a0$/mois selon la vitesse et le fournisseur. Les revendeurs concurrentiels offrent souvent des prix plus bas que les fournisseurs \u00e9tablis.` },
+  { question: `Internet fibre est-il disponible \u00e0 ${city.name_fr}\u00a0?`, answer: `La disponibilit\u00e9 de la fibre \u00e0 ${city.name_fr} varie selon le quartier. V\u00e9rifiez votre adresse sp\u00e9cifique avec notre outil de recherche pour voir si la fibre est disponible \u00e0 votre emplacement.` },
+  { question: `Puis-je obtenir Internet illimit\u00e9 \u00e0 ${city.name_fr}\u00a0?`, answer: `Oui, la plupart des grands fournisseurs \u00e0 ${city.name_fr} offrent des forfaits avec donn\u00e9es illimit\u00e9es. Certains forfaits \u00e9conomiques peuvent avoir des limites de donn\u00e9es, v\u00e9rifiez les d\u00e9tails du forfait.` },
+];
+
+const crumbs = [
+  { name: "Accueil", href: "/fr" },
+  { name: "Couverture", href: "/fr/coverage" },
+  { name: provName, href: `/fr/coverage/${city.province_code}` },
+  { name: city.name_fr, href: `/fr/internet/${city.province_code}/${city.slug}` },
+];
+---
+
+<BaseLayout title={seoTitle} description={seoDesc} locale={locale} canonicalPath={`/fr/internet/${city.province_code}/${city.slug}`}>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={crumbs} />
+
+      <div class="max-w-3xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
+          Fournisseurs Internet \u00e0 {city.name_fr}, {provName}
+        </h1>
+        <p class="mt-4 text-lg text-text-secondary">
+          {city.description_fr} Comparez {ispDetails.length} fournisseurs desservant cette r\u00e9gion d\u2019une population de {city.population.toLocaleString("fr-CA")}.
+        </p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{ispDetails.length}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.isps")}</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{city.population.toLocaleString("fr-CA")}</div>
+          <div class="mt-1 text-xs text-text-muted">{t(locale, "common.population")}</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{provName}</div>
+          <div class="mt-1 text-xs text-text-muted">Province</div>
+        </div>
+        <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 text-center shadow-card">
+          <div class="text-2xl font-bold text-primary-600">{ispDetails.filter((i) => i!.technologies.includes("fibre")).length}</div>
+          <div class="mt-1 text-xs text-text-muted">FSI fibre</div>
+        </div>
+      </div>
+
+      <section class="mt-12">
+        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">
+          {t(locale, "results.providers.title")}
+        </h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-border text-text-muted">
+                <th class="pb-3 pr-4 font-medium">Fournisseur</th>
+                <th class="pb-3 pr-4 font-medium">{t(locale, "common.technologies")}</th>
+                <th class="pb-3 pr-4 font-medium">Type</th>
+                <th class="pb-3 font-medium"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border-subtle">
+              {ispDetails.map((isp) => (
+                <tr class="group">
+                  <td class="py-4 pr-4">
+                    <a href={`/fr/providers/${isp!.slug}`} class="font-semibold text-text-primary transition-colors group-hover:text-primary-600">
+                      {isp!.name}
+                    </a>
+                  </td>
+                  <td class="py-4 pr-4">
+                    <div class="flex flex-wrap gap-1.5">
+                      {isp!.technologies.map((tech) => (
+                        <a href={`/fr/technology/${tech}`} class="rounded-full bg-primary-50 px-2.5 py-0.5 text-xs font-medium text-primary-700 transition-colors hover:bg-primary-100">
+                          {tech}
+                        </a>
+                      ))}
+                    </div>
+                  </td>
+                  <td class="py-4 pr-4 capitalize text-text-secondary">{isp!.ownership_type}</td>
+                  <td class="py-4">
+                    <a href={`/fr/providers/${isp!.slug}`} class="text-sm font-medium text-primary-600 transition-colors hover:text-primary-700">
+                      {t(locale, "common.view_plans")} &rarr;
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <div class="rounded-[var(--radius-xl)] bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-center text-white shadow-card-hover md:p-12">
+          <h2 class="font-[var(--font-display)] text-2xl font-bold md:text-3xl">
+            {t(locale, "common.check_address_cta")}
+          </h2>
+          <p class="mx-auto mt-3 max-w-lg text-primary-100">
+            Voyez exactement quels fournisseurs et vitesses sont disponibles \u00e0 votre adresse sp\u00e9cifique \u00e0 {city.name_fr}.
+          </p>
+          <a
+            href="/fr"
+            class="mt-6 inline-flex items-center gap-2 rounded-[var(--radius-md)] bg-white px-6 py-3 font-[var(--font-display)] font-semibold text-primary-700 shadow-card transition-colors hover:bg-primary-50"
+          >
+            {t(locale, "nav.lookup")}
+          </a>
+        </div>
+      </section>
+
+      {nearbyToShow.length > 0 && (
+        <RelatedLinks
+          title={t(locale, "common.nearby_cities")}
+          links={nearbyToShow.map((c) => ({
+            text: `${c.name_fr}, ${getProvinceByCode(c.province_code)?.name_fr ?? c.province_code.toUpperCase()}`,
+            href: `/fr/internet/${c.province_code}/${c.slug}`,
+          }))}
+        />
+      )}
+
+      <FAQSection title={t(locale, "seo.faq_title")} faqs={faqs} />
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

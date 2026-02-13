@@ -1,0 +1,346 @@
+[
+  {
+    "slug": "fibre",
+    "name_en": "Fibre Optic Internet",
+    "name_fr": "Internet par fibre optique",
+    "description_en": "Fibre optic internet transmits data using pulses of light through thin glass or plastic strands, delivering the fastest and most reliable internet connections available to Canadian homes. It is considered the gold standard for broadband, offering symmetrical upload and download speeds that no other consumer technology can match.",
+    "description_fr": "L'Internet par fibre optique transmet les données en utilisant des impulsions lumineuses à travers de minces brins de verre ou de plastique, offrant les connexions Internet les plus rapides et les plus fiables disponibles pour les foyers canadiens. Il est considéré comme la référence en matière de haut débit, offrant des vitesses symétriques en téléversement et téléchargement qu'aucune autre technologie grand public ne peut égaler.",
+    "how_it_works_en": "Fibre optic internet works by encoding data into pulses of light that travel through hair-thin strands of glass or plastic fibre. These fibres are bundled into cables that run from your ISP's central office or local node directly to your home — a configuration known as Fibre-to-the-Home (FTTH) or Fibre-to-the-Premises (FTTP).\n\nAt your home, an Optical Network Terminal (ONT) receives the light signals and converts them into electrical signals that your router can use to create a Wi-Fi network or wired Ethernet connections. Because light signals don't degrade over distance the way electrical signals do in copper cables, fibre maintains consistent speeds regardless of how far you are from your provider's equipment.\n\nUnlike cable or DSL, fibre optic connections are not shared with your neighbours at the local level, which means your speeds remain consistent even during peak usage times in the evening. The technology supports symmetrical speeds — meaning your upload speed matches your download speed — which is a major advantage for video conferencing, cloud backups, and content creation.\n\nIn Canada, major fibre networks include Bell Fibe (Ontario, Quebec, Atlantic), TELUS PureFibre (BC, Alberta), SaskTel infiNET (Saskatchewan), and independent providers like Beanfield (Toronto). The federal government's Universal Broadband Fund is also helping extend fibre to more rural and Indigenous communities.",
+    "how_it_works_fr": "L'Internet par fibre optique fonctionne en encodant les données en impulsions lumineuses qui voyagent à travers des brins ultra-fins de verre ou de plastique. Ces fibres sont regroupées en câbles qui vont du bureau central ou du noeud local de votre FAI directement à votre domicile — une configuration connue sous le nom de Fibre jusqu'au domicile (FTTH) ou Fibre jusqu'aux locaux (FTTP).\n\nÀ votre domicile, un Terminal de Réseau Optique (ONT) reçoit les signaux lumineux et les convertit en signaux électriques que votre routeur peut utiliser pour créer un réseau Wi-Fi ou des connexions Ethernet filaires. Parce que les signaux lumineux ne se dégradent pas sur la distance comme les signaux électriques dans les câbles de cuivre, la fibre maintient des vitesses constantes quelle que soit la distance entre vous et l'équipement de votre fournisseur.\n\nContrairement au câble ou au DSL, les connexions fibre optique ne sont pas partagées avec vos voisins au niveau local, ce qui signifie que vos vitesses restent constantes même pendant les heures de pointe en soirée. La technologie supporte des vitesses symétriques — ce qui signifie que votre vitesse de téléversement égale votre vitesse de téléchargement — un avantage majeur pour la vidéoconférence, les sauvegardes en nuage et la création de contenu.\n\nAu Canada, les principaux réseaux de fibre comprennent Bell Fibe (Ontario, Québec, Atlantique), TELUS PureFibre (C.-B., Alberta), SaskTel infiNET (Saskatchewan) et des fournisseurs indépendants comme Beanfield (Toronto). Le Fonds pour la large bande universelle du gouvernement fédéral aide également à étendre la fibre à davantage de communautés rurales et autochtones.",
+    "speed_range_down": "50-8000",
+    "speed_range_up": "50-8000",
+    "typical_latency_ms": "1-5",
+    "availability_percent": 87,
+    "pros_en": [
+      "Fastest speeds available (up to 8 Gbps)",
+      "Symmetrical upload and download",
+      "Lowest latency",
+      "Future-proof technology",
+      "Not affected by network congestion"
+    ],
+    "pros_fr": [
+      "Vitesses les plus rapides disponibles (jusqu'à 8 Gbit/s)",
+      "Téléversement et téléchargement symétriques",
+      "Latence la plus faible",
+      "Technologie à l'épreuve du temps",
+      "Non affecté par la congestion du réseau"
+    ],
+    "cons_en": [
+      "Not available everywhere",
+      "Installation can be disruptive",
+      "Higher monthly cost",
+      "Requires professional installation"
+    ],
+    "cons_fr": [
+      "Non disponible partout",
+      "L'installation peut être perturbante",
+      "Coût mensuel plus élevé",
+      "Nécessite une installation professionnelle"
+    ],
+    "best_for_en": "Households with multiple users, gamers, remote workers, and anyone who needs reliable high-speed symmetrical internet.",
+    "best_for_fr": "Les ménages avec plusieurs utilisateurs, les joueurs, les télétravailleurs et quiconque a besoin d'un Internet symétrique haute vitesse fiable.",
+    "major_providers": ["bell", "telus", "sasktel", "beanfield", "novus"],
+    "faqs_en": [
+      {"question": "How fast is fibre internet in Canada?", "answer": "Fibre internet in Canada typically ranges from 50 Mbps to 8 Gbps depending on the plan. Most major providers offer plans starting at 150 Mbps with symmetrical upload speeds. Bell offers plans up to 8 Gbps in select areas, while TELUS reaches 2.5 Gbps."},
+      {"question": "Is fibre optic available in my area?", "answer": "Fibre availability varies significantly by address. Use our lookup tool to check if fibre is available at your specific location. Major cities generally have good fibre coverage, with about 87% of urban Canadian households having access."},
+      {"question": "Is fibre better than cable?", "answer": "Fibre is generally superior to cable for speed, latency, and reliability. Fibre offers symmetrical speeds (same upload and download) while cable typically has much slower uploads. Fibre is also less susceptible to congestion during peak hours."},
+      {"question": "How much does fibre internet cost in Canada?", "answer": "Fibre internet plans in Canada typically range from $60-$150/month depending on speed and provider. Some competitive ISPs offer fibre plans starting around $50/month. The fastest multi-gigabit plans can cost $150+/month."},
+      {"question": "Does fibre internet need a modem?", "answer": "Fibre internet requires an Optical Network Terminal (ONT) instead of a traditional modem. This device converts light signals to electrical signals for your router. Most providers include the ONT as part of the installation at no extra cost."}
+    ],
+    "faqs_fr": [
+      {"question": "Quelle est la vitesse de l'Internet fibre au Canada ?", "answer": "L'Internet fibre au Canada varie généralement de 50 Mbit/s à 8 Gbit/s selon le forfait. La plupart des grands fournisseurs offrent des forfaits à partir de 150 Mbit/s avec des vitesses de téléversement symétriques. Bell offre des forfaits jusqu'à 8 Gbit/s dans certaines zones, tandis que TELUS atteint 2,5 Gbit/s."},
+      {"question": "La fibre optique est-elle disponible dans ma région ?", "answer": "La disponibilité de la fibre varie considérablement selon l'adresse. Utilisez notre outil de recherche pour vérifier si la fibre est disponible à votre emplacement précis. Les grandes villes ont généralement une bonne couverture fibre, environ 87 % des foyers urbains canadiens y ayant accès."},
+      {"question": "La fibre est-elle meilleure que le câble ?", "answer": "La fibre est généralement supérieure au câble en vitesse, latence et fiabilité. La fibre offre des vitesses symétriques (même téléversement et téléchargement) tandis que le câble a généralement des téléversements beaucoup plus lents. La fibre est aussi moins susceptible à la congestion aux heures de pointe."},
+      {"question": "Combien coûte l'Internet fibre au Canada ?", "answer": "Les forfaits Internet fibre au Canada varient généralement de 60 à 150 $/mois selon la vitesse et le fournisseur. Certains FAI concurrentiels offrent des forfaits fibre à partir d'environ 50 $/mois. Les forfaits multi-gigabit les plus rapides peuvent coûter plus de 150 $/mois."},
+      {"question": "L'Internet fibre a-t-il besoin d'un modem ?", "answer": "L'Internet fibre nécessite un Terminal de Réseau Optique (ONT) au lieu d'un modem traditionnel. Cet appareil convertit les signaux lumineux en signaux électriques pour votre routeur. La plupart des fournisseurs incluent l'ONT dans l'installation sans frais supplémentaires."}
+    ]
+  },
+  {
+    "slug": "cable",
+    "name_en": "Cable Internet",
+    "name_fr": "Internet par câble",
+    "description_en": "Cable internet uses the same coaxial cable network originally built for cable television to deliver high-speed internet. It is one of the most widely available broadband technologies in Canada, offering fast download speeds up to 1.5 Gbps through DOCSIS 3.1 technology, though upload speeds are significantly lower than fibre.",
+    "description_fr": "L'Internet par câble utilise le même réseau de câble coaxial initialement construit pour la télévision par câble pour offrir l'Internet haute vitesse. C'est l'une des technologies haut débit les plus largement disponibles au Canada, offrant des vitesses de téléchargement rapides allant jusqu'à 1,5 Gbit/s grâce à la technologie DOCSIS 3.1, bien que les vitesses de téléversement soient nettement inférieures à celles de la fibre.",
+    "how_it_works_en": "Cable internet transmits data over the same coaxial copper cables that deliver cable TV to your home. The technology uses a standard called DOCSIS (Data Over Cable Service Interface Specification), with most Canadian providers now using DOCSIS 3.1, which supports download speeds up to 10 Gbps in theory and up to about 1.5 Gbps in current consumer plans.\n\nAt the ISP's headend facility, internet data is combined with TV signals and sent over the coaxial cable network to neighbourhood nodes. From the node, the signal travels over coaxial cable to your home, where a cable modem separates the internet data from TV signals and provides a connection to your router.\n\nOne important characteristic of cable internet is that bandwidth is shared among users connected to the same neighbourhood node. During peak usage times (typically evenings), you may experience slower speeds as more neighbours use the network simultaneously. This is less of an issue with newer DOCSIS 3.1 equipment that can handle more simultaneous users efficiently.\n\nCable internet is asymmetrical, meaning download speeds are much faster than upload speeds. A plan offering 1 Gbps download might only provide 30-100 Mbps upload. This is adequate for most activities but can be a limitation for heavy uploaders, content creators, or remote workers who need to push large files to the cloud.",
+    "how_it_works_fr": "L'Internet par câble transmet des données sur les mêmes câbles coaxiaux en cuivre qui acheminent la télé par câble à votre domicile. La technologie utilise une norme appelée DOCSIS (Data Over Cable Service Interface Specification), la plupart des fournisseurs canadiens utilisant maintenant DOCSIS 3.1, qui supporte des vitesses de téléchargement théoriques allant jusqu'à 10 Gbit/s et jusqu'à environ 1,5 Gbit/s dans les forfaits consommateurs actuels.\n\nDans les installations de tête de réseau du FAI, les données Internet sont combinées avec les signaux télé et envoyées sur le réseau de câble coaxial vers des noeuds de quartier. Du noeud, le signal voyage sur le câble coaxial jusqu'à votre domicile, où un modem câble sépare les données Internet des signaux télé et fournit une connexion à votre routeur.\n\nUne caractéristique importante de l'Internet par câble est que la bande passante est partagée entre les utilisateurs connectés au même noeud de quartier. Pendant les heures de pointe (généralement en soirée), vous pouvez connaître des vitesses plus lentes car plus de voisins utilisent le réseau simultanément. C'est moins un problème avec le nouvel équipement DOCSIS 3.1 qui peut gérer plus d'utilisateurs simultanés efficacement.\n\nL'Internet par câble est asymétrique, ce qui signifie que les vitesses de téléchargement sont beaucoup plus rapides que les vitesses de téléversement. Un forfait offrant 1 Gbit/s en téléchargement pourrait n'offrir que 30 à 100 Mbit/s en téléversement. C'est adéquat pour la plupart des activités mais peut être une limitation pour les gros téléverseurs, les créateurs de contenu ou les télétravailleurs qui doivent transférer de gros fichiers vers le nuage.",
+    "speed_range_down": "25-1500",
+    "speed_range_up": "5-200",
+    "typical_latency_ms": "10-30",
+    "availability_percent": 93,
+    "pros_en": [
+      "Widely available across urban and suburban Canada",
+      "Fast download speeds up to 1.5 Gbps",
+      "No new infrastructure needed — uses existing cable TV wiring",
+      "Generally lower cost than fibre for comparable download speeds",
+      "Easy self-installation in most cases"
+    ],
+    "pros_fr": [
+      "Largement disponible dans les zones urbaines et suburbaines du Canada",
+      "Vitesses de téléchargement rapides allant jusqu'à 1,5 Gbit/s",
+      "Aucune nouvelle infrastructure nécessaire — utilise le câblage télé existant",
+      "Généralement moins cher que la fibre pour des vitesses de téléchargement comparables",
+      "Auto-installation facile dans la plupart des cas"
+    ],
+    "cons_en": [
+      "Asymmetrical — upload speeds much slower than download",
+      "Shared bandwidth can cause slowdowns during peak hours",
+      "Upload speeds typically capped at 100-200 Mbps",
+      "Older cable infrastructure may limit speeds in some areas"
+    ],
+    "cons_fr": [
+      "Asymétrique — les vitesses de téléversement sont beaucoup plus lentes que le téléchargement",
+      "La bande passante partagée peut causer des ralentissements aux heures de pointe",
+      "Vitesses de téléversement généralement plafonnées à 100-200 Mbit/s",
+      "L'infrastructure câble plus ancienne peut limiter les vitesses dans certaines zones"
+    ],
+    "best_for_en": "Households that primarily stream content, browse the web, and game online without heavy upload needs. Great for families who want fast downloads at a reasonable price.",
+    "best_for_fr": "Les foyers qui diffusent principalement du contenu, naviguent sur le Web et jouent en ligne sans besoins importants de téléversement. Idéal pour les familles qui veulent des téléchargements rapides à un prix raisonnable.",
+    "major_providers": ["rogers", "videotron", "cogeco", "eastlink", "shaw"],
+    "faqs_en": [
+      {"question": "How fast is cable internet in Canada?", "answer": "Cable internet in Canada ranges from 25 Mbps to about 1.5 Gbps for downloads, depending on the provider and plan. Upload speeds typically range from 10 Mbps to 200 Mbps. Rogers offers some of the fastest cable plans at up to 2.5 Gbps."},
+      {"question": "Is cable internet good enough for streaming?", "answer": "Yes, cable internet is excellent for streaming. A 25 Mbps plan can handle one 4K Netflix stream. For households with multiple streamers, a 100-300 Mbps cable plan provides plenty of bandwidth for simultaneous streams."},
+      {"question": "Why is my cable internet slow at night?", "answer": "Cable internet shares bandwidth with other users on the same neighbourhood node. During peak evening hours when more people are streaming and browsing, this shared capacity can lead to slower speeds. This is one of cable's main drawbacks compared to fibre."},
+      {"question": "Is cable or fibre better?", "answer": "Fibre is technically superior with symmetrical speeds, lower latency, and no congestion issues. However, cable is more widely available and often cheaper. If fibre is available at your address and within budget, it's the better choice."},
+      {"question": "Do I need a special modem for cable internet?", "answer": "Yes, cable internet requires a DOCSIS-compatible modem. Most providers supply one (sometimes for a monthly rental fee), or you can purchase your own DOCSIS 3.1 compatible modem. Check with your provider for compatible models."}
+    ],
+    "faqs_fr": [
+      {"question": "Quelle est la vitesse de l'Internet par câble au Canada ?", "answer": "L'Internet par câble au Canada varie de 25 Mbit/s à environ 1,5 Gbit/s en téléchargement, selon le fournisseur et le forfait. Les vitesses de téléversement varient généralement de 10 Mbit/s à 200 Mbit/s. Rogers offre certains des forfaits câble les plus rapides à jusqu'à 2,5 Gbit/s."},
+      {"question": "L'Internet par câble est-il suffisant pour la diffusion en continu ?", "answer": "Oui, l'Internet par câble est excellent pour la diffusion en continu. Un forfait de 25 Mbit/s peut gérer un flux Netflix 4K. Pour les foyers avec plusieurs spectateurs simultanés, un forfait câble de 100 à 300 Mbit/s fournit amplement de bande passante."},
+      {"question": "Pourquoi mon Internet par câble est-il lent le soir ?", "answer": "L'Internet par câble partage la bande passante avec d'autres utilisateurs sur le même noeud de quartier. Pendant les heures de pointe en soirée lorsque plus de personnes diffusent et naviguent, cette capacité partagée peut entraîner des vitesses plus lentes. C'est l'un des principaux inconvénients du câble par rapport à la fibre."},
+      {"question": "Le câble ou la fibre, lequel est meilleur ?", "answer": "La fibre est techniquement supérieure avec des vitesses symétriques, une latence plus faible et aucun problème de congestion. Cependant, le câble est plus largement disponible et souvent moins cher. Si la fibre est disponible à votre adresse et dans votre budget, c'est le meilleur choix."},
+      {"question": "Ai-je besoin d'un modem spécial pour l'Internet par câble ?", "answer": "Oui, l'Internet par câble nécessite un modem compatible DOCSIS. La plupart des fournisseurs en fournissent un (parfois moyennant des frais de location mensuels), ou vous pouvez acheter votre propre modem compatible DOCSIS 3.1. Vérifiez auprès de votre fournisseur les modèles compatibles."}
+    ]
+  },
+  {
+    "slug": "dsl",
+    "name_en": "DSL Internet",
+    "name_fr": "Internet DSL",
+    "description_en": "DSL (Digital Subscriber Line) internet uses existing copper telephone lines to deliver broadband. While slower than fibre and cable, DSL remains an important technology in Canada, particularly in smaller communities and rural areas where newer infrastructure hasn't been deployed. Modern VDSL2 technology can deliver up to 100 Mbps over short distances.",
+    "description_fr": "L'Internet DSL (Digital Subscriber Line) utilise les lignes téléphoniques en cuivre existantes pour offrir le haut débit. Bien que plus lent que la fibre et le câble, le DSL reste une technologie importante au Canada, particulièrement dans les petites communautés et les zones rurales où les infrastructures plus récentes n'ont pas été déployées. La technologie moderne VDSL2 peut offrir jusqu'à 100 Mbit/s sur de courtes distances.",
+    "how_it_works_en": "DSL internet works by transmitting data over the copper telephone wires that already connect most Canadian homes. The technology uses frequencies above the range used for voice calls, which means you can use the internet and make phone calls simultaneously on the same line.\n\nThere are several variants of DSL technology. ADSL (Asymmetric DSL) is the most basic, offering up to about 15 Mbps download. VDSL (Very-high-bit-rate DSL) and VDSL2 are faster variants that can reach up to 100 Mbps, but only over short distances from the telephone exchange or street-level cabinet.\n\nThe key limitation of DSL is distance sensitivity. Speed decreases significantly as the distance between your home and the nearest telephone exchange (central office) or VDSL cabinet increases. A home 300 metres from the exchange might get 100 Mbps, while a home 3 kilometres away might only get 5-10 Mbps on the same technology.\n\nIn Canada, Bell is the largest DSL provider, offering DSL service in areas where its fibre network hasn't yet been built. Other providers like TELUS, SaskTel, and MTS also offer DSL. Many independent ISPs (TekSavvy, Start.ca, Oxio) resell DSL access on Bell's copper network at lower prices through CRTC wholesale regulations.",
+    "how_it_works_fr": "L'Internet DSL fonctionne en transmettant des données sur les fils téléphoniques en cuivre qui connectent déjà la plupart des foyers canadiens. La technologie utilise des fréquences au-dessus de la plage utilisée pour les appels vocaux, ce qui signifie que vous pouvez utiliser Internet et passer des appels téléphoniques simultanément sur la même ligne.\n\nIl existe plusieurs variantes de la technologie DSL. L'ADSL (DSL asymétrique) est la plus basique, offrant jusqu'à environ 15 Mbit/s en téléchargement. Le VDSL (DSL à très haut débit) et le VDSL2 sont des variantes plus rapides qui peuvent atteindre 100 Mbit/s, mais uniquement sur de courtes distances du central téléphonique ou du cabinet au niveau de la rue.\n\nLa limitation clé du DSL est la sensibilité à la distance. La vitesse diminue significativement à mesure que la distance entre votre domicile et le central téléphonique ou le cabinet VDSL le plus proche augmente. Un domicile à 300 mètres du central pourrait obtenir 100 Mbit/s, tandis qu'un domicile à 3 kilomètres pourrait n'obtenir que 5 à 10 Mbit/s avec la même technologie.\n\nAu Canada, Bell est le plus grand fournisseur DSL, offrant le service DSL dans les zones où son réseau fibre n'a pas encore été construit. D'autres fournisseurs comme TELUS, SaskTel et MTS offrent également le DSL. De nombreux FAI indépendants (TekSavvy, Start.ca, Oxio) revendent l'accès DSL sur le réseau cuivre de Bell à des prix inférieurs grâce aux règlements de gros du CRTC.",
+    "speed_range_down": "5-100",
+    "speed_range_up": "1-30",
+    "typical_latency_ms": "20-50",
+    "availability_percent": 85,
+    "pros_en": [
+      "Widely available using existing phone lines",
+      "Dedicated line — not shared with neighbours",
+      "Lower cost than fibre and cable in many areas",
+      "No new wiring needed for most homes",
+      "Stable and predictable speeds (no peak-hour congestion)"
+    ],
+    "pros_fr": [
+      "Largement disponible en utilisant les lignes téléphoniques existantes",
+      "Ligne dédiée — non partagée avec les voisins",
+      "Coût inférieur à la fibre et au câble dans de nombreuses zones",
+      "Aucun nouveau câblage nécessaire pour la plupart des domiciles",
+      "Vitesses stables et prévisibles (pas de congestion aux heures de pointe)"
+    ],
+    "cons_en": [
+      "Much slower than fibre and cable",
+      "Speed depends heavily on distance from the exchange",
+      "Asymmetrical — very slow upload speeds",
+      "Aging technology being phased out in many areas",
+      "Cannot meet CRTC 50/10 Mbps objective in most deployments"
+    ],
+    "cons_fr": [
+      "Beaucoup plus lent que la fibre et le câble",
+      "La vitesse dépend fortement de la distance du central",
+      "Asymétrique — vitesses de téléversement très lentes",
+      "Technologie vieillissante en voie de remplacement dans de nombreuses zones",
+      "Ne peut pas atteindre l'objectif de 50/10 Mbit/s du CRTC dans la plupart des déploiements"
+    ],
+    "best_for_en": "Light internet users in areas without fibre or cable access. Suitable for basic browsing, email, and single-device standard-definition streaming.",
+    "best_for_fr": "Les utilisateurs légers d'Internet dans les zones sans accès à la fibre ou au câble. Adapté à la navigation de base, au courriel et à la diffusion en continu en définition standard sur un seul appareil.",
+    "major_providers": ["bell", "telus", "sasktel", "teksavvy", "start-ca"],
+    "faqs_en": [
+      {"question": "Is DSL internet still available in Canada?", "answer": "Yes, DSL remains available across much of Canada, particularly from Bell, TELUS, and SaskTel. However, providers are actively replacing DSL with fibre in many areas. DSL continues to serve communities where fibre hasn't been built yet."},
+      {"question": "Why is my DSL so slow?", "answer": "DSL speed is heavily dependent on your distance from the nearest telephone exchange or VDSL cabinet. The farther you are, the slower your speeds. If you're more than 1-2 km away, you may only get 5-15 Mbps regardless of the plan you pay for."},
+      {"question": "Is DSL fast enough for Netflix?", "answer": "DSL can handle Netflix at standard or HD quality if your connection is at least 5-15 Mbps. However, 4K streaming requires 25 Mbps, which may not be achievable on DSL depending on your distance from the exchange. Multiple simultaneous streams will be challenging."},
+      {"question": "Is DSL being replaced by fibre?", "answer": "Yes. Bell, TELUS, and other providers are actively replacing their DSL networks with fibre optic. This transition is happening gradually, with urban areas being upgraded first. Some rural areas may keep DSL service for years to come."},
+      {"question": "Can I get faster DSL?", "answer": "Your DSL speed is limited by physical distance to the exchange. If you're already on VDSL2, there's no way to get significantly faster speeds without switching to a different technology like fibre or cable. Check our lookup tool to see what alternatives are available at your address."}
+    ],
+    "faqs_fr": [
+      {"question": "L'Internet DSL est-il encore disponible au Canada ?", "answer": "Oui, le DSL reste disponible dans une grande partie du Canada, particulièrement chez Bell, TELUS et SaskTel. Cependant, les fournisseurs remplacent activement le DSL par la fibre dans de nombreuses zones. Le DSL continue de desservir les communautés où la fibre n'a pas encore été construite."},
+      {"question": "Pourquoi mon DSL est-il si lent ?", "answer": "La vitesse DSL dépend fortement de votre distance du central téléphonique ou du cabinet VDSL le plus proche. Plus vous êtes loin, plus vos vitesses sont lentes. Si vous êtes à plus de 1-2 km, vous pourriez n'obtenir que 5 à 15 Mbit/s quel que soit le forfait que vous payez."},
+      {"question": "Le DSL est-il assez rapide pour Netflix ?", "answer": "Le DSL peut gérer Netflix en qualité standard ou HD si votre connexion est d'au moins 5 à 15 Mbit/s. Cependant, la diffusion 4K nécessite 25 Mbit/s, ce qui peut ne pas être atteignable en DSL selon votre distance du central. Plusieurs diffusions simultanées seront difficiles."},
+      {"question": "Le DSL est-il remplacé par la fibre ?", "answer": "Oui. Bell, TELUS et d'autres fournisseurs remplacent activement leurs réseaux DSL par la fibre optique. Cette transition se fait graduellement, les zones urbaines étant mises à niveau en premier. Certaines zones rurales pourraient conserver le service DSL pendant des années encore."},
+      {"question": "Puis-je obtenir un DSL plus rapide ?", "answer": "Votre vitesse DSL est limitée par la distance physique au central. Si vous êtes déjà sur VDSL2, il n'y a pas moyen d'obtenir des vitesses significativement plus rapides sans passer à une technologie différente comme la fibre ou le câble. Vérifiez notre outil de recherche pour voir quelles alternatives sont disponibles à votre adresse."}
+    ]
+  },
+  {
+    "slug": "fixed-wireless",
+    "name_en": "Fixed Wireless Internet",
+    "name_fr": "Internet sans fil fixe",
+    "description_en": "Fixed wireless internet delivers broadband through radio signals from a nearby tower to an antenna installed at your home. It bridges the gap between wired broadband and satellite, offering decent speeds in rural and suburban areas where fibre and cable infrastructure doesn't reach. Providers like Xplore (Xplornet) and various regional WISPs serve communities across Canada with this technology.",
+    "description_fr": "L'Internet sans fil fixe offre le haut débit par des signaux radio d'une tour voisine à une antenne installée à votre domicile. Il comble l'écart entre le haut débit filaire et le satellite, offrant des vitesses convenables dans les zones rurales et suburbaines où l'infrastructure fibre et câble ne se rend pas. Des fournisseurs comme Xplore (Xplornet) et divers WISP régionaux desservent des communautés à travers le Canada avec cette technologie.",
+    "how_it_works_en": "Fixed wireless internet works by establishing a radio link between a tower (base station) operated by your ISP and a receiver antenna mounted on your home, typically on the roof or side of the building. Unlike mobile wireless, fixed wireless uses a stationary, directional antenna pointed at the tower for a stronger, more stable connection.\n\nThe base station tower connects to the internet via a fibre backhaul line, and then broadcasts the signal wirelessly to subscribers within its coverage area. The range and speed depend on the frequency used, the power of the transmitter, and the terrain between your home and the tower.\n\nModern fixed wireless systems use LTE or 5G technology, which can deliver speeds comparable to basic cable internet. Older systems using proprietary technologies may be slower. Line-of-sight between your antenna and the tower is ideal, though some technologies (especially lower-frequency bands) can work with partial obstructions like trees.\n\nIn Canada, fixed wireless is particularly important for rural communities. Xplore (formerly Xplornet) is the largest fixed wireless provider, serving rural areas across most provinces. Regional Wireless ISPs (WISPs) also serve many communities. The technology is also being deployed by some providers as a quicker, cheaper alternative to running fibre to every home in less dense areas.",
+    "how_it_works_fr": "L'Internet sans fil fixe fonctionne en établissant une liaison radio entre une tour (station de base) exploitée par votre FAI et une antenne réceptrice montée sur votre domicile, généralement sur le toit ou le côté du bâtiment. Contrairement au sans-fil mobile, le sans-fil fixe utilise une antenne stationnaire et directionnelle pointée vers la tour pour une connexion plus forte et plus stable.\n\nLa tour de la station de base se connecte à Internet via une ligne de raccordement fibre, puis diffuse le signal sans fil aux abonnés dans sa zone de couverture. La portée et la vitesse dépendent de la fréquence utilisée, de la puissance de l'émetteur et du terrain entre votre domicile et la tour.\n\nLes systèmes modernes de sans-fil fixe utilisent la technologie LTE ou 5G, qui peut offrir des vitesses comparables à l'Internet câble de base. Les systèmes plus anciens utilisant des technologies propriétaires peuvent être plus lents. Une ligne de vue entre votre antenne et la tour est idéale, bien que certaines technologies (surtout les bandes de fréquences plus basses) puissent fonctionner avec des obstructions partielles comme les arbres.\n\nAu Canada, le sans-fil fixe est particulièrement important pour les communautés rurales. Xplore (anciennement Xplornet) est le plus grand fournisseur de sans-fil fixe, desservant les zones rurales dans la plupart des provinces. Des FAI sans fil (WISP) régionaux desservent également de nombreuses communautés. La technologie est aussi déployée par certains fournisseurs comme alternative plus rapide et moins coûteuse que d'amener la fibre à chaque domicile dans les zones moins denses.",
+    "speed_range_down": "5-100",
+    "speed_range_up": "1-20",
+    "typical_latency_ms": "20-50",
+    "availability_percent": 35,
+    "pros_en": [
+      "Available in rural areas without fibre or cable",
+      "Faster than satellite with lower latency",
+      "No data caps on many plans",
+      "Quicker to deploy than wired infrastructure",
+      "More consistent than mobile hotspot connections"
+    ],
+    "pros_fr": [
+      "Disponible dans les zones rurales sans fibre ni câble",
+      "Plus rapide que le satellite avec une latence plus faible",
+      "Pas de limites de données sur de nombreux forfaits",
+      "Déploiement plus rapide que l'infrastructure filaire",
+      "Plus constant que les connexions de point d'accès mobile"
+    ],
+    "cons_en": [
+      "Speed depends on distance and line-of-sight to tower",
+      "Weather can affect signal quality",
+      "Limited availability — only near ISP towers",
+      "Slower than fibre and cable alternatives",
+      "May require professional antenna installation"
+    ],
+    "cons_fr": [
+      "La vitesse dépend de la distance et de la ligne de vue vers la tour",
+      "Les conditions météorologiques peuvent affecter la qualité du signal",
+      "Disponibilité limitée — uniquement près des tours du FAI",
+      "Plus lent que les alternatives fibre et câble",
+      "Peut nécessiter une installation professionnelle d'antenne"
+    ],
+    "best_for_en": "Rural and semi-rural households that need better-than-satellite internet but don't have access to fibre or cable. A good middle ground for farms and small communities near a tower.",
+    "best_for_fr": "Les foyers ruraux et semi-ruraux qui ont besoin d'un Internet meilleur que le satellite mais n'ont pas accès à la fibre ou au câble. Un bon compromis pour les fermes et les petites communautés proches d'une tour.",
+    "major_providers": ["xplore", "bell-mts", "tbaytel", "rain-wireless"],
+    "faqs_en": [
+      {"question": "What is fixed wireless internet?", "answer": "Fixed wireless internet uses radio signals from a nearby tower to deliver broadband to an antenna mounted on your home. Unlike mobile wireless, the connection is stationary and uses a directional antenna for better speed and reliability."},
+      {"question": "How fast is fixed wireless internet?", "answer": "Fixed wireless speeds typically range from 5 to 100 Mbps download, depending on the provider, technology, and your distance from the tower. Modern LTE-based fixed wireless can deliver 25-50 Mbps in good conditions."},
+      {"question": "Is fixed wireless better than satellite?", "answer": "Generally yes for latency and consistency. Fixed wireless typically offers 20-50ms latency versus 20-600ms for satellite (depending on LEO vs GEO). However, Starlink's LEO satellite can now match or exceed some fixed wireless speeds."},
+      {"question": "Do I need line of sight for fixed wireless?", "answer": "Ideally yes, though some technologies work with partial obstructions. Your provider will typically perform a site survey to determine if your location can receive a strong enough signal from their nearest tower."},
+      {"question": "Is fixed wireless available in my rural area?", "answer": "Fixed wireless availability depends on proximity to a provider's tower. Xplore (formerly Xplornet) has the widest fixed wireless coverage in rural Canada. Use our lookup tool to check what's available at your specific address."}
+    ],
+    "faqs_fr": [
+      {"question": "Qu'est-ce que l'Internet sans fil fixe ?", "answer": "L'Internet sans fil fixe utilise des signaux radio d'une tour voisine pour offrir le haut débit à une antenne montée sur votre domicile. Contrairement au sans-fil mobile, la connexion est stationnaire et utilise une antenne directionnelle pour une meilleure vitesse et fiabilité."},
+      {"question": "Quelle est la vitesse de l'Internet sans fil fixe ?", "answer": "Les vitesses du sans-fil fixe varient généralement de 5 à 100 Mbit/s en téléchargement, selon le fournisseur, la technologie et votre distance de la tour. Le sans-fil fixe moderne basé sur LTE peut offrir 25 à 50 Mbit/s dans de bonnes conditions."},
+      {"question": "Le sans-fil fixe est-il meilleur que le satellite ?", "answer": "Généralement oui pour la latence et la constance. Le sans-fil fixe offre généralement une latence de 20 à 50 ms contre 20 à 600 ms pour le satellite (selon LEO ou GEO). Cependant, le satellite LEO de Starlink peut maintenant égaler ou dépasser certaines vitesses de sans-fil fixe."},
+      {"question": "Ai-je besoin d'une ligne de vue pour le sans-fil fixe ?", "answer": "Idéalement oui, bien que certaines technologies fonctionnent avec des obstructions partielles. Votre fournisseur effectuera généralement une visite de site pour déterminer si votre emplacement peut recevoir un signal suffisamment fort de leur tour la plus proche."},
+      {"question": "Le sans-fil fixe est-il disponible dans ma zone rurale ?", "answer": "La disponibilité du sans-fil fixe dépend de la proximité d'une tour du fournisseur. Xplore (anciennement Xplornet) a la couverture sans fil fixe la plus étendue au Canada rural. Utilisez notre outil de recherche pour vérifier ce qui est disponible à votre adresse spécifique."}
+    ]
+  },
+  {
+    "slug": "satellite",
+    "name_en": "Satellite Internet",
+    "name_fr": "Internet par satellite",
+    "description_en": "Satellite internet delivers broadband anywhere in Canada by communicating with satellites orbiting Earth. Traditional geostationary (GEO) satellite internet has served remote areas for years with high latency, but the new generation of Low Earth Orbit (LEO) satellites — led by Starlink — has revolutionized the technology with much faster speeds and dramatically lower latency, making it a genuine broadband option for rural Canadians.",
+    "description_fr": "L'Internet par satellite offre le haut débit partout au Canada en communiquant avec des satellites en orbite autour de la Terre. L'Internet par satellite géostationnaire (GEO) traditionnel dessert les zones éloignées depuis des années avec une latence élevée, mais la nouvelle génération de satellites en orbite terrestre basse (LEO) — menée par Starlink — a révolutionné la technologie avec des vitesses beaucoup plus rapides et une latence considérablement réduite, en faisant une véritable option haut débit pour les Canadiens ruraux.",
+    "how_it_works_en": "Satellite internet works by transmitting data between a dish antenna at your home and satellites orbiting Earth. There are two fundamentally different types of satellite internet available in Canada, and the distinction matters enormously.\n\nGeostationary (GEO) satellite internet uses large satellites positioned about 36,000 km above the equator. Because the signal must travel such a vast distance (72,000 km round trip), latency is very high — typically 600ms or more. GEO satellite providers in Canada include Telesat and some legacy Xplore (Xplornet) plans. These services typically offer 10-25 Mbps with data caps.\n\nLow Earth Orbit (LEO) satellite internet — primarily Starlink — uses thousands of smaller satellites orbiting at just 550 km altitude. The much shorter distance means dramatically lower latency (20-60ms), which makes the internet feel responsive for browsing, video calls, and even some gaming. Starlink delivers 50-200 Mbps download speeds with no data caps.\n\nAt your home, a self-orienting dish antenna (Starlink calls it \"Dishy\") communicates with whichever satellite is overhead at any moment. As satellites move across the sky, your dish seamlessly switches between them. This requires a clear view of the sky with minimal obstructions from trees or buildings.\n\nSatellite internet is the only technology that can serve virtually any location in Canada, including the most remote communities in the North. This makes it critical for closing Canada's digital divide.",
+    "how_it_works_fr": "L'Internet par satellite fonctionne en transmettant des données entre une antenne parabolique à votre domicile et des satellites en orbite autour de la Terre. Il existe deux types fondamentalement différents d'Internet par satellite disponibles au Canada, et la distinction est très importante.\n\nL'Internet par satellite géostationnaire (GEO) utilise de gros satellites positionnés à environ 36 000 km au-dessus de l'équateur. Parce que le signal doit parcourir une si grande distance (72 000 km aller-retour), la latence est très élevée — généralement 600 ms ou plus. Les fournisseurs de satellite GEO au Canada incluent Télésat et certains forfaits anciens de Xplore (Xplornet). Ces services offrent généralement 10 à 25 Mbit/s avec des limites de données.\n\nL'Internet par satellite en orbite terrestre basse (LEO) — principalement Starlink — utilise des milliers de petits satellites en orbite à seulement 550 km d'altitude. La distance beaucoup plus courte signifie une latence considérablement réduite (20-60 ms), ce qui rend l'Internet réactif pour la navigation, les appels vidéo et même certains jeux. Starlink offre des vitesses de téléchargement de 50 à 200 Mbit/s sans limites de données.\n\nÀ votre domicile, une antenne parabolique auto-orientable (Starlink l'appelle « Dishy ») communique avec le satellite qui est au-dessus à tout moment. Comme les satellites se déplacent dans le ciel, votre antenne bascule de manière transparente entre eux. Cela nécessite une vue dégagée du ciel avec un minimum d'obstructions des arbres ou bâtiments.\n\nL'Internet par satellite est la seule technologie qui peut desservir pratiquement n'importe quel emplacement au Canada, y compris les communautés les plus éloignées du Nord. Cela en fait un élément crucial pour combler le fossé numérique du Canada.",
+    "speed_range_down": "12-350",
+    "speed_range_up": "3-40",
+    "typical_latency_ms": "20-600",
+    "availability_percent": 99,
+    "pros_en": [
+      "Available virtually anywhere in Canada with sky visibility",
+      "LEO satellite (Starlink) delivers genuine broadband speeds",
+      "No ground infrastructure required at your location",
+      "Ideal for remote, northern, and Indigenous communities",
+      "Starlink offers unlimited data with no caps"
+    ],
+    "pros_fr": [
+      "Disponible pratiquement partout au Canada avec vue sur le ciel",
+      "Le satellite LEO (Starlink) offre de véritables vitesses haut débit",
+      "Aucune infrastructure au sol requise à votre emplacement",
+      "Idéal pour les communautés éloignées, nordiques et autochtones",
+      "Starlink offre des données illimitées sans plafond"
+    ],
+    "cons_en": [
+      "High upfront equipment cost ($499-$799 for Starlink)",
+      "Higher monthly cost than wired alternatives",
+      "GEO satellite has very high latency (600ms+)",
+      "Performance affected by heavy rain, snow, and obstructions",
+      "Speeds can decrease as more users join in your area"
+    ],
+    "cons_fr": [
+      "Coût d'équipement initial élevé (499 à 799 $ pour Starlink)",
+      "Coût mensuel plus élevé que les alternatives filaires",
+      "Le satellite GEO a une latence très élevée (600 ms+)",
+      "Performance affectée par la pluie forte, la neige et les obstructions",
+      "Les vitesses peuvent diminuer à mesure que plus d'utilisateurs se joignent dans votre zone"
+    ],
+    "best_for_en": "Rural and remote households with no access to fibre, cable, or adequate DSL. Essential for northern communities, farms, cottages, and off-grid properties where terrestrial broadband doesn't reach.",
+    "best_for_fr": "Les foyers ruraux et éloignés sans accès à la fibre, au câble ou à un DSL adéquat. Essentiel pour les communautés nordiques, les fermes, les chalets et les propriétés hors réseau où le haut débit terrestre ne se rend pas.",
+    "major_providers": ["starlink", "xplore", "telesat"],
+    "faqs_en": [
+      {"question": "Is Starlink available in Canada?", "answer": "Yes. Starlink is available across virtually all of Canada, including northern and remote areas. Coverage has expanded significantly since its 2020 launch. You can check availability on Starlink's website or use our lookup tool."},
+      {"question": "How much does satellite internet cost in Canada?", "answer": "Starlink costs approximately $140/month plus a one-time equipment fee of $499-$799 CAD. Traditional GEO satellite plans from Xplore range from $60-$120/month. Starlink is more expensive but offers dramatically better performance."},
+      {"question": "Is satellite internet good enough for working from home?", "answer": "Starlink's LEO satellite internet is generally adequate for remote work, including video conferencing on Zoom or Teams. GEO satellite internet is not suitable for real-time video calls due to its 600ms+ latency causing noticeable delays."},
+      {"question": "What is the difference between Starlink and regular satellite internet?", "answer": "Starlink uses LEO satellites at 550 km altitude with 20-60ms latency, while traditional GEO satellites orbit at 36,000 km with 600ms+ latency. This makes Starlink dramatically more responsive and capable of speeds up to 200+ Mbps versus 10-25 Mbps for GEO."},
+      {"question": "Does satellite internet work in winter?", "answer": "Yes, but heavy snow can temporarily affect performance. Starlink dishes have a built-in heating element to melt snow. Positioning the dish with a clear sky view and away from areas where snow drifts is important for reliable winter performance."}
+    ],
+    "faqs_fr": [
+      {"question": "Starlink est-il disponible au Canada ?", "answer": "Oui. Starlink est disponible dans pratiquement tout le Canada, y compris les zones nordiques et éloignées. La couverture s'est considérablement élargie depuis son lancement en 2020. Vous pouvez vérifier la disponibilité sur le site Web de Starlink ou utiliser notre outil de recherche."},
+      {"question": "Combien coûte l'Internet par satellite au Canada ?", "answer": "Starlink coûte environ 140 $/mois plus des frais d'équipement uniques de 499 à 799 $ CAD. Les forfaits satellite GEO traditionnels de Xplore varient de 60 à 120 $/mois. Starlink est plus cher mais offre des performances considérablement meilleures."},
+      {"question": "L'Internet par satellite est-il suffisant pour le télétravail ?", "answer": "L'Internet par satellite LEO de Starlink est généralement adéquat pour le télétravail, y compris la vidéoconférence sur Zoom ou Teams. L'Internet par satellite GEO n'est pas adapté aux appels vidéo en temps réel en raison de sa latence de 600 ms+ causant des retards perceptibles."},
+      {"question": "Quelle est la différence entre Starlink et l'Internet par satellite ordinaire ?", "answer": "Starlink utilise des satellites LEO à 550 km d'altitude avec une latence de 20 à 60 ms, tandis que les satellites GEO traditionnels orbitent à 36 000 km avec une latence de 600 ms+. Cela rend Starlink considérablement plus réactif et capable de vitesses allant jusqu'à 200+ Mbit/s contre 10 à 25 Mbit/s pour le GEO."},
+      {"question": "L'Internet par satellite fonctionne-t-il en hiver ?", "answer": "Oui, mais la neige abondante peut temporairement affecter la performance. Les antennes Starlink ont un élément chauffant intégré pour faire fondre la neige. Positionner l'antenne avec une vue dégagée du ciel et loin des zones où la neige s'accumule est important pour une performance hivernale fiable."}
+    ]
+  },
+  {
+    "slug": "mobile-wireless",
+    "name_en": "Mobile Wireless Internet (LTE/5G)",
+    "name_fr": "Internet sans fil mobile (LTE/5G)",
+    "description_en": "Mobile wireless internet uses cellular LTE and 5G networks to provide home internet service. Available from carriers like Bell, Rogers, and TELUS, these plans use the same towers as your smartphone but with a dedicated home router. 5G home internet can deliver speeds rivalling cable, making it an increasingly viable alternative in areas with strong cellular coverage.",
+    "description_fr": "L'Internet sans fil mobile utilise les réseaux cellulaires LTE et 5G pour fournir le service Internet résidentiel. Disponible chez des opérateurs comme Bell, Rogers et TELUS, ces forfaits utilisent les mêmes tours que votre téléphone intelligent mais avec un routeur domestique dédié. L'Internet résidentiel 5G peut offrir des vitesses rivalisant avec le câble, en faisant une alternative de plus en plus viable dans les zones avec une forte couverture cellulaire.",
+    "how_it_works_en": "Mobile wireless home internet works exactly like your smartphone's data connection, but with a dedicated router designed for home use. Instead of plugging into a cable or phone line, the router contains a cellular modem that connects to your carrier's nearest LTE or 5G tower and creates a Wi-Fi network in your home.\n\nLTE (Long-Term Evolution) is the current standard for 4G cellular networks and can deliver speeds of 25-150 Mbps in good conditions. 5G (fifth generation) is the newer standard that comes in two flavours: sub-6 GHz 5G offers modest improvements over LTE with wider coverage, while mmWave 5G can deliver speeds over 1 Gbps but only over very short distances.\n\nIn Canada, the three national carriers (Bell, Rogers, TELUS) all offer home internet plans on their cellular networks. These plans typically include a wireless router/modem that you simply plug in and use — no installation appointment needed. Some plans include external antenna options for rural areas with weaker signal.\n\nThe quality of service depends entirely on the strength of the cellular signal at your location and the congestion on the local cell tower. During peak hours or in densely populated areas, speeds may decrease as the tower's capacity is shared among all connected devices including smartphones. This technology is regulated by ISED (Innovation, Science and Economic Development Canada) which manages spectrum allocation.",
+    "how_it_works_fr": "L'Internet sans fil mobile résidentiel fonctionne exactement comme la connexion de données de votre téléphone intelligent, mais avec un routeur dédié conçu pour un usage domestique. Au lieu de se brancher dans un câble ou une ligne téléphonique, le routeur contient un modem cellulaire qui se connecte à la tour LTE ou 5G la plus proche de votre opérateur et crée un réseau Wi-Fi dans votre maison.\n\nLe LTE (Long-Term Evolution) est la norme actuelle pour les réseaux cellulaires 4G et peut offrir des vitesses de 25 à 150 Mbit/s dans de bonnes conditions. La 5G (cinquième génération) est la norme plus récente qui se décline en deux variantes : la 5G sous-6 GHz offre des améliorations modestes par rapport au LTE avec une couverture plus large, tandis que la 5G mmWave peut offrir des vitesses de plus de 1 Gbit/s mais uniquement sur de très courtes distances.\n\nAu Canada, les trois opérateurs nationaux (Bell, Rogers, TELUS) offrent tous des forfaits Internet résidentiel sur leurs réseaux cellulaires. Ces forfaits incluent généralement un routeur/modem sans fil que vous branchez simplement et utilisez — aucun rendez-vous d'installation nécessaire. Certains forfaits incluent des options d'antenne externe pour les zones rurales avec un signal plus faible.\n\nLa qualité du service dépend entièrement de la force du signal cellulaire à votre emplacement et de la congestion sur la tour cellulaire locale. Pendant les heures de pointe ou dans les zones densément peuplées, les vitesses peuvent diminuer car la capacité de la tour est partagée entre tous les appareils connectés, y compris les téléphones intelligents. Cette technologie est réglementée par ISDE (Innovation, Sciences et Développement économique Canada) qui gère l'attribution du spectre.",
+    "speed_range_down": "10-1000",
+    "speed_range_up": "5-100",
+    "typical_latency_ms": "15-50",
+    "availability_percent": 99,
+    "pros_en": [
+      "Available wherever there is cellular coverage",
+      "No installation appointment — plug in and use",
+      "5G speeds can rival cable internet",
+      "Portable — can move the router if you relocate",
+      "Good alternative when cable and fibre are unavailable"
+    ],
+    "pros_fr": [
+      "Disponible partout où il y a une couverture cellulaire",
+      "Aucun rendez-vous d'installation — branchez et utilisez",
+      "Les vitesses 5G peuvent rivaliser avec l'Internet par câble",
+      "Portable — vous pouvez déplacer le routeur si vous déménagez",
+      "Bonne alternative lorsque le câble et la fibre ne sont pas disponibles"
+    ],
+    "cons_en": [
+      "Speed varies with signal strength and congestion",
+      "Data caps on many plans or deprioritized during congestion",
+      "Performance depends on proximity to cell tower",
+      "Not as reliable as wired connections",
+      "Higher per-gigabyte cost than cable or fibre"
+    ],
+    "cons_fr": [
+      "La vitesse varie selon la force du signal et la congestion",
+      "Limites de données sur de nombreux forfaits ou dépriorisé pendant la congestion",
+      "La performance dépend de la proximité de la tour cellulaire",
+      "Pas aussi fiable que les connexions filaires",
+      "Coût par gigaoctet plus élevé que le câble ou la fibre"
+    ],
+    "best_for_en": "Households in areas with strong LTE/5G coverage but no wired broadband options. Also useful as a secondary or backup connection, or for renters who want a no-installation internet solution.",
+    "best_for_fr": "Les foyers dans les zones avec une forte couverture LTE/5G mais sans options de haut débit filaire. Aussi utile comme connexion secondaire ou de secours, ou pour les locataires qui veulent une solution Internet sans installation.",
+    "major_providers": ["bell", "rogers", "telus", "freedom-mobile"],
+    "faqs_en": [
+      {"question": "What is 5G home internet?", "answer": "5G home internet uses the 5G cellular network to deliver broadband to your home through a dedicated wireless router. It offers faster speeds than LTE and can be a viable alternative to cable or fibre in areas with strong 5G coverage."},
+      {"question": "Is 5G home internet as good as cable?", "answer": "In areas with strong 5G coverage, speeds can match or approach cable internet (100-300 Mbps typical, up to 1 Gbps). However, 5G is more variable and can be affected by congestion, signal strength, and weather conditions."},
+      {"question": "Do mobile wireless plans have data caps?", "answer": "Many LTE/5G home internet plans in Canada include data caps or may deprioritize your traffic during network congestion. Some plans offer truly unlimited data. Check the specific terms of your plan carefully before signing up."},
+      {"question": "Can I use a mobile hotspot instead of home internet?", "answer": "You can, but dedicated home internet plans offer better value with more data and a purpose-built router with stronger antennas. Smartphone hotspot data is typically more expensive per gigabyte and shares your phone's data allocation."},
+      {"question": "Is LTE or 5G available in rural Canada?", "answer": "LTE coverage is extensive across most populated areas of Canada. 5G is still being deployed and is primarily available in major cities. For rural areas, LTE-based home internet is more likely available, though speeds may be lower than in urban areas."}
+    ],
+    "faqs_fr": [
+      {"question": "Qu'est-ce que l'Internet résidentiel 5G ?", "answer": "L'Internet résidentiel 5G utilise le réseau cellulaire 5G pour offrir le haut débit à votre domicile via un routeur sans fil dédié. Il offre des vitesses plus rapides que le LTE et peut être une alternative viable au câble ou à la fibre dans les zones avec une forte couverture 5G."},
+      {"question": "L'Internet résidentiel 5G est-il aussi bon que le câble ?", "answer": "Dans les zones avec une forte couverture 5G, les vitesses peuvent égaler ou approcher l'Internet par câble (100-300 Mbit/s typique, jusqu'à 1 Gbit/s). Cependant, la 5G est plus variable et peut être affectée par la congestion, la force du signal et les conditions météorologiques."},
+      {"question": "Les forfaits sans fil mobile ont-ils des limites de données ?", "answer": "De nombreux forfaits Internet résidentiel LTE/5G au Canada incluent des limites de données ou peuvent déprioriser votre trafic pendant la congestion du réseau. Certains forfaits offrent des données véritablement illimitées. Vérifiez attentivement les conditions spécifiques de votre forfait avant de vous inscrire."},
+      {"question": "Puis-je utiliser un point d'accès mobile au lieu d'Internet résidentiel ?", "answer": "Vous pouvez, mais les forfaits Internet résidentiel dédiés offrent un meilleur rapport qualité-prix avec plus de données et un routeur conçu spécifiquement avec des antennes plus puissantes. Les données de point d'accès de téléphone intelligent sont généralement plus chères par gigaoctet et partagent l'allocation de données de votre téléphone."},
+      {"question": "Le LTE ou la 5G sont-ils disponibles au Canada rural ?", "answer": "La couverture LTE est étendue dans la plupart des zones peuplées du Canada. La 5G est encore en cours de déploiement et est principalement disponible dans les grandes villes. Pour les zones rurales, l'Internet résidentiel basé sur LTE est plus probablement disponible, bien que les vitesses puissent être inférieures à celles des zones urbaines."}
+    ]
+  }
+]

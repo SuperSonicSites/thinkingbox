@@ -1,0 +1,100 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/common/Header.astro";
+import Footer from "@/components/common/Footer.astro";
+import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
+
+export const prerender = true;
+
+const locale = "fr";
+---
+
+<BaseLayout
+  title="Politique de confidentialité — FSI par adresse Canada"
+  description="Politique de confidentialité de FSI par adresse Canada. Découvrez comment nous recueillons, utilisons et protégeons vos données."
+  locale={locale}
+  canonicalPath="/fr/privacy"
+>
+  <Header locale={locale} />
+
+  <main id="main-content" class="py-12 md:py-16">
+    <div class="container-page">
+      <Breadcrumbs crumbs={[
+        { name: "Accueil", href: "/fr" },
+        { name: "Politique de confidentialité", href: "/fr/privacy" },
+      ]} />
+
+      <article class="prose mx-auto max-w-3xl">
+        <h1 class="text-3xl font-bold tracking-tight text-[var(--color-text-primary)] md:text-4xl">
+          Politique de confidentialité
+        </h1>
+        <p class="mt-2 text-sm text-[var(--color-text-muted)]">Dernière mise à jour : février 2026</p>
+
+        <div class="mt-8 space-y-8 text-[var(--color-text-secondary)] leading-relaxed">
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Aperçu</h2>
+            <p class="mt-3">
+              FSI par adresse Canada (« nous » ou « notre ») exploite le site Web ispbyaddress.ca. Cette page vous informe de nos politiques concernant la collecte, l'utilisation et la divulgation des renseignements personnels lorsque vous utilisez notre service.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Renseignements que nous recueillons</h2>
+            <p class="mt-3">Lorsque vous utilisez notre fonction de recherche d'adresse, nous traitons les renseignements suivants :</p>
+            <ul class="mt-3 list-disc space-y-2 pl-6">
+              <li><strong>Données d'adresse :</strong> L'adresse canadienne que vous entrez est envoyée à l'API Google Places pour le géocodage. Nous ne stockons pas de façon permanente les adresses recherchées.</li>
+              <li><strong>Données d'utilisation :</strong> Nous recueillons des statistiques d'utilisation anonymisées telles que les pages consultées, l'utilisation des fonctionnalités et la région géographique générale (au niveau provincial) pour améliorer notre service.</li>
+              <li><strong>Signalements d'écarts :</strong> Si vous soumettez volontairement un rapport de correction de données, nous conservons les informations fournies pour améliorer la précision des données.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Sources de données</h2>
+            <p class="mt-3">
+              Les données de couverture large bande affichées sur ce site proviennent des <a href="https://ised-isde.canada.ca/site/internet-haute-vitesse-canada/fr/fonds-pour-la-large-bande-universelle/couverture-large-bande" target="_blank" rel="noopener noreferrer" class="text-[var(--color-primary-500)] underline underline-offset-2 hover:text-[var(--color-primary-600)]">données nationales sur le large bande d'ISDE</a>, qui sont des données ouvertes publiquement disponibles du gouvernement du Canada. Les informations sur les forfaits des fournisseurs sont compilées à partir de sources publiquement accessibles.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Services tiers</h2>
+            <p class="mt-3">Nous utilisons les services tiers suivants :</p>
+            <ul class="mt-3 list-disc space-y-2 pl-6">
+              <li><strong>API Google Places :</strong> Pour le géocodage des adresses. La politique de confidentialité de Google s'applique à ce traitement.</li>
+              <li><strong>Cloudflare :</strong> Pour l'hébergement, le CDN et la sécurité. Cloudflare traite les données standard de requêtes Web (adresse IP, agent utilisateur).</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Témoins (cookies)</h2>
+            <p class="mt-3">
+              Nous utilisons des témoins minimaux et essentiels pour le fonctionnement du site (comme la préférence de langue). Nous n'utilisons pas de témoins publicitaires ni de témoins de suivi tiers.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Conservation des données</h2>
+            <p class="mt-3">
+              Les recherches d'adresses sont mises en cache temporairement (jusqu'à 24 heures) pour améliorer les performances et ne sont liées à aucun identifiant personnel. Les analyses d'utilisation anonymisées sont conservées jusqu'à 12 mois.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Vos droits</h2>
+            <p class="mt-3">
+              En vertu de la législation canadienne sur la protection de la vie privée (LPRPDE), vous avez le droit d'accéder à vos renseignements personnels, de les corriger ou de les supprimer. Puisque nous recueillons un minimum de données personnelles, la plupart des utilisateurs n'auront pas de données personnelles stockées dans nos systèmes. Si vous avez soumis un signalement d'écart et souhaitez le faire retirer, veuillez nous contacter.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-[var(--color-text-primary)]">Contact</h2>
+            <p class="mt-3">
+              Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter à <span class="font-mono text-[var(--color-text-primary)]">privacy@ispbyaddress.ca</span>.
+            </p>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>

@@ -1,0 +1,249 @@
+{
+  "nav": {
+    "home": "Home",
+    "lookup": "Check My Address",
+    "coverage": "Coverage Map",
+    "providers": "Providers",
+    "guides": "Guides",
+    "pricing": "Pricing",
+    "partners": "Partners",
+    "api_docs": "API Docs",
+    "blog": "Blog"
+  },
+  "lookup": {
+    "form": {
+      "title": "Find Internet Providers at Your Address",
+      "subtitle": "Enter your Canadian address to see which ISPs serve your location, available speeds, and pricing.",
+      "placeholder": "Enter your address (e.g., 123 Main St, Ottawa, ON)",
+      "button": "Search",
+      "searching": "Searching..."
+    },
+    "errors": {
+      "not_found": "We couldn't find any coverage data for that address. Please check the address and try again.",
+      "invalid": "Please enter a valid Canadian address including street number and name.",
+      "geocode_failed": "We were unable to locate that address. Please verify the address and try again.",
+      "server_error": "Something went wrong on our end. Please try again in a few moments."
+    }
+  },
+  "results": {
+    "title": "Internet Options at Your Address",
+    "subtitle": "Based on ISED broadband coverage data for your location.",
+    "availability": {
+      "title": "Speed Availability",
+      "combined": "Combined (Best Available)",
+      "wired": "Wired (Fibre, Cable, DSL)",
+      "wireless": "Wireless (Fixed Wireless)",
+      "lte": "LTE Mobile",
+      "satellite": "Satellite",
+      "classes": {
+        "50_10_plus": "50/10 Mbps or higher",
+        "25_5": "25/5 Mbps",
+        "10_2": "10/2 Mbps",
+        "5_1": "5/1 Mbps",
+        "lt5_1": "Below 5/1 Mbps",
+        "unknown_or_unserved": "Unknown or Unserved"
+      }
+    },
+    "confidence": {
+      "title": "Data Confidence",
+      "high": "High confidence",
+      "medium": "Medium confidence",
+      "low": "Low confidence",
+      "score_label": "Confidence Score",
+      "breakdown_title": "Score Breakdown",
+      "spatial": "Spatial Accuracy",
+      "concordance": "Data Concordance",
+      "freshness": "Data Freshness",
+      "discrepancy": "Discrepancy Adjustment"
+    },
+    "providers": {
+      "title": "Available Providers",
+      "no_providers": "No provider information is currently available for this location.",
+      "pricing_coming_soon": "Pricing Coming Soon",
+      "monthly": "/mo",
+      "promo_for_months": "for {{months}} months",
+      "no_contract": "No contract",
+      "contract_months": "{{months}}-month contract",
+      "data_cap": "{{cap}} GB data cap",
+      "unlimited": "Unlimited data",
+      "install_fee": "Installation fee: ${{fee}}",
+      "visit_provider": "Visit Provider",
+      "stale_warning": "This pricing has not been verified recently and may be outdated."
+    },
+    "filters": {
+      "title": "Filter Plans",
+      "min_upload": "Minimum Upload Speed",
+      "no_contract": "No contract required",
+      "max_budget": "Maximum Monthly Budget",
+      "technology": "Connection Type",
+      "all_technologies": "All Technologies",
+      "apply": "Apply Filters",
+      "clear": "Clear Filters"
+    },
+    "provenance": {
+      "title": "Data Source",
+      "data_source": "Source",
+      "phh_id": "PHH Point ID",
+      "last_updated": "Last Updated",
+      "freshness": "Data Freshness",
+      "hours_ago": "{{hours}} hours ago"
+    },
+    "discrepancy": {
+      "report_button": "Report Incorrect Data",
+      "report_title": "Report a Data Issue",
+      "report_description": "Help us improve our data by reporting inaccuracies.",
+      "report_type": "Issue Type",
+      "submit": "Submit Report",
+      "success": "Thank you! Your report has been submitted and will be reviewed.",
+      "types": {
+        "wrong_provider": "Wrong provider listed",
+        "wrong_speed": "Incorrect speed information",
+        "missing_provider": "Missing provider",
+        "pricing_error": "Pricing error",
+        "other": "Other issue"
+      }
+    },
+    "wireless_dependent_warning": "Wired internet is not available at this location. The speeds shown are based on wireless coverage only.",
+    "unknown_unserved_disclaimer": "We do not have confirmed broadband coverage data for this location. Service may still be available through providers not yet in our database."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "back": "Back",
+    "save": "Save",
+    "share": "Share Results",
+    "language_switch": "Fran\u00e7ais",
+    "copyright": "\u00a9 {{year}} ISP by Address Canada. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "skip_to_content": "Skip to main content",
+    "check_address_cta": "Check Your Exact Address",
+    "home": "Home",
+    "isps": "ISPs",
+    "cities": "Cities",
+    "population": "Population",
+    "founded": "Founded",
+    "headquarters": "Headquarters",
+    "customers": "Customers",
+    "technologies": "Technologies",
+    "provinces_served": "Provinces Served",
+    "reading_time": "{{minutes}} min read",
+    "last_updated": "Last updated",
+    "table_of_contents": "Table of Contents",
+    "pros": "Pros",
+    "cons": "Cons",
+    "best_for": "Best For",
+    "speed_range": "Speed Range",
+    "latency": "Latency",
+    "availability": "Availability",
+    "suitable_for": "Suitable For",
+    "not_suitable_for": "Not Suitable For",
+    "household_size": "Household Size",
+    "devices": "Devices",
+    "typical_price": "Typical Price",
+    "typical_technologies": "Typical Technologies",
+    "view_plans": "View Plans",
+    "visit_website": "Visit Website",
+    "compare_providers": "Compare Providers",
+    "related_guides": "Related Guides",
+    "related_pages": "Related Pages",
+    "nearby_cities": "Nearby Cities",
+    "all_providers": "All Providers",
+    "provider_directory": "Provider Directory",
+    "technology_hub": "Internet Technologies",
+    "speed_guide": "Speed Guide",
+    "guides_hub": "Internet Guides",
+    "comparisons_hub": "Provider Comparisons",
+    "which_should_you_choose": "Which Should You Choose?",
+    "quick_verdict": "Quick Verdict",
+    "strengths": "Strengths",
+    "service_areas": "Service Areas",
+    "company_info": "Company Information",
+    "ownership": "Ownership",
+    "coverage_in_province": "Internet Coverage in {{province}}",
+    "isps_in_province": "{{count}} ISPs",
+    "cities_in_province": "{{count}} Cities"
+  },
+  "seo": {
+    "home_title": "ISP by Address Canada \u2014 Find Internet Providers at Your Address",
+    "home_description": "Check which internet service providers are available at your Canadian address. Compare speeds, prices, and technologies from ISED broadband data.",
+    "lookup_title": "Check Internet Availability \u2014 ISP by Address Canada",
+    "lookup_description": "Enter your address to discover available internet providers, speeds, and pricing at your location across Canada.",
+    "compare_title": "Compare Internet Plans \u2014 ISP by Address Canada",
+    "coverage_title": "Broadband Coverage Map \u2014 ISP by Address Canada",
+    "providers_title": "Internet Providers in Canada \u2014 ISP by Address Canada",
+    "providers_description": "Browse all {{count}} Canadian internet service providers. Compare coverage, technologies, and plans from major carriers and regional ISPs.",
+    "technology_title": "Internet Technologies \u2014 ISP by Address Canada",
+    "technology_description": "Learn about different internet technologies available in Canada: fibre, cable, DSL, fixed wireless, satellite, and mobile wireless.",
+    "speeds_title": "Internet Speed Guide \u2014 ISP by Address Canada",
+    "speeds_description": "Find the right internet speed for your household. Compare speed tiers from under 25 Mbps to 500+ Mbps with activity recommendations.",
+    "guides_title": "Internet Guides \u2014 ISP by Address Canada",
+    "guides_description": "Expert guides to help you choose the best internet service in Canada. Tips on speeds, technologies, providers, and switching.",
+    "comparisons_title": "ISP Comparisons \u2014 ISP by Address Canada",
+    "comparisons_description": "Side-by-side comparisons of Canada's top internet providers. Compare Bell vs Rogers, Telus vs Shaw, and more.",
+    "faq_title": "Frequently Asked Questions"
+  },
+  "accessibility": {
+    "confidence_announcement": "Data confidence level: {{level}}, score {{score}} out of 100.",
+    "speed_announcement": "Maximum available speed: {{down}} Mbps download, {{up}} Mbps upload.",
+    "new_tab": "Opens in a new tab"
+  },
+  "units": {
+    "mbps": "Mbps",
+    "mbit_s": "Mbit/s",
+    "per_month": "/mo",
+    "gb": "GB"
+  },
+  "pricing": {
+    "title": "API Pricing",
+    "subtitle": "Access ISP coverage data programmatically with our API.",
+    "free_tier": "Free Tier \u2014 100 lookups per day, perfect for personal use.",
+    "partner_tier": "Partner Tier \u2014 10,000 lookups per day with priority support.",
+    "enterprise_tier": "Enterprise Tier \u2014 Unlimited lookups with dedicated support and SLA."
+  },
+  "partners": {
+    "title": "Partner With Us",
+    "subtitle": "Help Canadians find better internet by joining our provider network.",
+    "cta": "Become a Partner"
+  },
+  "home": {
+    "stats": {
+      "data_points": "16.6M data points",
+      "providers": "50+ providers",
+      "cities": "100+ cities",
+      "updated": "Updated quarterly"
+    },
+    "confidence_preview": {
+      "title": "Transparent Confidence Scoring",
+      "description": "Every result shows exactly how reliable our data is \u2014 with a breakdown of spatial accuracy, data concordance, freshness, and community corrections.",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "precision": {
+      "title": "Address-Level Precision",
+      "stat": "16.6M",
+      "stat_label": "pseudo-household data points from ISED"
+    },
+    "all_providers": {
+      "title": "Every Major Provider",
+      "description": "Compare coverage from Bell, Rogers, Telus, Videotron, and dozens of regional ISPs \u2014 across fibre, cable, DSL, wireless, and satellite."
+    },
+    "explore": {
+      "title": "Explore Internet in Canada",
+      "subtitle": "Browse providers, compare technologies, and find the right speed for your needs.",
+      "coverage": "Coverage Map",
+      "coverage_stat": "13 provinces & territories",
+      "providers": "Providers",
+      "providers_stat": "50+ ISPs compared",
+      "technologies": "Technologies",
+      "technologies_stat": "5 connection types",
+      "speeds": "Speed Guide",
+      "speeds_stat": "5 speed tiers",
+      "compare": "Compare ISPs",
+      "compare_stat": "30+ head-to-head matchups",
+      "guides": "Guides",
+      "guides_stat": "10 expert guides"
+    }
+  }
+}

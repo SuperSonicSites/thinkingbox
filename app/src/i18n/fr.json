@@ -1,0 +1,249 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "lookup": "V\u00e9rifier mon adresse",
+    "coverage": "Carte de couverture",
+    "providers": "Fournisseurs",
+    "guides": "Guides",
+    "pricing": "Tarification",
+    "partners": "Partenaires",
+    "api_docs": "Documentation API",
+    "blog": "Blogue"
+  },
+  "lookup": {
+    "form": {
+      "title": "Trouvez les fournisseurs Internet \u00e0 votre adresse",
+      "subtitle": "Entrez votre adresse canadienne pour voir quels fournisseurs desservent votre emplacement, les vitesses disponibles et les tarifs.",
+      "placeholder": "Entrez votre adresse (ex.\u00a0: 123, rue Principale, Ottawa, ON)",
+      "button": "Rechercher",
+      "searching": "Recherche en cours..."
+    },
+    "errors": {
+      "not_found": "Nous n\u2019avons trouv\u00e9 aucune donn\u00e9e de couverture pour cette adresse. Veuillez v\u00e9rifier l\u2019adresse et r\u00e9essayer.",
+      "invalid": "Veuillez entrer une adresse canadienne valide incluant le num\u00e9ro et le nom de la rue.",
+      "geocode_failed": "Nous n\u2019avons pas pu localiser cette adresse. Veuillez v\u00e9rifier l\u2019adresse et r\u00e9essayer.",
+      "server_error": "Une erreur est survenue de notre c\u00f4t\u00e9. Veuillez r\u00e9essayer dans quelques instants."
+    }
+  },
+  "results": {
+    "title": "Options Internet \u00e0 votre adresse",
+    "subtitle": "Bas\u00e9 sur les donn\u00e9es de couverture large bande d\u2019ISDE pour votre emplacement.",
+    "availability": {
+      "title": "Disponibilit\u00e9 des vitesses",
+      "combined": "Combin\u00e9 (meilleur disponible)",
+      "wired": "Filaire (fibre, c\u00e2ble, DSL)",
+      "wireless": "Sans fil (sans fil fixe)",
+      "lte": "Mobile LTE",
+      "satellite": "Satellite",
+      "classes": {
+        "50_10_plus": "50/10 Mbit/s ou plus",
+        "25_5": "25/5 Mbit/s",
+        "10_2": "10/2 Mbit/s",
+        "5_1": "5/1 Mbit/s",
+        "lt5_1": "Moins de 5/1 Mbit/s",
+        "unknown_or_unserved": "Inconnu ou non desservi"
+      }
+    },
+    "confidence": {
+      "title": "Confiance des donn\u00e9es",
+      "high": "Confiance \u00e9lev\u00e9e",
+      "medium": "Confiance moyenne",
+      "low": "Confiance faible",
+      "score_label": "Score de confiance",
+      "breakdown_title": "D\u00e9tail du score",
+      "spatial": "Pr\u00e9cision spatiale",
+      "concordance": "Concordance des donn\u00e9es",
+      "freshness": "Fra\u00eecheur des donn\u00e9es",
+      "discrepancy": "Ajustement d\u2019\u00e9cart"
+    },
+    "providers": {
+      "title": "Fournisseurs disponibles",
+      "no_providers": "Aucune information sur les fournisseurs n\u2019est actuellement disponible pour cet emplacement.",
+      "pricing_coming_soon": "Tarification \u00e0 venir",
+      "monthly": "/mois",
+      "promo_for_months": "pour {{months}} mois",
+      "no_contract": "Sans contrat",
+      "contract_months": "Contrat de {{months}} mois",
+      "data_cap": "Limite de donn\u00e9es de {{cap}} Go",
+      "unlimited": "Donn\u00e9es illimit\u00e9es",
+      "install_fee": "Frais d\u2019installation\u00a0: {{fee}}\u00a0$",
+      "visit_provider": "Visiter le fournisseur",
+      "stale_warning": "Cette tarification n\u2019a pas \u00e9t\u00e9 v\u00e9rifi\u00e9e r\u00e9cemment et pourrait \u00eatre d\u00e9pass\u00e9e."
+    },
+    "filters": {
+      "title": "Filtrer les forfaits",
+      "min_upload": "Vitesse de t\u00e9l\u00e9versement minimale",
+      "no_contract": "Sans contrat requis",
+      "max_budget": "Budget mensuel maximum",
+      "technology": "Type de connexion",
+      "all_technologies": "Toutes les technologies",
+      "apply": "Appliquer les filtres",
+      "clear": "Effacer les filtres"
+    },
+    "provenance": {
+      "title": "Source des donn\u00e9es",
+      "data_source": "Source",
+      "phh_id": "Identifiant du point PHH",
+      "last_updated": "Derni\u00e8re mise \u00e0 jour",
+      "freshness": "Fra\u00eecheur des donn\u00e9es",
+      "hours_ago": "Il y a {{hours}} heures"
+    },
+    "discrepancy": {
+      "report_button": "Signaler des donn\u00e9es incorrectes",
+      "report_title": "Signaler un probl\u00e8me de donn\u00e9es",
+      "report_description": "Aidez-nous \u00e0 am\u00e9liorer nos donn\u00e9es en signalant les inexactitudes.",
+      "report_type": "Type de probl\u00e8me",
+      "submit": "Soumettre le signalement",
+      "success": "Merci\u00a0! Votre signalement a \u00e9t\u00e9 soumis et sera examin\u00e9.",
+      "types": {
+        "wrong_provider": "Fournisseur erron\u00e9 indiqu\u00e9",
+        "wrong_speed": "Information de vitesse incorrecte",
+        "missing_provider": "Fournisseur manquant",
+        "pricing_error": "Erreur de tarification",
+        "other": "Autre probl\u00e8me"
+      }
+    },
+    "wireless_dependent_warning": "L\u2019Internet filaire n\u2019est pas disponible \u00e0 cet emplacement. Les vitesses affich\u00e9es sont bas\u00e9es uniquement sur la couverture sans fil.",
+    "unknown_unserved_disclaimer": "Nous n\u2019avons pas de donn\u00e9es de couverture large bande confirm\u00e9es pour cet emplacement. Le service pourrait tout de m\u00eame \u00eatre disponible aupr\u00e8s de fournisseurs qui ne figurent pas encore dans notre base de donn\u00e9es."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "back": "Retour",
+    "save": "Enregistrer",
+    "share": "Partager les r\u00e9sultats",
+    "language_switch": "English",
+    "copyright": "\u00a9 {{year}} FSI par adresse Canada. Tous droits r\u00e9serv\u00e9s.",
+    "privacy": "Politique de confidentialit\u00e9",
+    "terms": "Conditions d\u2019utilisation",
+    "skip_to_content": "Passer au contenu principal",
+    "check_address_cta": "V\u00e9rifier votre adresse exacte",
+    "home": "Accueil",
+    "isps": "FSI",
+    "cities": "Villes",
+    "population": "Population",
+    "founded": "Fond\u00e9e",
+    "headquarters": "Si\u00e8ge social",
+    "customers": "Clients",
+    "technologies": "Technologies",
+    "provinces_served": "Provinces desservies",
+    "reading_time": "{{minutes}} min de lecture",
+    "last_updated": "Derni\u00e8re mise \u00e0 jour",
+    "table_of_contents": "Table des mati\u00e8res",
+    "pros": "Avantages",
+    "cons": "Inconv\u00e9nients",
+    "best_for": "Id\u00e9al pour",
+    "speed_range": "Plage de vitesses",
+    "latency": "Latence",
+    "availability": "Disponibilit\u00e9",
+    "suitable_for": "Convient pour",
+    "not_suitable_for": "Ne convient pas pour",
+    "household_size": "Taille du m\u00e9nage",
+    "devices": "Appareils",
+    "typical_price": "Prix typique",
+    "typical_technologies": "Technologies typiques",
+    "view_plans": "Voir les forfaits",
+    "visit_website": "Visiter le site Web",
+    "compare_providers": "Comparer les fournisseurs",
+    "related_guides": "Guides connexes",
+    "related_pages": "Pages connexes",
+    "nearby_cities": "Villes avoisinantes",
+    "all_providers": "Tous les fournisseurs",
+    "provider_directory": "R\u00e9pertoire des fournisseurs",
+    "technology_hub": "Technologies Internet",
+    "speed_guide": "Guide des vitesses",
+    "guides_hub": "Guides Internet",
+    "comparisons_hub": "Comparaisons de fournisseurs",
+    "which_should_you_choose": "Lequel devriez-vous choisir\u00a0?",
+    "quick_verdict": "Verdict rapide",
+    "strengths": "Points forts",
+    "service_areas": "Zones de service",
+    "company_info": "Information sur l\u2019entreprise",
+    "ownership": "Propri\u00e9t\u00e9",
+    "coverage_in_province": "Couverture Internet au/en {{province}}",
+    "isps_in_province": "{{count}} FSI",
+    "cities_in_province": "{{count}} villes"
+  },
+  "seo": {
+    "home_title": "FSI par adresse Canada \u2014 Trouvez les fournisseurs Internet \u00e0 votre adresse",
+    "home_description": "V\u00e9rifiez quels fournisseurs de services Internet sont disponibles \u00e0 votre adresse canadienne. Comparez les vitesses, les prix et les technologies \u00e0 partir des donn\u00e9es large bande d\u2019ISDE.",
+    "lookup_title": "V\u00e9rifier la disponibilit\u00e9 Internet \u2014 FSI par adresse Canada",
+    "lookup_description": "Entrez votre adresse pour d\u00e9couvrir les fournisseurs Internet disponibles, les vitesses et les tarifs \u00e0 votre emplacement partout au Canada.",
+    "compare_title": "Comparer les forfaits Internet \u2014 FSI par adresse Canada",
+    "coverage_title": "Carte de couverture large bande \u2014 FSI par adresse Canada",
+    "providers_title": "Fournisseurs Internet au Canada \u2014 FSI par adresse Canada",
+    "providers_description": "Parcourez les {{count}} fournisseurs de services Internet canadiens. Comparez la couverture, les technologies et les forfaits des grands op\u00e9rateurs et des FSI r\u00e9gionaux.",
+    "technology_title": "Technologies Internet \u2014 FSI par adresse Canada",
+    "technology_description": "D\u00e9couvrez les diff\u00e9rentes technologies Internet disponibles au Canada\u00a0: fibre, c\u00e2ble, DSL, sans fil fixe, satellite et sans fil mobile.",
+    "speeds_title": "Guide des vitesses Internet \u2014 FSI par adresse Canada",
+    "speeds_description": "Trouvez la bonne vitesse Internet pour votre foyer. Comparez les paliers de vitesse de moins de 25 Mbit/s \u00e0 500+ Mbit/s avec des recommandations d\u2019activit\u00e9s.",
+    "guides_title": "Guides Internet \u2014 FSI par adresse Canada",
+    "guides_description": "Guides experts pour vous aider \u00e0 choisir le meilleur service Internet au Canada. Conseils sur les vitesses, les technologies, les fournisseurs et le changement de fournisseur.",
+    "comparisons_title": "Comparaisons de FSI \u2014 FSI par adresse Canada",
+    "comparisons_description": "Comparaisons c\u00f4te \u00e0 c\u00f4te des principaux fournisseurs Internet du Canada. Comparez Bell vs Rogers, Telus vs Shaw et plus encore.",
+    "faq_title": "Questions fr\u00e9quemment pos\u00e9es"
+  },
+  "accessibility": {
+    "confidence_announcement": "Niveau de confiance des donn\u00e9es\u00a0: {{level}}, score de {{score}} sur 100.",
+    "speed_announcement": "Vitesse maximale disponible\u00a0: {{down}} Mbit/s en t\u00e9l\u00e9chargement, {{up}} Mbit/s en t\u00e9l\u00e9versement.",
+    "new_tab": "Ouvre dans un nouvel onglet"
+  },
+  "units": {
+    "mbps": "Mbit/s",
+    "mbit_s": "Mbit/s",
+    "per_month": "/mois",
+    "gb": "Go"
+  },
+  "pricing": {
+    "title": "Tarification de l\u2019API",
+    "subtitle": "Acc\u00e9dez aux donn\u00e9es de couverture des FSI de mani\u00e8re programmatique avec notre API.",
+    "free_tier": "Forfait gratuit \u2014 100 recherches par jour, id\u00e9al pour un usage personnel.",
+    "partner_tier": "Forfait partenaire \u2014 10\u00a0000 recherches par jour avec soutien prioritaire.",
+    "enterprise_tier": "Forfait entreprise \u2014 Recherches illimit\u00e9es avec soutien d\u00e9di\u00e9 et entente de niveau de service."
+  },
+  "partners": {
+    "title": "Devenez partenaire",
+    "subtitle": "Aidez les Canadiens \u00e0 trouver un meilleur acc\u00e8s Internet en rejoignant notre r\u00e9seau de fournisseurs.",
+    "cta": "Devenir partenaire"
+  },
+  "home": {
+    "stats": {
+      "data_points": "16,6M points de donn\u00e9es",
+      "providers": "50+ fournisseurs",
+      "cities": "100+ villes",
+      "updated": "Mis \u00e0 jour trimestriellement"
+    },
+    "confidence_preview": {
+      "title": "Score de confiance transparent",
+      "description": "Chaque r\u00e9sultat montre exactement la fiabilit\u00e9 de nos donn\u00e9es \u2014 avec un d\u00e9tail de la pr\u00e9cision spatiale, la concordance des donn\u00e9es, la fra\u00eecheur et les corrections communautaires.",
+      "high": "\u00c9lev\u00e9",
+      "medium": "Moyen",
+      "low": "Faible"
+    },
+    "precision": {
+      "title": "Pr\u00e9cision au niveau de l\u2019adresse",
+      "stat": "16,6M",
+      "stat_label": "points de donn\u00e9es pseudo-m\u00e9nages d\u2019ISDE"
+    },
+    "all_providers": {
+      "title": "Tous les grands fournisseurs",
+      "description": "Comparez la couverture de Bell, Rogers, Telus, Vid\u00e9otron et des dizaines de FSI r\u00e9gionaux \u2014 fibre, c\u00e2ble, DSL, sans fil et satellite."
+    },
+    "explore": {
+      "title": "Explorer Internet au Canada",
+      "subtitle": "Parcourez les fournisseurs, comparez les technologies et trouvez la bonne vitesse pour vos besoins.",
+      "coverage": "Carte de couverture",
+      "coverage_stat": "13 provinces et territoires",
+      "providers": "Fournisseurs",
+      "providers_stat": "50+ FSI compar\u00e9s",
+      "technologies": "Technologies",
+      "technologies_stat": "5 types de connexion",
+      "speeds": "Guide des vitesses",
+      "speeds_stat": "5 paliers de vitesse",
+      "compare": "Comparer les FSI",
+      "compare_stat": "30+ comparaisons directes",
+      "guides": "Guides",
+      "guides_stat": "10 guides experts"
+    }
+  }
+}

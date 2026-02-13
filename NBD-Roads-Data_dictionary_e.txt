@@ -1,0 +1,59 @@
+-------------------------+-----------------------------------------------------------------------------------------------------
+Field                    | Description
+-------------------------+-----------------------------------------------------------------------------------------------------
+ALL FILES
+-------------------------+-----------------------------------------------------------------------------------------------------
+id                       | GPKG ONLY - Primary Key for the GeoPackage format
+colour_couleur           | GPKG ONLY - String value for feature styling in the format of "RGB(<R>,<G>,<B>)" where R or G or B is within 0 to 255. The colour corresponds to the DL/UL speed available:
+                         |             50/10 - "RGB(60,180,75)"; 25/5 - RGB(111,237,197); 10/2 - RGB(20,151,250); 5/1 - RGB(0,56,213); lt5/1 - RGB(153,0,229)
+NGD_UID                  | Unique identifier of the road arc
+NGD_SUBID                | Identifier of one road arc sub-segment.
+                         |   Road arcs were split by ISED into 250 metres (approximately) sub-segments.
+Avail_lt5_1_Dispo        | Boolean value indicating if speeds smaller than 5/1 Mbps DL/UL are available at this road arc
+Avail_5_1_Dispo          | Boolean value indicating if 5/1 Mbps DL/UL speeds are available at this road arc
+Avail_10_2_Dispo         | Boolean value indicating if 10/2 Mbps DL/UL speeds are available at this road arc
+Avail_25_5_Dispo         | Boolean value indicating if 25/5 Mbps DL/UL speeds are available at this road arc
+Avail_50_10_Dispo        | Boolean value indicating if 50/10 Mbps DL/UL speeds are available at this road arc
+-------------------------+-----------------------------------------------------------------------------------------------------
+RoadsCombinedCurrent_RoutesCombineeActuelles 			| Layer showing road speeds for current available services considering wired and fixed wireless technologies
+RoadsCombinedGovernmentSupport_RoutesCombineeAppuiGouvernement	| Layer showing road speeds for completed and ongoing government supported projects considering wired and fixed wireless technologies
+RoadsCombinedPrivateExpansions_RoutesCombineeExpansionsPriv es	| Layer showing road speeds for privately funded expansion commitments considering wired and fixed wireless technologies
+RoadsCombinedUBF-RRS_RoutesCombineeFLBU-VRR			| Layer showing road speeds for Universal Broadband Fund (UBF) Rapid Response Stream (RRS) projects considering wired and fixed wireless technologies
+RoadsCombinedUBF-Core_RoutesCombineeFLBU-Principal		| Layer showing road speeds for Universal Broadband Fund (UBF) Core projects considering wired and fixed wireless technologies
+RoadsCombinedCIB_RoutesCombineeBIC				| Layer showing road speeds for Canada Infrastructure Bank (CIB) projects considering wired and fixed wireless technologies
+-------------------------+-----------------------------------------------------------------------------------------------------
+RoadsWiredCurrent_RoutesFilaireActuelles			| Layer showing road speeds for current available services considering wired technologies only
+RoadsWiredGovernmentSupport_RoutesFilaireAppuiGouvernement	| Layer showing road speeds for completed and ongoing government supported projects considering wired technologies only
+RoadsWiredPrivateExpansions_RoutesFilaireExpansionsPriv es	| Layer showing road speeds for privately funded expansion commitments considering wired technologies only
+RoadsWiredUBF-RRS_RoutesFilaireFLBU-VRR				| Layer showing road speeds for Universal Broadband Fund (UBF) Rapid Response Stream (RRS) projects considering wired technologies only
+RoadsWiredUBF-Core_RoutesFilaireFLBU-Principal			| Layer showing road speeds for Universal Broadband Fund (UBF) Core projects considering wired technologies only
+RoadsWiredCIB_RoutesFilaireBIC					| Layer showing road speeds for Canada Infrastructure Bank (CIB) projects considering wired technologies only
+-------------------------+----------------------------------------------------------------------------------------------------
+RoadsWirelessCurrent_RoutesSansFilActuelles			| Layer showing road speeds for current available services considering wireless technologies only
+RoadsWirelessGovernmentSupport_RoutesSansFilAppuiGouvernement	| Layer showing road speeds for completed and ongoing government supported projects considering wireless technologies only
+RoadsWirelessPrivateExpansions_RoutesSansFilExpansionsPriv es	| Layer showing road speeds for privately funded expansion commitments considering wireless technologies only
+RoadsWirelessUBF-RRS_RoutesSansFilFLBU-VRR			| Layer showing road speeds for Universal Broadband Fund (UBF) Rapid Response Stream (RRS) projects considering fixed wireless technologies only
+RoadsWirelessUBF-Core_RoutesSansFilFLBU-Principal		| Layer showing road speeds for Universal Broadband Fund (UBF) Core projects considering fixed wireless technologies only
+-------------------------+----------------------------------------------------------------------------------------------------
+RoadsMobileCurrent_RoutesMobileActuelles			| Layer showing road speeds for current available services considering mobile wireless technologies
+RoadsMobileGovernmentSupport_RoutesMobileAppuiGouvernement	| Layer showing road speeds for completed and ongoing government supported projects considering mobile wireless technologies
+RoadsMobileUBF-RRS_RoutesMobileFLBU-VRR				| Layer showing road speeds for Universal Broadband Fund (UBF) Rapid Response Stream (RRS) projects considering mobile wireless technologies
+RoadsMobileUBF-Core_RoutesMobileFLBU-Principal			| Layer showing road speeds for Universal Broadband Fund (UBF) Core projects considering mobile wireless technologies
+-------------------------+-----------------------------------------------------------------------------------------------------
+RoadsSatelliteCurrent_RoutesSatelliteActuelles			| Layer showing road speeds for current available services considering satellite technologies
+RoadsSatelliteGovernmentSupport_RoutesSatelliteAppuiGouvernement| Layer showing road speeds for completed and ongoing government supported projects considering satellite technologies
+RoadsSatelliteUBF-RRS_RoutesSatelliteFLBU-VRR			| Layer showing road speeds for Universal Broadband Fund (UBF) Rapid Response Stream (RRS) projects considering satellite technologies
+-------------------------+-----------------------------------------------------------------------------------------------------
+
+-------------------------+-----------------------------------------------------------------------------------------------------
+Data Type                | Values
+-------------------------+-----------------------------------------------------------------------------------------------------
+Boolean                  | 0 = False/No, 1 = True/Yes
+-------------------------+-----------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+Additional Notes:
+  - Determination of speeds at arc sub-segment is obtained by retrieving the associated speed values
+  from nearest PHH point locations (see the NBD_PHH_Speeds dataset).
+  - Mobile wireless technologies include LTE, LTE-Advanced and 5G
+-------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,32 @@
+-----------------------------------------------------+----------+------------------------------------------------------------------------------------------------------------------------------------------------
+Field                                                |Data type |Description   
+-----------------------------------------------------+----------+------------------------------------------------------------------------------------------------------------------------------------------------
+Avail_5_1_75PctPlus_Dispo			     |Character |T (True) or F (False) to indicate if greater than 75% of households have access to broadband services offering 5/1 Mbps or greater
+Avail_50_10_Gradient_Dispo                           |Character |Percentage range of households that have access to broadband services offering 50/10 Mbps or greater.
+Backbone_dorsale	                             |Number    |1 (Yes) or 0 (No) to indicate presence of backbone funding
+Backbone_Technology/Technologie_dorsale              |Character |Backbone technology
+CTI_backbone_dorsale_BPI                             |Number    |1 (Yes) or 0 (No) to indicate presence of CTI backbone funding
+HEXuid_HEXidu                                        |Character |Unique identifier for the Hexagon
+Last_Mile_Technology/Technologie_dernier_kilomètre   |Character |Last mile  technology
+LastMile_dernierkilomètre		             |Number    |1 (Yes) or 0 (No) to indicate presence of last mile funding
+Latitude                                             |Number    |Latitude for the placename point
+Longitude                                            |Number    |Longitude for the placename point
+Name_en                                              |Character |Name of the placename in English
+Name_Nom                                             |Character |Entity Name
+Nom_fr                                               |Character |Name of the placename in French
+PCCLASS                                              |Number    |Distinguishes between small population centres, medium population centres and large urban population centres
+PCNAME                                               |Character |Population centre name
+PCPUID                                               |Number    |Uniquely identifies the provincial or territorial part of a population centre (composed of the 2-digit province or territory unique identifier followed by the 4-digit population centre unique identifier)
+PNuid_NLidu                                          |Number    |Unique identifier for the placename
+PRNAME                                               |Character |Province or territory name
+ProjectAreas_ZonesDeProjets		             |Number    |1 (Yes) or 0 (No) to indicate presence of infrastructure within scope of funding
+satellite_dep                                        |Number    |1 (Yes) or 0 (No) to indicate if community is satellite dependent
+SumPop_2021_SommePop                                 |Character |Estimated population within the hexagon in summing PHH related data
+SumTD_2021_SommeTL                                   |Character |Estimated total private dwellings within the hexagon in summing related PHH data
+SumURD_2021_SommeRH                                  |Character |Estimated private dwellings occupied by usual residents within the hexagon in summing related PHH data
+Technology/Technologie                               |Character |Backbone or last mile technolgy
+wo_backbone_fibre_sans_fibre_dorsale                 |Number    |1 (Yes) or 0 (No) to indicate presence of fibre backbone near the community
+
+
+         
+  

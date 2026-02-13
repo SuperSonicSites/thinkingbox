@@ -1,0 +1,145 @@
+{
+  "_comment": "Deterministic test addresses for mock geocoder. Covers urban/suburban/rural/northern across provinces.",
+  "addresses": [
+    {
+      "input": "150 King St W, Toronto, ON M5H 1J9",
+      "lat": 43.6489,
+      "lng": -79.3842,
+      "province": "ON",
+      "context": "urban-downtown"
+    },
+    {
+      "input": "1 Place Ville Marie, Montreal, QC H3B 2B6",
+      "lat": 45.5017,
+      "lng": -73.5673,
+      "province": "QC",
+      "context": "urban-downtown"
+    },
+    {
+      "input": "200 Burrard St, Vancouver, BC V6C 3L6",
+      "lat": 49.2861,
+      "lng": -123.1157,
+      "province": "BC",
+      "context": "urban-downtown"
+    },
+    {
+      "input": "1 Sparks St, Ottawa, ON K1P 5B5",
+      "lat": 45.4225,
+      "lng": -75.6992,
+      "province": "ON",
+      "context": "urban-government"
+    },
+    {
+      "input": "225 8 Ave SW, Calgary, AB T2P 1B3",
+      "lat": 51.0460,
+      "lng": -114.0710,
+      "province": "AB",
+      "context": "urban-downtown"
+    },
+    {
+      "input": "100 Main St, Winnipeg, MB R3C 1A5",
+      "lat": 49.8954,
+      "lng": -97.1385,
+      "province": "MB",
+      "context": "urban-core"
+    },
+    {
+      "input": "2220 Albert St, Regina, SK S4P 2V2",
+      "lat": 50.4452,
+      "lng": -104.6189,
+      "province": "SK",
+      "context": "urban-core"
+    },
+    {
+      "input": "5251 Duke St, Halifax, NS B3J 1P3",
+      "lat": 44.6476,
+      "lng": -63.5728,
+      "province": "NS",
+      "context": "urban-core"
+    },
+    {
+      "input": "134 Kent St, Charlottetown, PE C1A 1N3",
+      "lat": 46.2352,
+      "lng": -63.1258,
+      "province": "PE",
+      "context": "small-city"
+    },
+    {
+      "input": "100 Bayshore Dr, Ramara, ON L3V 6H1",
+      "lat": 44.6251,
+      "lng": -79.2103,
+      "province": "ON",
+      "context": "rural-ontario"
+    },
+    {
+      "input": "1 Chemin du Lac, Sainte-Adèle, QC J8B 2N1",
+      "lat": 46.0500,
+      "lng": -74.1333,
+      "province": "QC",
+      "context": "rural-quebec"
+    },
+    {
+      "input": "1 Main St, Iqaluit, NU X0A 0H0",
+      "lat": 63.7467,
+      "lng": -68.5170,
+      "province": "NU",
+      "context": "northern-remote"
+    },
+    {
+      "input": "1 Main St, Yellowknife, NT X1A 1A1",
+      "lat": 62.4540,
+      "lng": -114.3718,
+      "province": "NT",
+      "context": "northern-city"
+    },
+    {
+      "input": "1 Main St, Whitehorse, YT Y1A 1A1",
+      "lat": 60.7212,
+      "lng": -135.0568,
+      "province": "YT",
+      "context": "northern-city"
+    },
+    {
+      "input": "100 Water St, St. John's, NL A1C 1A4",
+      "lat": 47.5615,
+      "lng": -52.7126,
+      "province": "NL",
+      "context": "urban-core"
+    },
+    {
+      "input": "500 George St, Fredericton, NB E3B 1G9",
+      "lat": 45.9636,
+      "lng": -66.6431,
+      "province": "NB",
+      "context": "small-city"
+    },
+    {
+      "input": "123 Rural Route 5, Kapuskasing, ON P5N 2Y4",
+      "lat": 49.4200,
+      "lng": -82.4300,
+      "province": "ON",
+      "context": "rural-northern-ontario"
+    },
+    {
+      "input": "1 Rang Saint-Joseph, Saint-Tite, QC G0X 3H0",
+      "lat": 46.7333,
+      "lng": -72.5667,
+      "province": "QC",
+      "context": "rural-quebec-deep"
+    },
+    {
+      "input": "45 Main St, Canmore, AB T1W 2B2",
+      "lat": 51.0884,
+      "lng": -115.3579,
+      "province": "AB",
+      "context": "mountain-town"
+    },
+    {
+      "input": "100 Island Hwy, Campbell River, BC V9W 2E1",
+      "lat": 50.0244,
+      "lng": -125.2475,
+      "province": "BC",
+      "context": "rural-island"
+    }
+  ]
+}

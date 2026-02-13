@@ -1,0 +1,127 @@
+---
+import "@/styles/global.css";
+import { t } from "@/i18n/utils";
+import type { Locale } from "@/types/index";
+
+interface Props {
+  title: string;
+  description: string;
+  locale?: Locale;
+  canonicalPath?: string;
+  ogType?: "website" | "article";
+  jsonLdExtra?: Record<string, unknown>[];
+}
+
+const {
+  title,
+  description,
+  locale = "en",
+  canonicalPath = "",
+  ogType = "website",
+  jsonLdExtra = [],
+} = Astro.props;
+
+const siteUrl = "https://ispbyaddress.ca";
+const siteName = locale === "en" ? "ISP by Address Canada" : "FSI par adresse Canada";
+const canonicalUrl = `${siteUrl}${canonicalPath}`;
+const alternateLang = locale === "en" ? "fr" : "en";
+const alternatePath = locale === "en"
+  ? `/fr${canonicalPath}`
+  : canonicalPath.replace(/^\/fr/, "") || "/";
+const alternateUrl = `${siteUrl}${alternatePath}`;
+const skipText = t(locale, "common.skip_to_content");
+const ogLocale = locale === "en" ? "en_CA" : "fr_CA";
+const ogLocaleAlternate = locale === "en" ? "fr_CA" : "en_CA";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "ISP by Address Canada",
+      alternateName: "FSI par adresse Canada",
+      description: "Find internet service providers available at any Canadian address using ISED broadband data.",
+      inLanguage: ["en-CA", "fr-CA"],
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${siteUrl}/lookup?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "ISP by Address Canada",
+      url: siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/favicon.svg`,
+      },
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${canonicalUrl}/#webpage`,
+      url: canonicalUrl,
+      name: title,
+      description: description,
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#organization` },
+      inLanguage: `${locale}-CA`,
+    },
+  ],
+};
+---
+
+<!DOCTYPE html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang={locale} href={canonicalUrl} />
+    <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}${locale === "en" ? canonicalPath : alternatePath}`} />
+    <meta name="theme-color" content="#1B8FAF" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlternate} />
+    <meta property="og:image" content={`${siteUrl}/og-image.svg`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/og-image.svg`} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    {jsonLdExtra.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
+  </head>
+  <body class="min-h-screen bg-surface text-text-primary font-body antialiased">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-primary-500 focus:px-4 focus:py-2 focus:text-white focus:font-semibold focus:shadow-dropdown"
+    >
+      {skipText}
+    </a>
+    <slot />
+  </body>
+</html>

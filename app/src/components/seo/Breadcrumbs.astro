@@ -1,0 +1,46 @@
+---
+interface BreadcrumbItem {
+  name: string;
+  href: string;
+}
+
+interface Props {
+  crumbs: BreadcrumbItem[];
+}
+
+const { crumbs } = Astro.props;
+
+const siteUrl = "https://ispbyaddress.ca";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: crumbs.map((crumb, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: crumb.name,
+    item: `${siteUrl}${crumb.href}`,
+  })),
+};
+---
+
+<nav aria-label="Breadcrumb" class="mb-6">
+  <ol class="flex flex-wrap items-center gap-1.5 text-sm text-text-muted" role="list">
+    {crumbs.map((crumb, index) => (
+      <li class="flex items-center gap-1.5">
+        {index > 0 && (
+          <svg class="h-3.5 w-3.5 shrink-0 text-border" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        )}
+        {index === crumbs.length - 1 ? (
+          <span class="font-medium text-text-secondary" aria-current="page">{crumb.name}</span>
+        ) : (
+          <a href={crumb.href} class="transition-colors hover:text-primary-500">{crumb.name}</a>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

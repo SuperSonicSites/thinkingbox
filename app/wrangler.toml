@@ -1,0 +1,25 @@
+name = "isp-by-address-canada"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+GEOCODE_PROVIDER = "mock"
+MOCK_PLANS = "true"
+
+# Production bindings (uncomment when deploying)
+# [[hyperdrive]]
+# binding = "HYPERDRIVE"
+# id = "<your-hyperdrive-config-id>"
+
+# [[kv_namespaces]]
+# binding = "LOOKUP_CACHE"
+# id = "<your-kv-namespace-id>"
+
+# [[r2_buckets]]
+# binding = "DATA_BUCKET"
+# bucket_name = "isp-data-snapshots"
+
+# [queues]
+# [[queues.producers]]
+# binding = "INGESTION_QUEUE"
+# queue = "ingestion-tasks"
