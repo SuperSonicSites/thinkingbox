@@ -113,9 +113,18 @@ export function createLocalDataClient(basePath: string): DataClient {
       try {
         const fs = await import("node:fs/promises");
         const path = await import("node:path");
-        const filePath = path.join(basePath, "cells", `${geohash}.json`);
-        const content = await fs.readFile(filePath, "utf-8");
-        return JSON.parse(content) as CellData;
+        // Try subdirectory structure first (cells/{prefix2}/{geohash}.json)
+        const prefix = geohash.slice(0, 2);
+        const subPath = path.join(basePath, "cells", prefix, `${geohash}.json`);
+        try {
+          const content = await fs.readFile(subPath, "utf-8");
+          return JSON.parse(content) as CellData;
+        } catch {
+          // Fall back to flat structure (cells/{geohash}.json)
+          const flatPath = path.join(basePath, "cells", `${geohash}.json`);
+          const content = await fs.readFile(flatPath, "utf-8");
+          return JSON.parse(content) as CellData;
+        }
       } catch {
         return null;
       }

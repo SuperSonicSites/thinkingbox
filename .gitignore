@@ -10,13 +10,16 @@ app/.env
 app/dist/
 app/.astro/
 
-# Data files (large CSVs — tracked separately or in R2)
+# Raw data files (large CSVs from ISED/StatCan)
 NBD_PHH_Speeds/
 NBD_Roads_TAB/
 Map_Data_CSV/
 PHH_ID_2021/
 Digital Boundary Files/
 Municipal CSD Boundaries/
+
+# Pre-computed data (generated locally, uploaded to R2)
+/data/
 
 # Docker volumes
 docker/pgdata/

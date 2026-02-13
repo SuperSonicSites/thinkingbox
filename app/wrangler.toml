@@ -14,7 +14,7 @@ bucket_name = "isp-data-canada"
 # KV namespace for edge caching of R2 data
 [[kv_namespaces]]
 binding = "LOOKUP_CACHE"
-id = "69acf19373974831b33ddd7d8615f3e5"
+id = "74e2c0c9b4814fdbaea3937794f08924"
 
 # D1 database for write operations (discrepancy reports)
 [[d1_databases]]

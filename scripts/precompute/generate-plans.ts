@@ -1,15 +1,34 @@
 /**
- * Pre-compute plans bundle from PostGIS provider data.
+ * Pre-compute plans bundle from mock provider plans JSON.
  *
- * Bundles all provider plans into a single plans.json file.
+ * Reads plans from mock/provider_plans.json and writes a bundled
+ * plans.json with additional metadata fields to data/precomputed/.
  *
- * Run locally with PostGIS available:
+ * Run locally:
  *   npx tsx scripts/precompute/generate-plans.ts
  */
 
-import postgres from "postgres";
 import * as fs from "node:fs";
 import * as path from "node:path";
+
+interface MockPlan {
+  provider_name: string;
+  region_code: string;
+  technology: string;
+  plan_name: string;
+  speed_down: number;
+  speed_up: number;
+  monthly_price: number;
+  promo_price: number | null;
+  promo_months: number;
+  contract_months: number;
+  data_cap_gb: number | null;
+  install_fee: number;
+  source: string;
+  source_url?: string | null;
+  last_verified_at?: string;
+  stale_flag?: boolean;
+}
 
 interface BundledPlan {
   provider_name: string;
@@ -30,70 +49,65 @@ interface BundledPlan {
   stale_flag: boolean;
 }
 
+interface MockPlansFile {
+  _comment?: string;
+  plans: MockPlan[];
+}
+
+const MOCK_PLANS_PATH = path.resolve(__dirname, "../../mock/provider_plans.json");
 const OUTPUT_DIR = path.resolve(__dirname, "../../data/precomputed");
 
-async function main(): Promise<void> {
-  const connectionString =
-    process.env.DATABASE_URL ??
-    "postgresql://postgres:postgres@localhost:5432/ispbyaddress";
+function main(): void {
+  console.log("Starting plans bundle generation from mock JSON...");
+  console.log(`Source: ${MOCK_PLANS_PATH}`);
 
-  const sql = postgres(connectionString, { max: 5, idle_timeout: 30 });
+  if (!fs.existsSync(MOCK_PLANS_PATH)) {
+    throw new Error(`Mock plans file not found: ${MOCK_PLANS_PATH}`);
+  }
 
-  console.log("Starting plans bundle generation...");
+  const raw = fs.readFileSync(MOCK_PLANS_PATH, "utf-8");
+  const mockData: MockPlansFile = JSON.parse(raw) as MockPlansFile;
+
+  if (!Array.isArray(mockData.plans)) {
+    throw new Error("Invalid mock plans file: missing 'plans' array");
+  }
+
+  const now = new Date().toISOString();
+
+  const plans: BundledPlan[] = mockData.plans.map((plan) => ({
+    provider_name: plan.provider_name,
+    region_code: plan.region_code,
+    technology: plan.technology,
+    plan_name: plan.plan_name,
+    speed_down: plan.speed_down,
+    speed_up: plan.speed_up,
+    monthly_price: plan.monthly_price,
+    promo_price: plan.promo_price ?? null,
+    promo_months: plan.promo_months,
+    contract_months: plan.contract_months,
+    data_cap_gb: plan.data_cap_gb ?? null,
+    install_fee: plan.install_fee,
+    source: plan.source,
+    source_url: plan.source_url ?? null,
+    last_verified_at: plan.last_verified_at ?? now,
+    stale_flag: plan.stale_flag ?? false,
+  }));
+
+  plans.sort((a, b) => {
+    const nameCompare = a.provider_name.localeCompare(b.provider_name);
+    if (nameCompare !== 0) return nameCompare;
+    const techCompare = a.technology.localeCompare(b.technology);
+    if (techCompare !== 0) return techCompare;
+    return a.monthly_price - b.monthly_price;
+  });
 
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-
-  const rows = await sql`
-    SELECT
-      p.name AS provider_name,
-      pp.region_code,
-      pp.technology,
-      pp.plan_name,
-      pp.speed_down,
-      pp.speed_up,
-      pp.monthly_price,
-      pp.promo_price,
-      pp.promo_months,
-      pp.contract_months,
-      pp.data_cap_gb,
-      pp.install_fee,
-      pp.source,
-      pp.source_url,
-      pp.last_verified_at,
-      pp.stale_flag
-    FROM provider_plans pp
-    JOIN providers p ON p.id = pp.provider_id
-    ORDER BY p.name, pp.technology, pp.monthly_price
-  `;
-
-  const plans: BundledPlan[] = rows.map((row) => ({
-    provider_name: String(row.provider_name),
-    region_code: String(row.region_code),
-    technology: String(row.technology),
-    plan_name: String(row.plan_name),
-    speed_down: Number(row.speed_down),
-    speed_up: Number(row.speed_up),
-    monthly_price: Number(row.monthly_price),
-    promo_price: row.promo_price != null ? Number(row.promo_price) : null,
-    promo_months: Number(row.promo_months),
-    contract_months: Number(row.contract_months),
-    data_cap_gb: row.data_cap_gb != null ? Number(row.data_cap_gb) : null,
-    install_fee: Number(row.install_fee),
-    source: String(row.source),
-    source_url: row.source_url != null ? String(row.source_url) : null,
-    last_verified_at: new Date(row.last_verified_at as string).toISOString(),
-    stale_flag: Boolean(row.stale_flag),
-  }));
 
   const bundle = { plans };
   const filePath = path.join(OUTPUT_DIR, "plans.json");
   fs.writeFileSync(filePath, JSON.stringify(bundle));
 
-  console.log(`Done. Bundled ${plans.length} plans into plans.json.`);
-  await sql.end();
+  console.log(`Done. Bundled ${plans.length} plans into ${filePath}`);
 }
 
-main().catch((err) => {
-  console.error("Plans generation failed:", err);
-  process.exit(1);
-});
+main();

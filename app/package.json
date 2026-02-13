@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
+    "@aws-sdk/client-s3": "^3.989.0",
     "@playwright/test": "^1.48.0",
     "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^25.2.3",
