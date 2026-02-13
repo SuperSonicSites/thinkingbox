@@ -1,6 +1,7 @@
 import type { APIContext } from "astro";
-import { getDatabase } from "@/lib/db/connection";
-import { resolveISPsAtLocation } from "@/lib/plans/resolver";
+import { z } from "zod";
+import { getDataClient } from "@/lib/data/r2-client";
+import { resolveISPsFromData } from "@/lib/plans/resolver";
 import {
   successResponse,
   jsonResponse,
@@ -9,43 +10,48 @@ import {
   generateRequestId,
 } from "@/lib/api/utils";
 
+const QuerySchema = z.object({
+  hexuid: z.string().min(1),
+  province: z.string().min(1).max(2),
+});
+
+/**
+ * GET /api/v1/address/[id]/plans?hexuid=...&province=...
+ *
+ * Refactored to accept hexuid + province params directly (no stored address_id).
+ * The [id] param is kept for URL compatibility but the actual lookup
+ * is now stateless.
+ */
 export async function GET(context: APIContext) {
   const requestId = generateRequestId();
   const locale = extractLocale(context.request);
 
   try {
-    const addressId = context.params.id;
+    const url = new URL(context.request.url);
+    const parsed = QuerySchema.safeParse({
+      hexuid: url.searchParams.get("hexuid"),
+      province: url.searchParams.get("province"),
+    });
 
-    if (!addressId || isNaN(Number(addressId))) {
-      return errors.badRequest("Invalid address ID");
+    if (!parsed.success) {
+      return errors.badRequest(
+        "hexuid and province query parameters are required",
+        parsed.error.flatten().fieldErrors
+      );
     }
 
+    const { hexuid, province } = parsed.data;
     const env = (context.locals as { runtime?: { env?: Record<string, unknown> } }).runtime?.env ?? {};
-    const sql = getDatabase(env as Parameters<typeof getDatabase>[0]);
+    const client = getDataClient(env);
 
-    // Find the address and its matched PHH point's hex
-    const [address] = await sql`
-      SELECT a.id, a.province, p.hexuid
-      FROM addresses a
-      JOIN address_phh_matches apm ON apm.address_id = a.id AND apm.rank = 1
-      JOIN phh_points p ON p.phh_id = apm.phh_id
-      WHERE a.id = ${Number(addressId)}
-    `;
-
-    if (!address) {
-      return errors.notFound("Address not found");
-    }
-
-    const isps = await resolveISPsAtLocation(
-      sql,
-      address.hexuid,
-      address.province ?? ""
-    );
+    const ispEntries = await client.getISPsForHex(hexuid);
+    const plansBundle = await client.getPlans();
+    const isps = resolveISPsFromData(ispEntries, plansBundle.plans, province);
 
     return jsonResponse(
       successResponse(
         {
-          address_id: Number(addressId),
+          hexuid,
           providers_count: isps.length,
           isps,
         },

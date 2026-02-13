@@ -275,8 +275,9 @@ ISP plan/pricing data does not exist as an open dataset. Plans are public market
 ## 10) Non-Functional Requirements (NFR)
 
 ### Performance
-- p95 lookup response < 2.5s (cached), < 5s (uncached).
-- p95 API response < 800ms for simple queries.
+- p50 lookup response ~200ms (KV cached), p95 < 400ms (R2 fallback).
+- p95 API response < 500ms for simple queries.
+- Monthly infrastructure cost: ~$0 (within Cloudflare free tiers for R2/KV/D1).
 
 ### Reliability
 - 99.5% monthly uptime for public lookup.
@@ -299,22 +300,47 @@ ISP plan/pricing data does not exist as an open dataset. Plans are public market
 
 ## 11) System Architecture (Implementation Target)
 
+### Architecture: Pre-computed R2/KV (Zero-Database Runtime)
+
+The ISED broadband data updates **quarterly**. Rather than running PostGIS for runtime spatial queries (~$69/mo), all spatial lookups are pre-computed into static JSON files and served from Cloudflare R2 (object storage) + KV (edge cache). The deployed application has **zero database dependencies** for read operations, bringing infrastructure cost to ~$0/mo within free tiers.
+
+#### Runtime lookup flow
+```
+User address → Geocode → lat/lng
+  → Compute geohash_6 in JS (~1.2km cell)
+  → Fetch 9 cells from R2/KV (center + 8 neighbors, parallel)
+  → Haversine distance to all PHH points in cells (in-memory)
+  → Nearest PHH has embedded coverage data + hexuid
+  → Fetch ISP list from R2/KV by hexuid
+  → Filter plans from cached plans.json
+  → CSD from pre-computed cell metadata
+  → Compute confidence → Return result
+```
+
+#### Pre-compute pipeline (runs locally with PostGIS, one-time per quarterly refresh)
+```
+PostGIS (local Docker) → geohash partitioning → cells/{hash}.json (~150K files, ~7.5GB)
+                        → ISP grouping → isps/{hexuid}.json (~74K files, ~30MB)
+                        → plan bundling → plans.json (1 file, ~500KB)
+                        → Upload to R2 bucket
+```
+
 ### Components
 1. **Web frontend:** Astro 5 + React 19 islands. Deploys to Cloudflare Pages via `@astrojs/cloudflare`.
 2. **API backend:** Astro server endpoints (`src/pages/api/v1/*`) running as Cloudflare Pages Functions.
-3. **Data store:** Postgres + PostGIS (Neon serverless for production, Docker for local dev), accessed via Hyperdrive from Workers.
-4. **Cache:** Cloudflare KV for hot lookup results + Hyperdrive query caching.
-5. **Object storage:** R2 for raw data snapshots, ingestion artifacts, and CSV archives.
-6. **Queue/workers:** Cloudflare Queues for async ingestion tasks; cron-triggered Workers for pricing page monitors.
-7. **Geocoding:** Google Places API (New) for address autocomplete + forward geocoding.
+3. **Data layer (reads):** Pre-computed JSON files on Cloudflare R2, with KV edge caching (cells: 1h TTL, ISPs: 6h, plans: 24h).
+4. **Data layer (writes):** Cloudflare D1 (free SQLite) for discrepancy reports only.
+5. **Pre-compute pipeline:** Local PostGIS + TypeScript scripts that generate all static data files. Runs once per quarterly ISED data release.
+6. **Geocoding:** Google Places API (New) for address autocomplete + forward geocoding.
+7. **Spatial matching:** Pure TypeScript geohash encoding + haversine distance (replaces PostGIS ST_DWithin).
 8. **Monitoring:** Cloudflare Analytics Engine + Workers Logpush.
 
 ### Local development stack (zero cloud cost)
-- Postgres + PostGIS: `docker compose up db`
-- Redis (optional): `docker compose up redis`
 - Astro dev server: `npm run dev` (includes API routes)
 - Geocoding: mock service returning deterministic results for test addresses
-- No Cloudflare account required for local dev/testing
+- Data: local filesystem fallback reads from `data/precomputed/`, or mock province profiles if no data
+- No Cloudflare account, no database, no API keys required for local dev
+- PostGIS (Docker) only needed when running the pre-compute pipeline
 
 ### Service boundaries
 - `lookup-service`
@@ -367,34 +393,42 @@ ISP plan/pricing data does not exist as an open dataset. Plans are public market
 
 ---
 
-## 14) Database Schema (Minimum)
+## 14) Data Schema
 
-Tables:
+### Pre-computed data (R2 — read-only, rebuilt quarterly)
+
+#### `cells/{geohash6}.json` (~150K files, ~50KB avg)
+Each file contains all PHH points in a ~1.2km x 0.6km geohash cell:
+- `csd` — Census Subdivision: `{ uid, en, fr }`
+- `points[]` — PHH points: `{ id, lat, lng, hex, prov, cov: { c, w, x, s, lte, at } }`
+  - Coverage compact: `c`=combined, `w`=wired, `x`=wireless, `s`=satellite max thresholds
+  - `lte` = LTE mobile availability, `at` = ingested timestamp
+
+#### `isps/{hexuid}.json` (~74K files, ~400B avg)
+ISP entries per hex cell: `[{ name, tech_en, tech_fr }]`
+
+#### `plans.json` (1 file, ~500KB)
+All provider plans bundled: `{ plans: [{ provider_name, region_code, technology, plan_name, speed_down, speed_up, monthly_price, ... }] }`
+
+### D1 database (SQLite — write operations only)
+
+Table: `discrepancy_reports`
+- `id`, `phh_id`, `reporter_email`, `report_type`, `description`, `latitude`, `longitude`, `status`, `created_at`
+
+### PostGIS schema (local pre-compute pipeline only, not deployed)
+
+Tables used by the pre-compute pipeline (see `scripts/migrate/001-initial-schema.sql`):
 - `phh_points` (PHH_ID, lat, lng, geometry, hexuid, dbuid, pop, dwellings)
 - `phh_coverage_snapshots` (PHH_ID, dataset_variant, all boolean flags, all enum thresholds, lte flag, ingested_at)
 - `hex_isp_coverage` (hexuid, provider_name, technology_en, technology_fr)
 - `census_subdivisions` (csd_uid, name_en, name_fr, province, geometry)
-- `addresses` (geocoded user lookups)
-- `address_phh_matches` (address_id, phh_id, distance_meters, confidence_score)
 - `providers` (provider registry: id, name, affiliate_status, website_url)
-- `provider_plans` (provider_id, region_code, technology, plan_name, speed_down, speed_up, monthly_price, promo_price, promo_months, contract_months, data_cap_gb, install_fee, source_url, last_verified_at, stale_flag)
-- `provider_plan_change_log` (plan_id, field_changed, old_value, new_value, changed_at, change_source)
-- `pricing_page_monitors` (provider_id, url, last_hash, last_checked_at, alert_pending)
-- `address_plan_inferences`
-- `provenance_events`
-- `users`
-- `saved_addresses`
-- `alerts`
-- `partner_accounts`
-- `api_keys`
-- `discrepancy_reports`
-- `audit_logs`
+- `provider_plans` (provider_id, region_code, technology, plan_name, speed_down, speed_up, monthly_price, etc.)
 
 Indices:
-- spatial index on `phh_points` geometry and on `census_subdivisions` geometry.
-- composite indexes on `(address_id, updated_at)` and `(provider_id, updated_at)`.
-- index on `hex_isp_coverage(hexuid)` for join from PHH to ISP names.
-- index on `provider_plans(provider_id, technology, region_code)` for plan lookup.
+- GIST spatial index on `phh_points` geometry and on `census_subdivisions` geometry
+- B-tree index on `hex_isp_coverage(hexuid)` for join from PHH to ISP names
+- B-tree index on `provider_plans(provider_id, technology, region_code)` for plan lookup
 
 ---
 
@@ -661,19 +695,26 @@ Website is considered autonomously build-complete when:
 ### Required for local development
 | Key | Purpose | How to get | Cost |
 |---|---|---|---|
-| `DATABASE_URL` | Local PostGIS connection | Docker compose auto-generates | Free |
-| None others required | Mock geocoder + real open data = full local dev with zero API keys | — | Free |
+| None required | Mock geocoder + mock data fallback = full local dev with zero API keys or databases | — | Free |
+| `DATABASE_URL` (optional) | Local PostGIS for pre-compute pipeline only | Docker compose auto-generates | Free |
 
 ### Required for production deployment
 | Key | Env var | Purpose | How to get | Cost |
 |---|---|---|---|---|
-| Cloudflare API Token | `CLOUDFLARE_API_TOKEN` | Pages/Workers deployment, R2, KV, Queues | Cloudflare dashboard → API Tokens | Free tier available |
+| Cloudflare API Token | `CLOUDFLARE_API_TOKEN` | Pages/Workers deployment, R2, KV, D1 | Cloudflare dashboard → API Tokens | Free tier available |
 | Cloudflare Account ID | `CLOUDFLARE_ACCOUNT_ID` | Resource scoping | Cloudflare dashboard | Free |
-| Neon/Supabase Postgres | `DATABASE_URL` | Production PostGIS connection | Neon console or Supabase dashboard | Free tier (Neon 0.5GB, Supabase 500MB) |
-| Hyperdrive config | `HYPERDRIVE_ID` | Workers → Postgres connection pooling | `wrangler hyperdrive create` | Included with Workers |
 | Google Places API Key | `GOOGLE_PLACES_API_KEY` | Address autocomplete + geocoding | Google Cloud Console → APIs & Services | $200/mo free credit, then ~$17/1K sessions |
-| R2 bucket | `R2_BUCKET_NAME` | Data snapshots and artifacts | `wrangler r2 bucket create` | 10GB free |
-| KV namespace | `KV_NAMESPACE_ID` | Lookup result caching | `wrangler kv namespace create` | Free tier available |
+| R2 bucket | `DATA_BUCKET` | Pre-computed cell, ISP, and plan data | `wrangler r2 bucket create` | 10GB free |
+| KV namespace | `LOOKUP_CACHE` | Edge caching for R2 data | `wrangler kv namespace create` | Free tier available |
+| D1 database | `DISCREPANCY_DB` | Discrepancy report storage | `wrangler d1 create` | Free tier (5GB) |
+
+**No Postgres/PostGIS in production.** The deployed application has zero database dependencies for read operations. PostGIS is only used locally for the quarterly pre-compute pipeline.
+
+### Required for pre-compute pipeline (local only)
+| Key | Env var | Purpose | How to get | Cost |
+|---|---|---|---|---|
+| PostGIS connection | `DATABASE_URL` | Source data for pre-computation | Docker compose | Free |
+| R2 credentials | `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY` | Upload pre-computed data | Cloudflare dashboard → R2 API Tokens | Free |
 
 ### Optional / Phase 2+
 | Key | Env var | Purpose | When needed |
@@ -683,7 +724,7 @@ Website is considered autonomously build-complete when:
 | Sentry DSN | `SENTRY_DSN` | Error tracking | Production launch |
 
 ### Environment file template
-The project includes `.env.example` with all variables. For local dev, only `DATABASE_URL` is needed (auto-set by docker compose). Copy to `.env.local` and fill production values when deploying.
+The project includes `.env.example` with all variables. For local dev, no configuration is needed — the app runs with mock data. Copy `.env.example` to `.env.local` and fill production values when deploying.
 
 ## Appendix C — Governance Policy
 

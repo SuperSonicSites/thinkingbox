@@ -1,7 +1,6 @@
 import type { APIRoute } from "astro";
 import { z } from "zod";
-import { getDatabase } from "@/lib/db/connection";
-import { saveDiscrepancyReport } from "@/lib/db/queries";
+import { saveDiscrepancyReport } from "@/lib/data/d1-client";
 import {
   successResponse,
   jsonResponse,
@@ -10,7 +9,6 @@ import {
 } from "@/lib/api/utils";
 
 const DiscrepancySchema = z.object({
-  address_id: z.number().int().positive().optional(),
   phh_id: z.number().int().positive().optional(),
   reporter_email: z.string().email().optional(),
   report_type: z.enum([
@@ -21,7 +19,17 @@ const DiscrepancySchema = z.object({
     "other",
   ]),
   description: z.string().min(10).max(2000),
+  latitude: z.number().optional(),
+  longitude: z.number().optional(),
 });
+
+interface D1Database {
+  prepare(query: string): {
+    bind(...values: unknown[]): {
+      run(): Promise<{ meta: { last_row_id: number } }>;
+    };
+  };
+}
 
 export const POST: APIRoute = async ({ request, locals }) => {
   const requestId = generateRequestId();
@@ -38,14 +46,27 @@ export const POST: APIRoute = async ({ request, locals }) => {
     }
 
     const env = (locals as { runtime?: { env?: Record<string, unknown> } }).runtime?.env ?? {};
-    const sql = getDatabase(env as Parameters<typeof getDatabase>[0]);
+    const db = env.DISCREPANCY_DB as D1Database | undefined;
 
-    const reportId = await saveDiscrepancyReport(sql, {
-      address_id: parsed.data.address_id ?? null,
+    if (!db) {
+      // In dev without D1, return a mock ID
+      console.warn("[discrepancy] D1 not available, returning mock report ID");
+      return jsonResponse(
+        successResponse(
+          { report_id: Math.floor(Math.random() * 10000), status: "pending" },
+          { request_id: requestId }
+        ),
+        201
+      );
+    }
+
+    const reportId = await saveDiscrepancyReport(db as Parameters<typeof saveDiscrepancyReport>[0], {
       phh_id: parsed.data.phh_id ?? null,
       reporter_email: parsed.data.reporter_email ?? null,
       report_type: parsed.data.report_type,
       description: parsed.data.description,
+      latitude: parsed.data.latitude ?? null,
+      longitude: parsed.data.longitude ?? null,
     });
 
     return jsonResponse(

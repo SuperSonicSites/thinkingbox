@@ -1,6 +1,5 @@
 import type { APIRoute } from "astro";
 import { z } from "zod";
-import { getDatabase } from "@/lib/db/connection";
 import { performLookup } from "@/lib/api/lookup";
 import {
   successResponse,
@@ -36,7 +35,6 @@ export const POST: APIRoute = async ({ request, locals }) => {
     }
 
     const env = (locals as { runtime?: { env?: Record<string, unknown> } }).runtime?.env ?? {};
-    const sql = getDatabase(env as Parameters<typeof getDatabase>[0]);
 
     const apiKey = (env.GOOGLE_PLACES_API_KEY as string | undefined)
       ?? import.meta.env.GOOGLE_PLACES_API_KEY
@@ -46,7 +44,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
       ?? (apiKey ? "google" : "mock");
 
     const result = await performLookup(
-      sql,
+      env,
       parsed.data,
       {
         GEOCODE_PROVIDER: geocodeProvider,

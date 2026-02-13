@@ -1,14 +1,13 @@
 import type {
   CoverageSnapshot,
-  HexISPCoverage,
   AvailabilitySummary,
   AvailabilityDetail,
   AvailabilityClass,
   ISPAtLocation,
+  ProviderPlan,
   SpeedThreshold,
 } from "@/types";
-import type { SQL } from "@/lib/db/connection";
-import { getISPsForHex, getPlansForProvider } from "@/lib/db/queries";
+import type { ISPEntry, BundledPlan } from "@/lib/data/types";
 
 /**
  * Derive the availability summary from a PHH coverage snapshot.
@@ -91,49 +90,69 @@ function classifyAvailability(
 }
 
 /**
- * Resolve all ISPs and their plans for a given hex + province.
- * This is the core "plan-to-location join logic" from PRD Section 8.5.
+ * Resolve ISPs and plans from pre-computed data (R2/KV).
+ * Replaces the SQL-based resolveISPsAtLocation().
  */
-export async function resolveISPsAtLocation(
-  sql: SQL,
-  hexuid: string,
+export function resolveISPsFromData(
+  ispEntries: ISPEntry[],
+  allPlans: BundledPlan[],
   provinceCode: string
-): Promise<ISPAtLocation[]> {
-  const hexISPs = await getISPsForHex(sql, hexuid);
+): ISPAtLocation[] {
+  if (ispEntries.length === 0) return [];
 
-  if (hexISPs.length === 0) return [];
-
-  // Group by provider to deduplicate (a provider may serve via multiple technologies)
-  const providerMap = new Map<string, HexISPCoverage[]>();
-  for (const isp of hexISPs) {
-    const existing = providerMap.get(isp.provider_name) ?? [];
-    existing.push(isp);
-    providerMap.set(isp.provider_name, existing);
+  // Group by provider name to deduplicate
+  const providerMap = new Map<string, ISPEntry[]>();
+  for (const entry of ispEntries) {
+    const existing = providerMap.get(entry.name) ?? [];
+    existing.push(entry);
+    providerMap.set(entry.name, existing);
   }
 
   const results: ISPAtLocation[] = [];
 
   for (const [providerName, entries] of providerMap) {
-    // For each technology this provider offers at this hex
     for (const entry of entries) {
-      const technologyKey = mapTechnologyToDBKey(entry.technology_en);
-      const plans = await getPlansForProvider(
-        sql,
-        providerName,
-        technologyKey,
-        provinceCode
-      );
+      const technologyKey = mapTechnologyToDBKey(entry.tech_en);
+
+      // Filter plans from the bundle by provider + technology + region
+      const matchingPlans: ProviderPlan[] = allPlans
+        .filter(
+          (p) =>
+            p.provider_name === providerName &&
+            p.technology === technologyKey &&
+            p.region_code === provinceCode
+        )
+        .map((p, idx) => ({
+          id: idx,
+          provider_id: 0,
+          provider_name: p.provider_name,
+          region_code: p.region_code,
+          technology: p.technology,
+          plan_name: p.plan_name,
+          speed_down: p.speed_down,
+          speed_up: p.speed_up,
+          monthly_price: p.monthly_price,
+          promo_price: p.promo_price,
+          promo_months: p.promo_months,
+          contract_months: p.contract_months,
+          data_cap_gb: p.data_cap_gb,
+          install_fee: p.install_fee,
+          source: p.source,
+          source_url: p.source_url,
+          last_verified_at: p.last_verified_at,
+          stale_flag: p.stale_flag,
+        }));
 
       results.push({
         provider: {
           name: providerName,
           slug: slugify(providerName),
-          website_url: null, // Populated from providers table if needed
+          website_url: null,
         },
-        technology: entry.technology_en,
-        technology_fr: entry.technology_fr,
-        plans,
-        has_pricing: plans.length > 0,
+        technology: entry.tech_en,
+        technology_fr: entry.tech_fr,
+        plans: matchingPlans,
+        has_pricing: matchingPlans.length > 0,
       });
     }
   }

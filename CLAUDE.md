@@ -10,9 +10,12 @@ A bilingual (EN/FR) web platform that answers: "What internet options are availa
 - **Frontend:** Astro 5 + React 19 (islands architecture). No other frameworks.
 - **Styling:** Tailwind CSS 4. No component libraries unless explicitly approved.
 - **API:** Astro server endpoints in `src/pages/api/v1/`. These deploy as Cloudflare Pages Functions.
-- **Database:** Postgres 16 + PostGIS 3.4. Local via Docker, production via Neon + Hyperdrive.
-- **Cache:** Cloudflare KV for hot lookup results in production. Skip caching in local dev.
-- **Object storage:** Cloudflare R2.
+- **Data layer (reads):** Pre-computed JSON files on Cloudflare R2 + KV edge cache. No runtime database for reads.
+- **Data layer (writes):** Cloudflare D1 (free SQLite) for discrepancy reports only.
+- **Pre-compute pipeline:** Local PostGIS (Docker) generates static geohash cell files quarterly. Not deployed.
+- **Spatial matching:** Pure TypeScript geohash encoding + haversine distance (replaces PostGIS ST_DWithin).
+- **Object storage:** Cloudflare R2 for pre-computed cell/ISP/plan data.
+- **Cache:** Cloudflare KV for edge caching R2 data (cells: 1h, ISPs: 6h, plans: 24h TTL).
 - **Geocoding:** Mock geocoder for dev (`GEOCODE_PROVIDER=mock`), Google Places API (New) for production.
 - **Language:** TypeScript everywhere. Strict mode. No `any` types.
 - **Package manager:** npm (not yarn, not pnpm, not bun).
@@ -59,11 +62,11 @@ thinkingbox/
 │       │       ├── discrepancy.ts
 │       │       └── health.ts
 │       ├── lib/
-│       │   ├── db/           # Postgres/PostGIS queries, connection
-│       │   ├── geo/          # Geocoding (mock + Google), spatial matching
+│       │   ├── data/         # R2/KV client, PHH matcher, D1 client, types
+│       │   ├── geo/          # Geocoding (mock + Google), geohash, haversine
 │       │   ├── confidence/   # Confidence scoring algorithm
-│       │   ├── plans/        # Plan lookup, join logic, mock detection
-│       │   └── api/          # Shared API utilities, error envelope
+│       │   ├── plans/        # Plan resolution, availability derivation
+│       │   └── api/          # Shared API utilities, error envelope, mock lookup
 │       ├── i18n/             # en.json, fr.json — all UI strings
 │       ├── styles/           # Global styles, Tailwind config
 │       └── types/            # Shared TypeScript types
@@ -73,7 +76,9 @@ thinkingbox/
 │   ├── e2e/                  # Playwright browser tests
 │   └── fixtures/             # Test data snapshots
 ├── scripts/
-│   ├── migrate/              # SQL migration files (001-initial-schema.sql, etc.)
+│   ├── precompute/           # Pre-compute pipeline (cells, ISPs, plans, upload)
+│   ├── migrate/              # PostGIS migrations (for pre-compute pipeline)
+│   ├── migrate-d1/           # D1 (SQLite) migrations for write operations
 │   ├── ingest/               # Scripts to load CSVs into PostGIS
 │   └── seed/                 # Seed scripts for mock/test data
 ├── docker/
@@ -91,16 +96,27 @@ thinkingbox/
 
 ## Data architecture — the core mental model
 
-### The join chain (this is the whole product)
+### The lookup chain (this is the whole product)
 ```
 User types address
   → Geocode to lat/lng (mock or Google Places API)
-  → PostGIS: find nearest PHH point(s) by ST_DWithin
-  → PHH_ID joins to phh_coverage_snapshots (speed thresholds)
-  → PHH.HEXUID joins to hex_isp_coverage (which ISPs serve this area)
-  → ISP name + technology joins to provider_plans (pricing)
+  → Compute geohash_6 in JS (~1.2km cell)
+  → Fetch 9 cells from R2/KV (center + 8 neighbors, parallel)
+  → Haversine distance to all PHH points in cells (in-memory)
+  → Nearest PHH has embedded coverage data + hexuid
+  → Fetch ISP list from R2/KV by hexuid
+  → Filter plans from cached plans.json
+  → CSD from pre-computed cell metadata
   → Compute confidence score
   → Return result
+```
+
+### Pre-compute pipeline (runs locally with PostGIS, once per quarterly data refresh)
+```
+PostGIS data → geohash partitioning → cells/{hash}.json (~150K files)
+             → ISP grouping by hex → isps/{hexuid}.json (~74K files)
+             → plan bundling → plans.json (1 file)
+             → Upload to Cloudflare R2
 ```
 
 ### Key data files (already downloaded, gitignored)
@@ -145,12 +161,13 @@ User types address
 - Use Zod for request validation at API boundaries.
 - Every endpoint logs with a correlation ID.
 
-### Database
-- All queries go through `src/lib/db/`. No raw SQL in components or pages.
-- Use parameterized queries. Never interpolate user input into SQL.
-- Migration files are sequential: `001-initial-schema.sql`, `002-add-index.sql`, etc.
-- PostGIS geometry column is `geography(Point, 4326)` for PHH points.
-- Spatial queries use `ST_DWithin` (not `ST_Distance` — DWithin uses spatial index).
+### Data layer
+- All data reads go through `src/lib/data/r2-client.ts` (DataClient interface).
+- Production: KV-first with R2 fallback. Dev: local filesystem or mock data.
+- Write operations (discrepancy reports) use D1 via `src/lib/data/d1-client.ts`.
+- Spatial matching uses `src/lib/data/phh-matcher.ts` (haversine distance, not PostGIS).
+- PostGIS is only used in `scripts/precompute/` for the quarterly pre-compute pipeline.
+- Migration files: `scripts/migrate/` for PostGIS, `scripts/migrate-d1/` for D1.
 
 ### i18n
 - All user-facing strings live in `src/i18n/en.json` and `src/i18n/fr.json`.
@@ -179,7 +196,7 @@ User types address
 
 ## What NOT to do
 - Do NOT scrape ISP websites. Plan data is manually curated or from affiliate feeds.
-- Do NOT use D1 (SQLite). This project requires PostGIS spatial queries.
+- Do NOT add PostGIS or any runtime database dependency. The deployed app is database-free for reads.
 - Do NOT install component libraries (Material UI, Chakra, shadcn, etc.) without explicit approval.
 - Do NOT commit data CSV files to git. They are gitignored and loaded via ingestion scripts.
 - Do NOT commit `.env.local` or any file with real API keys.
@@ -189,38 +206,42 @@ User types address
 
 ## Local development quickstart
 ```bash
-# 1. Start PostGIS
-cd docker && docker compose up db -d
-
-# 2. Run migrations
-psql $DATABASE_URL -f scripts/migrate/001-initial-schema.sql
-
-# 3. Ingest data (one-time, takes ~10-15 min for full national dataset)
-# Scripts in scripts/ingest/ load CSVs into PostGIS tables
-
-# 4. Seed mock plans
-# Script in scripts/seed/ loads mock/provider_plans.json
-
-# 5. Start Astro dev server
+# 1. Install and start (no database needed!)
 cd app && npm install && npm run dev
 # App runs at http://localhost:4321
 # API routes at http://localhost:4321/api/v1/*
+# Uses mock geocoder + mock province profiles when no pre-computed data exists
+```
+
+### Pre-compute pipeline (quarterly, requires PostGIS)
+```bash
+# 1. Start PostGIS
+cd docker && docker compose up db -d
+
+# 2. Run migrations + ingest data
+psql $DATABASE_URL -f scripts/migrate/001-initial-schema.sql
+cd app && npm run db:ingest:phh && npm run db:ingest:speeds && npm run db:ingest:hex && npm run db:ingest:boundaries
+
+# 3. Seed plans + pre-compute
+npm run db:seed:plans && npm run precompute
+
+# 4. Upload to R2 (production)
+npm run precompute:upload
 ```
 
 ## Build order (milestone sequence)
-1. **Database schema + migrations** — tables, indexes, PostGIS extensions
-2. **Data ingestion scripts** — load PHH speeds, coordinates, hex ISP, boundaries
-3. **Core lookup logic** — geocode → nearest PHH → availability → ISP resolution
-4. **Confidence scoring** — spatial + concordance + freshness + discrepancy
-5. **API endpoints** — /v1/lookup, /v1/address/{id}/availability, /v1/health
-6. **Frontend: lookup page** — address form, autocomplete, submit
-7. **Frontend: result page** — availability card, provider cards, confidence, provenance
-8. **i18n** — EN/FR string extraction and routing
-9. **Mock plan display** — "Pricing Coming Soon" cards
-10. **Evals** — data quality, lookup accuracy golden set, API contracts
-11. **SEO pages** — programmatic city/region templates
-12. **Accounts + alerts** — auth, saved addresses, watch alerts (Phase 2)
-13. **Partner/admin** — dashboard, API keys, admin console (Phase 2)
+1. **Pre-compute pipeline** — geohash cells, ISP files, plans bundle from PostGIS
+2. **Core lookup logic** — geocode → geohash → fetch cells → haversine match → availability → ISP resolution
+3. **Confidence scoring** — spatial + concordance + freshness + discrepancy
+4. **API endpoints** — /v1/lookup, /v1/address/{id}/availability, /v1/health
+5. **Frontend: lookup page** — address form, autocomplete, submit
+6. **Frontend: result page** — availability card, provider cards, confidence, provenance
+7. **i18n** — EN/FR string extraction and routing
+8. **Mock plan display** — "Pricing Coming Soon" cards
+9. **Evals** — data quality, lookup accuracy golden set, API contracts
+10. **SEO pages** — programmatic city/region templates
+11. **Accounts + alerts** — auth, saved addresses, watch alerts (Phase 2)
+12. **Partner/admin** — dashboard, API keys, admin console (Phase 2)
 
 ## Accessibility requirements
 - WCAG 2.2 AA compliance on all pages.
