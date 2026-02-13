@@ -165,6 +165,10 @@ thinkingbox/
 └── evals/                    # Data quality and accuracy validation
 ```
 
+## Next-Level Plan
+
+See [NEXT_LEVEL_ROADMAP.md](./NEXT_LEVEL_ROADMAP.md) for a prioritized execution plan focused on trust, schema markup coverage, ISP reviews, stronger “X vs X” comparison pages, reliability, and UX speed perception.
+
 ## License
 
 All rights reserved. Broadband data is used under the [Open Government Licence — Canada](https://open.canada.ca/en/open-government-licence-canada).
