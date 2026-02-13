@@ -1,0 +1,64 @@
+---
+import type { ISPReviewSummary } from "@/lib/seo/reviews";
+import { t } from "@/i18n/utils";
+
+interface Props {
+  providerName: string;
+  summary: ISPReviewSummary;
+  locale: "en" | "fr";
+}
+
+const { providerName, summary, locale } = Astro.props;
+const dimensionRows = [
+  { key: "reliability", score: summary.dimensions.reliability },
+  { key: "value", score: summary.dimensions.value },
+  { key: "support", score: summary.dimensions.support },
+  { key: "installation", score: summary.dimensions.installation },
+] as const;
+
+const highlights = locale === "en" ? summary.highlightsEn : summary.highlightsFr;
+const confidence = locale === "en" ? summary.confidenceLabelEn : summary.confidenceLabelFr;
+---
+
+<article class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-5 shadow-card">
+  <div class="flex items-center justify-between gap-3">
+    <h3 class="font-[var(--font-display)] text-lg font-bold text-text-primary">{providerName}</h3>
+    <span class="rounded-full bg-primary-50 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary-700">{t(locale, "compare.prelaunch_badge")}</span>
+  </div>
+
+  <div class="mt-3 flex items-end gap-2">
+    <span class="font-[var(--font-display)] text-3xl font-bold text-primary-700">{summary.overall.toFixed(1)}</span>
+    <span class="pb-1 text-sm text-text-muted">/5 {t(locale, "compare.rating")}</span>
+  </div>
+  <p class="text-sm text-text-secondary">{summary.reviewCount.toLocaleString(locale === "en" ? "en-CA" : "fr-CA")} {t(locale, "compare.reviews")}</p>
+
+  <p class="mt-3 rounded bg-primary-50 px-3 py-2 text-xs font-medium text-primary-700">
+    {t(locale, "compare.rating_confidence")}: {confidence}
+  </p>
+
+  <p class="mt-2 text-xs leading-relaxed text-text-muted">{t(locale, "compare.prelaunch_note")}</p>
+
+  <dl class="mt-4 space-y-3">
+    {dimensionRows.map((item) => {
+      const width = `${Math.round((item.score / 5) * 100)}%`;
+      return (
+        <div>
+          <div class="mb-1 flex items-center justify-between text-sm">
+            <dt class="text-text-secondary">{t(locale, `compare.dimensions.${item.key}`)}</dt>
+            <dd class="font-semibold text-text-primary">{item.score.toFixed(1)}</dd>
+          </div>
+          <div class="h-2 rounded-full bg-surface">
+            <div class="h-2 rounded-full bg-primary-500" style={{ width }} />
+          </div>
+        </div>
+      );
+    })}
+  </dl>
+
+  <div class="mt-4">
+    <h4 class="text-sm font-semibold text-text-primary">{t(locale, "compare.customer_highlights")}</h4>
+    <ul class="mt-2 space-y-1 text-sm text-text-secondary">
+      {highlights.map((item) => <li>• {item}</li>)}
+    </ul>
+  </div>
+</article>

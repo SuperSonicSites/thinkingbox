@@ -2,6 +2,7 @@
 import "@/styles/global.css";
 import { t } from "@/i18n/utils";
 import type { Locale } from "@/types/index";
+import { buildBreadcrumbListSchema } from "@/lib/seo/schema";
 
 interface Props {
   title: string;
@@ -32,6 +33,7 @@ const alternateUrl = `${siteUrl}${alternatePath}`;
 const skipText = t(locale, "common.skip_to_content");
 const ogLocale = locale === "en" ? "en_CA" : "fr_CA";
 const ogLocaleAlternate = locale === "en" ? "fr_CA" : "en_CA";
+const breadcrumbSchema = buildBreadcrumbListSchema(siteUrl, canonicalPath, locale);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -73,6 +75,7 @@ const jsonLd = {
       about: { "@id": `${siteUrl}/#organization` },
       inLanguage: `${locale}-CA`,
     },
+    ...(breadcrumbSchema ? [breadcrumbSchema] : []),
   ],
 };
 ---

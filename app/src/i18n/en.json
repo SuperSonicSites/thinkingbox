@@ -112,8 +112,8 @@
     "back": "Back",
     "save": "Save",
     "share": "Share Results",
-    "language_switch": "Fran\u00e7ais",
-    "copyright": "\u00a9 {{year}} ISP by Address Canada. All rights reserved.",
+    "language_switch": "Français",
+    "copyright": "© {{year}} ISP by Address Canada. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "skip_to_content": "Skip to main content",
@@ -165,21 +165,21 @@
     "cities_in_province": "{{count}} Cities"
   },
   "seo": {
-    "home_title": "ISP by Address Canada \u2014 Find Internet Providers at Your Address",
+    "home_title": "ISP by Address Canada — Find Internet Providers at Your Address",
     "home_description": "Check which internet service providers are available at your Canadian address. Compare speeds, prices, and technologies from ISED broadband data.",
-    "lookup_title": "Check Internet Availability \u2014 ISP by Address Canada",
+    "lookup_title": "Check Internet Availability — ISP by Address Canada",
     "lookup_description": "Enter your address to discover available internet providers, speeds, and pricing at your location across Canada.",
-    "compare_title": "Compare Internet Plans \u2014 ISP by Address Canada",
-    "coverage_title": "Broadband Coverage Map \u2014 ISP by Address Canada",
-    "providers_title": "Internet Providers in Canada \u2014 ISP by Address Canada",
+    "compare_title": "Compare Internet Plans — ISP by Address Canada",
+    "coverage_title": "Broadband Coverage Map — ISP by Address Canada",
+    "providers_title": "Internet Providers in Canada — ISP by Address Canada",
     "providers_description": "Browse all {{count}} Canadian internet service providers. Compare coverage, technologies, and plans from major carriers and regional ISPs.",
-    "technology_title": "Internet Technologies \u2014 ISP by Address Canada",
+    "technology_title": "Internet Technologies — ISP by Address Canada",
     "technology_description": "Learn about different internet technologies available in Canada: fibre, cable, DSL, fixed wireless, satellite, and mobile wireless.",
-    "speeds_title": "Internet Speed Guide \u2014 ISP by Address Canada",
+    "speeds_title": "Internet Speed Guide — ISP by Address Canada",
     "speeds_description": "Find the right internet speed for your household. Compare speed tiers from under 25 Mbps to 500+ Mbps with activity recommendations.",
-    "guides_title": "Internet Guides \u2014 ISP by Address Canada",
+    "guides_title": "Internet Guides — ISP by Address Canada",
     "guides_description": "Expert guides to help you choose the best internet service in Canada. Tips on speeds, technologies, providers, and switching.",
-    "comparisons_title": "ISP Comparisons \u2014 ISP by Address Canada",
+    "comparisons_title": "ISP Comparisons — ISP by Address Canada",
     "comparisons_description": "Side-by-side comparisons of Canada's top internet providers. Compare Bell vs Rogers, Telus vs Shaw, and more.",
     "faq_title": "Frequently Asked Questions"
   },
@@ -197,9 +197,9 @@
   "pricing": {
     "title": "API Pricing",
     "subtitle": "Access ISP coverage data programmatically with our API.",
-    "free_tier": "Free Tier \u2014 100 lookups per day, perfect for personal use.",
-    "partner_tier": "Partner Tier \u2014 10,000 lookups per day with priority support.",
-    "enterprise_tier": "Enterprise Tier \u2014 Unlimited lookups with dedicated support and SLA."
+    "free_tier": "Free Tier — 100 lookups per day, perfect for personal use.",
+    "partner_tier": "Partner Tier — 10,000 lookups per day with priority support.",
+    "enterprise_tier": "Enterprise Tier — Unlimited lookups with dedicated support and SLA."
   },
   "partners": {
     "title": "Partner With Us",
@@ -215,7 +215,7 @@
     },
     "confidence_preview": {
       "title": "Transparent Confidence Scoring",
-      "description": "Every result shows exactly how reliable our data is \u2014 with a breakdown of spatial accuracy, data concordance, freshness, and community corrections.",
+      "description": "Every result shows exactly how reliable our data is — with a breakdown of spatial accuracy, data concordance, freshness, and community corrections.",
       "high": "High",
       "medium": "Medium",
       "low": "Low"
@@ -227,7 +227,7 @@
     },
     "all_providers": {
       "title": "Every Major Provider",
-      "description": "Compare coverage from Bell, Rogers, Telus, Videotron, and dozens of regional ISPs \u2014 across fibre, cable, DSL, wireless, and satellite."
+      "description": "Compare coverage from Bell, Rogers, Telus, Videotron, and dozens of regional ISPs — across fibre, cable, DSL, wireless, and satellite."
     },
     "explore": {
       "title": "Explore Internet in Canada",
@@ -245,5 +245,32 @@
       "guides": "Guides",
       "guides_stat": "10 expert guides"
     }
+  },
+  "compare": {
+    "hero_subtitle": "Deep side-by-side comparison with coverage context, technology differences, and customer review ratings.",
+    "review_edge_prefix": "Current review edge:",
+    "review_snapshot_title": "Review Ratings Snapshot",
+    "side_by_side_title": "Side-by-Side Comparison",
+    "feature": "Feature",
+    "review_score": "Review score",
+    "type": "Type",
+    "provinces": "Provinces",
+    "learn_more_prefix": "Learn more about",
+    "choice_guidance": "The right choice depends on your address and priorities. Use the ratings as one signal, then verify actual service availability at your exact location.",
+    "cta_subtitle_prefix": "See whether",
+    "cta_subtitle_suffix": "or other ISPs serve your location.",
+    "rating": "Rating",
+    "reviews": "reviews",
+    "rating_confidence": "Rating confidence",
+    "customer_highlights": "What customers mention",
+    "dimensions": {
+      "reliability": "Reliability",
+      "value": "Value",
+      "support": "Support",
+      "installation": "Installation"
+    },
+    "index_subtitle": "Side-by-side comparisons of Canada's top internet providers with review-driven score snapshots.",
+    "prelaunch_badge": "Pre-launch review dataset",
+    "prelaunch_note": "Ratings are being calibrated before public launch and may be refined as verified reviews grow."
   }
 }

@@ -4,8 +4,10 @@ import Header from "@/components/common/Header.astro";
 import Footer from "@/components/common/Footer.astro";
 import Breadcrumbs from "@/components/seo/Breadcrumbs.astro";
 import FAQSection from "@/components/seo/FAQSection.astro";
+import ReviewScoreCard from "@/components/compare/ReviewScoreCard.astro";
 import { t } from "@/i18n/utils";
 import { getComparisons, getComparisonBySlug, getISPBySlug, getProvinceByCode } from "@/lib/seo/data";
+import { buildAggregateRatingSchema, getISPReviewSummary } from "@/lib/seo/reviews";
 
 export const prerender = true;
 
@@ -22,53 +24,92 @@ const providerA = getISPBySlug(comparison.provider_a_slug);
 const providerB = getISPBySlug(comparison.provider_b_slug);
 if (!providerA || !providerB) return Astro.redirect("/fr/compare");
 
-const seoTitle = `${providerA.name} vs ${providerB.name}\u00a0: quel FSI choisir en 2026\u00a0? \u2014 FSI par adresse Canada`;
-const seoDesc = `Comparez ${providerA.name} et ${providerB.name}. Couverture, vitesses, tarifs et technologies compar\u00e9s c\u00f4te \u00e0 c\u00f4te.`;
+const summaryA = getISPReviewSummary(providerA.slug);
+const summaryB = getISPReviewSummary(providerB.slug);
+if (!summaryA || !summaryB) return Astro.redirect("/fr/compare");
+
+const winner = summaryA.overall === summaryB.overall ? null : summaryA.overall > summaryB.overall ? providerA.name : providerB.name;
+const seoTitle = `${providerA.name} vs ${providerB.name} : quel FSI choisir en 2026 ? — FSI par adresse Canada`;
+const seoDesc = `Comparez ${providerA.name} et ${providerB.name}. Couverture, vitesses, prix et technologies côte à côte.`;
 
 const crumbs = [
-  { name: "Accueil", href: "/fr" },
+  { name: t(locale, "common.home"), href: "/fr" },
   { name: t(locale, "common.comparisons_hub"), href: "/fr/compare" },
   { name: `${providerA.name} vs ${providerB.name}`, href: `/fr/compare/${comparison.slug}` },
 ];
+
+const reviewSchemaA = buildAggregateRatingSchema(providerA.name, summaryA);
+const reviewSchemaB = buildAggregateRatingSchema(providerB.name, summaryB);
+
+const jsonLdExtra = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${providerA.name} vs ${providerB.name}`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: providerA.name },
+      { "@type": "ListItem", position: 2, name: providerB.name },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: comparison.faqs_fr.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  },
+  reviewSchemaA,
+  reviewSchemaB,
+];
 ---
 
-<BaseLayout title={seoTitle} description={seoDesc} locale={locale} canonicalPath={`/fr/compare/${comparison.slug}`}>
+<BaseLayout title={seoTitle} description={seoDesc} locale={locale} canonicalPath={`/fr/compare/${comparison.slug}`} jsonLdExtra={jsonLdExtra}>
   <Header locale={locale} />
 
   <main id="main-content" class="py-12 md:py-16">
     <div class="container-page">
       <Breadcrumbs crumbs={crumbs} />
 
-      <div class="max-w-3xl">
-        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
-          {providerA.name} vs {providerB.name}
-        </h1>
-        <p class="mt-4 text-lg text-text-secondary">
-          Comparaison d\u00e9taill\u00e9e de {providerA.name} et {providerB.name} au Canada.
-        </p>
+      <div class="max-w-4xl">
+        <h1 class="font-[var(--font-display)] text-3xl font-bold tracking-tight text-text-primary md:text-4xl">{providerA.name} vs {providerB.name}</h1>
+        <p class="mt-4 text-lg text-text-secondary">{t(locale, "compare.hero_subtitle")}</p>
       </div>
 
-      <section class="mt-8">
-        <div class="rounded-[var(--radius-lg)] border border-primary-200 bg-primary-50 p-6 shadow-card">
-          <h2 class="font-[var(--font-display)] text-lg font-bold text-primary-700 mb-2">{t(locale, "common.quick_verdict")}</h2>
-          <p class="text-sm leading-relaxed text-text-secondary">{comparison.verdict_fr}</p>
+      <section class="mt-8 rounded-[var(--radius-lg)] border border-primary-200 bg-primary-50 p-6 shadow-card">
+        <h2 class="mb-2 font-[var(--font-display)] text-lg font-bold text-primary-700">{t(locale, "common.quick_verdict")}</h2>
+        <p class="text-sm leading-relaxed text-text-secondary">{comparison.verdict_fr}</p>
+        {winner && <p class="mt-3 text-sm font-semibold text-primary-700">{t(locale, "compare.review_edge_prefix")} {winner}</p>}
+      </section>
+
+      <section class="mt-10">
+        <h2 class="mb-6 font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary">{t(locale, "compare.review_snapshot_title")}</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <ReviewScoreCard providerName={providerA.name} summary={summaryA} locale={locale} />
+          <ReviewScoreCard providerName={providerB.name} summary={summaryB} locale={locale} />
         </div>
       </section>
 
       <section class="mt-10">
-        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-6">Comparaison c\u00f4te \u00e0 c\u00f4te</h2>
-        <div class="overflow-x-auto">
+        <h2 class="mb-6 font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary">{t(locale, "compare.side_by_side_title")}</h2>
+        <div class="overflow-x-auto rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-4 shadow-card">
           <table class="w-full text-left text-sm">
             <thead>
               <tr class="border-b border-border">
-                <th class="pb-3 pr-4 font-medium text-text-muted">Crit\u00e8re</th>
+                <th class="pb-3 pr-4 font-medium text-text-muted">{t(locale, "compare.feature")}</th>
                 <th class="pb-3 pr-4 font-semibold text-text-primary">{providerA.name}</th>
                 <th class="pb-3 font-semibold text-text-primary">{providerB.name}</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-border-subtle">
               <tr>
-                <td class="py-3 pr-4 font-medium text-text-muted">Type</td>
+                <td class="py-3 pr-4 font-medium text-text-muted">{t(locale, "compare.review_score")}</td>
+                <td class="py-3 pr-4 text-text-secondary">{summaryA.overall.toFixed(1)} / 5 ({summaryA.reviewCount.toLocaleString("fr-CA")} {t(locale, "compare.reviews")})</td>
+                <td class="py-3 text-text-secondary">{summaryB.overall.toFixed(1)} / 5 ({summaryB.reviewCount.toLocaleString("fr-CA")} {t(locale, "compare.reviews")})</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium text-text-muted">{t(locale, "compare.type")}</td>
                 <td class="py-3 pr-4 capitalize text-text-secondary">{providerA.ownership_type}</td>
                 <td class="py-3 capitalize text-text-secondary">{providerB.ownership_type}</td>
               </tr>
@@ -78,7 +119,7 @@ const crumbs = [
                 <td class="py-3 text-text-secondary">{providerB.technologies.join(", ")}</td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 font-medium text-text-muted">Provinces</td>
+                <td class="py-3 pr-4 font-medium text-text-muted">{t(locale, "compare.provinces")}</td>
                 <td class="py-3 pr-4 text-text-secondary">{providerA.provinces_served.map((p) => getProvinceByCode(p)?.name_fr ?? p.toUpperCase()).join(", ")}</td>
                 <td class="py-3 text-text-secondary">{providerB.provinces_served.map((p) => getProvinceByCode(p)?.name_fr ?? p.toUpperCase()).join(", ")}</td>
               </tr>
@@ -86,11 +127,6 @@ const crumbs = [
                 <td class="py-3 pr-4 font-medium text-text-muted">{t(locale, "common.customers")}</td>
                 <td class="py-3 pr-4 text-text-secondary">~{(providerA.customer_count_approx / 1000).toFixed(0)}K</td>
                 <td class="py-3 text-text-secondary">~{(providerB.customer_count_approx / 1000).toFixed(0)}K</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 font-medium text-text-muted">{t(locale, "common.founded")}</td>
-                <td class="py-3 pr-4 text-text-secondary">{providerA.founded_year}</td>
-                <td class="py-3 text-text-secondary">{providerB.founded_year}</td>
               </tr>
             </tbody>
           </table>
@@ -100,33 +136,27 @@ const crumbs = [
       <section class="mt-10">
         <div class="grid gap-6 md:grid-cols-2">
           <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-6 shadow-card">
-            <h3 class="font-[var(--font-display)] text-lg font-bold text-text-primary mb-3">{providerA.name} \u2014 {t(locale, "common.strengths")}</h3>
+            <h3 class="mb-3 font-[var(--font-display)] text-lg font-bold text-text-primary">{providerA.name} — {t(locale, "common.strengths")}</h3>
             <p class="text-sm leading-relaxed text-text-secondary">{providerA.description_fr}</p>
-            <a href={`/fr/providers/${providerA.slug}`} class="mt-4 inline-block text-sm font-medium text-primary-600 transition-colors hover:text-primary-700">
-              En savoir plus sur {providerA.name} &rarr;
-            </a>
+            <a href={`/fr/providers/${providerA.slug}`} class="mt-4 inline-block text-sm font-medium text-primary-600 transition-colors hover:text-primary-700">{t(locale, "compare.learn_more_prefix")} {providerA.name} →</a>
           </div>
           <div class="rounded-[var(--radius-lg)] border border-border-subtle bg-surface-raised p-6 shadow-card">
-            <h3 class="font-[var(--font-display)] text-lg font-bold text-text-primary mb-3">{providerB.name} \u2014 {t(locale, "common.strengths")}</h3>
+            <h3 class="mb-3 font-[var(--font-display)] text-lg font-bold text-text-primary">{providerB.name} — {t(locale, "common.strengths")}</h3>
             <p class="text-sm leading-relaxed text-text-secondary">{providerB.description_fr}</p>
-            <a href={`/fr/providers/${providerB.slug}`} class="mt-4 inline-block text-sm font-medium text-primary-600 transition-colors hover:text-primary-700">
-              En savoir plus sur {providerB.name} &rarr;
-            </a>
+            <a href={`/fr/providers/${providerB.slug}`} class="mt-4 inline-block text-sm font-medium text-primary-600 transition-colors hover:text-primary-700">{t(locale, "compare.learn_more_prefix")} {providerB.name} →</a>
           </div>
         </div>
       </section>
 
       <section class="mt-10">
-        <h2 class="font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary mb-4">{t(locale, "common.which_should_you_choose")}</h2>
-        <p class="text-text-secondary leading-relaxed">
-          Le meilleur choix entre {providerA.name} et {providerB.name} d\u00e9pend de votre emplacement et de vos besoins. Les deux fournisseurs offrent un service concurrentiel dans leurs zones de couverture. Le facteur le plus important est de savoir quelles technologies sont disponibles \u00e0 votre adresse sp\u00e9cifique.
-        </p>
+        <h2 class="mb-4 font-[var(--font-display)] text-2xl font-bold tracking-tight text-text-primary">{t(locale, "common.which_should_you_choose")}</h2>
+        <p class="text-text-secondary leading-relaxed">{t(locale, "compare.choice_guidance")}</p>
       </section>
 
       <section class="mt-12">
         <div class="rounded-[var(--radius-xl)] bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-center text-white shadow-card-hover md:p-12">
           <h2 class="font-[var(--font-display)] text-2xl font-bold md:text-3xl">{t(locale, "common.check_address_cta")}</h2>
-          <p class="mx-auto mt-3 max-w-lg text-primary-100">Voyez si {providerA.name}, {providerB.name} ou d\u2019autres FSI desservent votre emplacement.</p>
+          <p class="mx-auto mt-3 max-w-lg text-primary-100">{t(locale, "compare.cta_subtitle_prefix")} {providerA.name}, {providerB.name}, {t(locale, "compare.cta_subtitle_suffix")}</p>
           <a href="/fr" class="mt-6 inline-flex items-center gap-2 rounded-[var(--radius-md)] bg-white px-6 py-3 font-[var(--font-display)] font-semibold text-primary-700 shadow-card transition-colors hover:bg-primary-50">{t(locale, "nav.lookup")}</a>
         </div>
       </section>

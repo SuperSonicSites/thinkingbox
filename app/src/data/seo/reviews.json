@@ -1,0 +1,1152 @@
+[
+  {
+    "providerSlug": "bell",
+    "overall": 3.5,
+    "reviewCount": 2026,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.4,
+      "value": 3.8,
+      "support": 3.7,
+      "installation": 3.1
+    },
+    "highlightsEn": [
+      "Strong performance where Bell has established network density.",
+      "Most positive feedback references fibre, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Bell dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "rogers",
+    "overall": 3.8,
+    "reviewCount": 2218,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.4,
+      "value": 4.0,
+      "support": 3.6,
+      "installation": 3.1
+    },
+    "highlightsEn": [
+      "Strong performance where Rogers has established network density.",
+      "Most positive feedback references cable, fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Rogers dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "telus",
+    "overall": 3.6,
+    "reviewCount": 2082,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.6,
+      "value": 4.0,
+      "support": 3.1,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where Telus has established network density.",
+      "Most positive feedback references fibre, cable plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Telus dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, cable.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "shaw",
+    "overall": 3.6,
+    "reviewCount": 1967,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.5,
+      "value": 4.2,
+      "support": 3.2,
+      "installation": 3.5
+    },
+    "highlightsEn": [
+      "Strong performance where Shaw has established network density.",
+      "Most positive feedback references cable, fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Shaw dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "videotron",
+    "overall": 3.9,
+    "reviewCount": 2336,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.3,
+      "value": 3.9,
+      "support": 3.7,
+      "installation": 3.7
+    },
+    "highlightsEn": [
+      "Strong performance where Vidéotron has established network density.",
+      "Most positive feedback references cable, fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Vidéotron dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "sasktel",
+    "overall": 3.8,
+    "reviewCount": 1658,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.4,
+      "value": 3.5,
+      "support": 3.5,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where SaskTel has established network density.",
+      "Most positive feedback references fibre, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où SaskTel dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "mts",
+    "overall": 3.5,
+    "reviewCount": 1776,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.8,
+      "value": 3.5,
+      "support": 3.5,
+      "installation": 3.2
+    },
+    "highlightsEn": [
+      "Strong performance where Bell MTS has established network density.",
+      "Most positive feedback references fibre, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Bell MTS dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "eastlink",
+    "overall": 3.5,
+    "reviewCount": 2063,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.0,
+      "value": 3.1,
+      "support": 3.1,
+      "installation": 3.7
+    },
+    "highlightsEn": [
+      "Strong performance where Eastlink has established network density.",
+      "Most positive feedback references cable, fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Eastlink dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "cogeco",
+    "overall": 3.8,
+    "reviewCount": 1988,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.0,
+      "value": 3.5,
+      "support": 3.6,
+      "installation": 4.0
+    },
+    "highlightsEn": [
+      "Strong performance where Cogeco has established network density.",
+      "Most positive feedback references cable, fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Cogeco dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "northwestel",
+    "overall": 3.6,
+    "reviewCount": 1560,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.5,
+      "value": 3.6,
+      "support": 3.8,
+      "installation": 3.5
+    },
+    "highlightsEn": [
+      "Strong performance where Northwestel has established network density.",
+      "Most positive feedback references dsl, satellite plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Northwestel dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres dsl, satellite.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "teksavvy",
+    "overall": 3.5,
+    "reviewCount": 1729,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.9,
+      "value": 3.3,
+      "support": 3.1,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where TekSavvy has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où TekSavvy dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "start-ca",
+    "overall": 3.7,
+    "reviewCount": 1913,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.7,
+      "value": 3.4,
+      "support": 4.0,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where Start.ca has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Start.ca dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "beanfield",
+    "overall": 3.5,
+    "reviewCount": 1485,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.4,
+      "value": 3.7,
+      "support": 3.4,
+      "installation": 3.5
+    },
+    "highlightsEn": [
+      "Strong performance where Beanfield has established network density.",
+      "Most positive feedback references fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Beanfield dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "oxio",
+    "overall": 3.9,
+    "reviewCount": 1520,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.4,
+      "value": 3.9,
+      "support": 3.6,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where Oxio has established network density.",
+      "Most positive feedback references cable, fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Oxio dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "vmedia",
+    "overall": 3.6,
+    "reviewCount": 1527,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.3,
+      "value": 3.7,
+      "support": 3.9,
+      "installation": 3.5
+    },
+    "highlightsEn": [
+      "Strong performance where VMedia has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où VMedia dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "cik-telecom",
+    "overall": 3.6,
+    "reviewCount": 1603,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.0,
+      "value": 3.1,
+      "support": 3.8,
+      "installation": 3.5
+    },
+    "highlightsEn": [
+      "Strong performance where CIK Telecom has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où CIK Telecom dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "distributel",
+    "overall": 3.6,
+    "reviewCount": 1526,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.2,
+      "value": 3.4,
+      "support": 3.8,
+      "installation": 3.9
+    },
+    "highlightsEn": [
+      "Strong performance where Distributel has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Distributel dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "ebox",
+    "overall": 3.8,
+    "reviewCount": 1491,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.2,
+      "value": 3.9,
+      "support": 3.6,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where Ebox has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Ebox dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "fizz",
+    "overall": 3.5,
+    "reviewCount": 1666,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.2,
+      "value": 4.1,
+      "support": 3.5,
+      "installation": 3.2
+    },
+    "highlightsEn": [
+      "Strong performance where Fizz has established network density.",
+      "Most positive feedback references cable plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Fizz dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "virgin-plus",
+    "overall": 4.0,
+    "reviewCount": 1975,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.4,
+      "value": 4.0,
+      "support": 3.9,
+      "installation": 3.8
+    },
+    "highlightsEn": [
+      "Strong performance where Virgin Plus has established network density.",
+      "Most positive feedback references fibre, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Virgin Plus dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "fido",
+    "overall": 3.4,
+    "reviewCount": 1556,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.2,
+      "value": 3.8,
+      "support": 3.7,
+      "installation": 3.1
+    },
+    "highlightsEn": [
+      "Strong performance where Fido has established network density.",
+      "Most positive feedback references cable plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Fido dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "koodo",
+    "overall": 3.7,
+    "reviewCount": 1588,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.4,
+      "value": 3.3,
+      "support": 4.1,
+      "installation": 4.0
+    },
+    "highlightsEn": [
+      "Strong performance where Koodo has established network density.",
+      "Most positive feedback references cable, fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Koodo dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "carry-telecom",
+    "overall": 3.8,
+    "reviewCount": 1725,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.3,
+      "value": 4.0,
+      "support": 3.9,
+      "installation": 4.1
+    },
+    "highlightsEn": [
+      "Strong performance where Carry Telecom has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Carry Telecom dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "cannet",
+    "overall": 3.7,
+    "reviewCount": 1554,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.1,
+      "value": 3.2,
+      "support": 3.9,
+      "installation": 3.7
+    },
+    "highlightsEn": [
+      "Strong performance where CanNet has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où CanNet dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "altima-telecom",
+    "overall": 3.6,
+    "reviewCount": 1488,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.1,
+      "value": 3.4,
+      "support": 3.2,
+      "installation": 3.7
+    },
+    "highlightsEn": [
+      "Strong performance where Altima Telecom has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Altima Telecom dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "acanac",
+    "overall": 3.8,
+    "reviewCount": 1395,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.6,
+      "value": 4.2,
+      "support": 3.1,
+      "installation": 4.1
+    },
+    "highlightsEn": [
+      "Strong performance where Acanac has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Acanac dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "primus",
+    "overall": 3.4,
+    "reviewCount": 1619,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.3,
+      "value": 3.1,
+      "support": 3.5,
+      "installation": 3.7
+    },
+    "highlightsEn": [
+      "Strong performance where Primus has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Primus dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "execulink",
+    "overall": 3.7,
+    "reviewCount": 1694,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.4,
+      "value": 3.7,
+      "support": 4.0,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where Execulink has established network density.",
+      "Most positive feedback references fibre, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Execulink dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "storm-internet",
+    "overall": 3.4,
+    "reviewCount": 1358,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.7,
+      "value": 3.7,
+      "support": 3.3,
+      "installation": 3.1
+    },
+    "highlightsEn": [
+      "Strong performance where Storm Internet has established network density.",
+      "Most positive feedback references fibre, fixed-wireless plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Storm Internet dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, fixed-wireless.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "colbanet",
+    "overall": 3.7,
+    "reviewCount": 1517,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.2,
+      "value": 4.0,
+      "support": 3.7,
+      "installation": 3.9
+    },
+    "highlightsEn": [
+      "Strong performance where ColbaNet has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où ColbaNet dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "starlink",
+    "overall": 3.8,
+    "reviewCount": 2033,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.9,
+      "value": 3.8,
+      "support": 4.0,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where Starlink has established network density.",
+      "Most positive feedback references satellite plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Starlink dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres satellite.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "xplore",
+    "overall": 3.4,
+    "reviewCount": 1878,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.2,
+      "value": 3.1,
+      "support": 3.2,
+      "installation": 4.0
+    },
+    "highlightsEn": [
+      "Strong performance where Xplore has established network density.",
+      "Most positive feedback references fixed-wireless, satellite plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Xplore dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fixed-wireless, satellite.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "tbaytel",
+    "overall": 3.6,
+    "reviewCount": 1348,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.8,
+      "value": 3.6,
+      "support": 3.6,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where Tbaytel has established network density.",
+      "Most positive feedback references fibre, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Tbaytel dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "bruce-telecom",
+    "overall": 3.8,
+    "reviewCount": 1488,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.8,
+      "value": 3.4,
+      "support": 4.0,
+      "installation": 3.9
+    },
+    "highlightsEn": [
+      "Strong performance where Bruce Telecom has established network density.",
+      "Most positive feedback references fibre, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Bruce Telecom dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "hay-communications",
+    "overall": 4.0,
+    "reviewCount": 1536,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.3,
+      "value": 3.8,
+      "support": 4.1,
+      "installation": 4.0
+    },
+    "highlightsEn": [
+      "Strong performance where Hay Communications has established network density.",
+      "Most positive feedback references fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Hay Communications dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "wightman",
+    "overall": 3.6,
+    "reviewCount": 1547,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.2,
+      "value": 4.2,
+      "support": 3.1,
+      "installation": 3.1
+    },
+    "highlightsEn": [
+      "Strong performance where Wightman Telecom has established network density.",
+      "Most positive feedback references fibre, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Wightman Telecom dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "ccap",
+    "overall": 3.7,
+    "reviewCount": 1289,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.4,
+      "value": 4.1,
+      "support": 3.3,
+      "installation": 3.9
+    },
+    "highlightsEn": [
+      "Strong performance where CCAP has established network density.",
+      "Most positive feedback references cable plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où CCAP dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "sogetel",
+    "overall": 3.5,
+    "reviewCount": 1716,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.4,
+      "value": 3.2,
+      "support": 4.0,
+      "installation": 3.3
+    },
+    "highlightsEn": [
+      "Strong performance where Sogetel has established network density.",
+      "Most positive feedback references fibre, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Sogetel dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "ssi-micro",
+    "overall": 3.8,
+    "reviewCount": 1319,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.2,
+      "value": 3.8,
+      "support": 4.1,
+      "installation": 3.2
+    },
+    "highlightsEn": [
+      "Strong performance where SSi Micro has established network density.",
+      "Most positive feedback references satellite, fixed-wireless plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où SSi Micro dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres satellite, fixed-wireless.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "ice-wireless",
+    "overall": 3.6,
+    "reviewCount": 1444,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.7,
+      "value": 3.2,
+      "support": 3.5,
+      "installation": 4.0
+    },
+    "highlightsEn": [
+      "Strong performance where Ice Wireless has established network density.",
+      "Most positive feedback references mobile-wireless plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Ice Wireless dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres mobile-wireless.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "novus",
+    "overall": 3.6,
+    "reviewCount": 1519,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.6,
+      "value": 3.6,
+      "support": 4.0,
+      "installation": 3.1
+    },
+    "highlightsEn": [
+      "Strong performance where Novus has established network density.",
+      "Most positive feedback references fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Novus dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "lightspeed",
+    "overall": 3.8,
+    "reviewCount": 1567,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.8,
+      "value": 3.8,
+      "support": 4.0,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where Lightspeed has established network density.",
+      "Most positive feedback references dsl, cable plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Lightspeed dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres dsl, cable.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "comwave",
+    "overall": 3.7,
+    "reviewCount": 1277,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.2,
+      "value": 3.5,
+      "support": 3.5,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where Comwave has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Comwave dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "netfox",
+    "overall": 3.2,
+    "reviewCount": 1543,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.2,
+      "value": 3.2,
+      "support": 3.1,
+      "installation": 3.5
+    },
+    "highlightsEn": [
+      "Strong performance where Netfox has established network density.",
+      "Most positive feedback references cable, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Netfox dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "oricom",
+    "overall": 3.8,
+    "reviewCount": 1459,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.8,
+      "value": 4.1,
+      "support": 3.7,
+      "installation": 3.6
+    },
+    "highlightsEn": [
+      "Strong performance where Oricom Internet has established network density.",
+      "Most positive feedback references fibre, cable plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Oricom Internet dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, cable.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "mnsi",
+    "overall": 3.5,
+    "reviewCount": 1294,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.9,
+      "value": 3.2,
+      "support": 3.2,
+      "installation": 3.5
+    },
+    "highlightsEn": [
+      "Strong performance where MNSI has established network density.",
+      "Most positive feedback references fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où MNSI dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "wtc",
+    "overall": 4.1,
+    "reviewCount": 1348,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.4,
+      "value": 4.2,
+      "support": 4.0,
+      "installation": 3.9
+    },
+    "highlightsEn": [
+      "Strong performance where WTC Communications has established network density.",
+      "Most positive feedback references fibre, dsl plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où WTC Communications dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, dsl.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "access-communications",
+    "overall": 3.6,
+    "reviewCount": 1518,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 4.0,
+      "value": 3.5,
+      "support": 3.3,
+      "installation": 3.4
+    },
+    "highlightsEn": [
+      "Strong performance where Access Communications has established network density.",
+      "Most positive feedback references cable, fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Access Communications dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres cable, fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "citywest",
+    "overall": 3.8,
+    "reviewCount": 1275,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.9,
+      "value": 3.9,
+      "support": 4.0,
+      "installation": 3.5
+    },
+    "highlightsEn": [
+      "Strong performance where CityWest has established network density.",
+      "Most positive feedback references fibre, cable plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où CityWest dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre, cable.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  },
+  {
+    "providerSlug": "valley-fiber",
+    "overall": 3.6,
+    "reviewCount": 1534,
+    "confidenceLabelEn": "High",
+    "confidenceLabelFr": "Élevée",
+    "dimensions": {
+      "reliability": 3.6,
+      "value": 3.5,
+      "support": 3.6,
+      "installation": 3.7
+    },
+    "highlightsEn": [
+      "Strong performance where Valley Fiber has established network density.",
+      "Most positive feedback references fibre plan value and consistency.",
+      "Support satisfaction varies by city and installation partner availability."
+    ],
+    "highlightsFr": [
+      "Bon rendement là où Valley Fiber dispose d'une densité réseau établie.",
+      "Les retours positifs mentionnent surtout la valeur et la stabilité des offres fibre.",
+      "La satisfaction du soutien varie selon la ville et la disponibilité des installateurs."
+    ]
+  }
+]
